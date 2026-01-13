@@ -5,6 +5,14 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import CabinAccommodation from "./pages/accommodation/CabinAccommodation";
+import CaravanAccommodation from "./pages/accommodation/CaravanAccommodation";
+import CampingGrounds from "./pages/accommodation/CampingGrounds";
+import AirportAccommodation from "./pages/accommodation/AirportAccommodation";
+import AtBarilla from "./pages/things-to-do/AtBarilla";
+import TouristAttractions from "./pages/things-to-do/TouristAttractions";
+import MiniGolf from "./pages/things-to-do/MiniGolf";
+import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +24,22 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          
+          {/* Accommodation Routes */}
+          <Route path="/accommodation/cabins" element={<CabinAccommodation />} />
+          <Route path="/accommodation/caravans" element={<CaravanAccommodation />} />
+          <Route path="/accommodation/camping" element={<CampingGrounds />} />
+          <Route path="/accommodation/airport" element={<AirportAccommodation />} />
+          
+          {/* Things to Do Routes */}
+          <Route path="/things-to-do/at-barilla" element={<AtBarilla />} />
+          <Route path="/things-to-do/attractions" element={<TouristAttractions />} />
+          <Route path="/things-to-do/mini-golf" element={<MiniGolf />} />
+          
+          {/* Contact */}
+          <Route path="/contact" element={<Contact />} />
+          
+          {/* Catch-all */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

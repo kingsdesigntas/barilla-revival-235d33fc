@@ -1,73 +1,123 @@
-# Welcome to your Lovable project
+# Barilla Holiday Park Website
 
-## Project info
+A modern, responsive website for Barilla Holiday Park Tasmania - a family-friendly caravan park located in Cambridge, near Hobart Airport.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tech Stack
 
-## How can I edit this code?
+- **Framework**: React 18 with TypeScript
+- **Styling**: Tailwind CSS
+- **Build Tool**: Vite
+- **UI Components**: Custom components with Radix UI primitives
+- **Routing**: React Router DOM
 
-There are several ways of editing your application.
+## Project Structure
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── assets/           # Images and static assets
+├── components/
+│   ├── home/         # Homepage-specific components
+│   ├── layout/       # Header, Footer, Layout wrapper
+│   ├── shared/       # Reusable components (PageHero, etc.)
+│   └── ui/           # Shadcn UI components
+├── pages/
+│   ├── accommodation/  # Cabin, Caravan, Camping, Airport pages
+│   ├── things-to-do/   # AtBarilla, TouristAttractions, MiniGolf
+│   ├── Contact.tsx
+│   └── Index.tsx
+└── App.tsx
 ```
 
-**Edit a file directly in GitHub**
+## Pages
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Home** (`/`) - Hero, introduction, accommodation cards, info section
+- **Cabin Accommodation** (`/accommodation/cabins`)
+- **Caravan Accommodation** (`/accommodation/caravans`)
+- **Camping Grounds** (`/accommodation/camping`)
+- **Airport Accommodation** (`/accommodation/airport`)
+- **Things to Do at Barilla** (`/things-to-do/at-barilla`)
+- **Tourist Attractions** (`/things-to-do/attractions`)
+- **Mini Golf** (`/things-to-do/mini-golf`)
+- **Contact** (`/contact`)
 
-**Use GitHub Codespaces**
+## Local Development
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+# Install dependencies
+npm install
 
-## What technologies are used for this project?
+# Start development server
+npm run dev
 
-This project is built with:
+# Build for production
+npm run build
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Preview production build
+npm run preview
+```
 
-## How can I deploy this project?
+## Deployment to Vercel
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Option 1: GitHub Integration (Recommended)
 
-## Can I connect a custom domain to my Lovable project?
+1. Push this repository to GitHub
+2. Go to [vercel.com](https://vercel.com) and sign in
+3. Click "Add New Project"
+4. Import your GitHub repository
+5. Vercel will auto-detect the Vite configuration
+6. Click "Deploy"
 
-Yes, you can!
+### Option 2: Vercel CLI
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```bash
+# Install Vercel CLI
+npm i -g vercel
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Deploy
+vercel
+```
+
+## DNS Setup for barilla.com.au
+
+### Step 1: Add Domain in Vercel
+
+1. In Vercel Dashboard, go to **Project Settings → Domains**
+2. Add `barilla.com.au` and `www.barilla.com.au`
+
+### Step 2: Update DNS Records
+
+In your DNS provider (domain registrar), add these records:
+
+**For root domain (`barilla.com.au`):**
+```
+Type: A
+Name: @
+Value: 76.76.21.21
+```
+
+**For www subdomain:**
+```
+Type: CNAME
+Name: www
+Value: cname.vercel-dns.com
+```
+
+### Step 3: SSL Certificate
+
+Vercel automatically provisions SSL certificates. Wait a few minutes after DNS propagation.
+
+### Verify DNS Propagation
+
+Use these tools to check:
+- [whatsmydns.net](https://www.whatsmydns.net/)
+- [dnschecker.org](https://www.dnschecker.org/)
+
+## Contact Information
+
+- **Phone**: 1800 465 453 (Freecall)
+- **Email**: stay@barilla.com.au
+- **Address**: 75 Richmond Road, Cambridge, Tasmania 7170
+
+## License
+
+© 2026 Barilla Holiday Park. All rights reserved.
