@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown, Calendar } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,6 +35,26 @@ const Header = () => {
             <Mail size={14} />
             <span className="hidden sm:inline">stay@barilla.com.au</span>
           </a>
+        </div>
+      </div>
+
+      {/* Booking info bar */}
+      <div className="bg-secondary border-b border-border py-2">
+        <div className="container flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm">
+          <span className="text-foreground font-medium">Call Us Anytime</span>
+          <a href="tel:1800465453" className="flex items-center gap-2 text-primary hover:text-accent transition-colors">
+            <Phone size={14} />
+            <span>Freecall: 1800 465 453</span>
+          </a>
+          <span className="hidden sm:inline text-muted-foreground">|</span>
+          <a href="mailto:stay@barilla.com.au" className="flex items-center gap-2 text-primary hover:text-accent transition-colors">
+            <Mail size={14} />
+            <span>Mail Us: stay@barilla.com.au</span>
+          </a>
+          <Link to="/contact" className="flex items-center gap-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-semibold hover:bg-accent/90 transition-colors">
+            <Calendar size={14} />
+            Book your Holiday
+          </Link>
         </div>
       </div>
 
