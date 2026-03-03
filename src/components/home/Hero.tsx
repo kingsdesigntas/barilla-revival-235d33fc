@@ -1,44 +1,37 @@
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-cabin.jpg";
+import { useSanityContent } from "@/hooks/useSanityContent";
+import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
+import { defaultHomePage } from "@/lib/default-content";
 
 const Hero = () => {
+  const { content } = useSanityContent("homePage", HOME_PAGE_QUERY, defaultHomePage);
+  const hero = content.hero;
+
   return (
-    <section 
+    <section
       className="relative min-h-[70vh] flex items-center justify-center bg-cover bg-center"
-      style={{ backgroundImage: `url(${heroImage})` }}
+      style={{ backgroundImage: `url(${hero.backgroundImage})` }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
-      
-      {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 drop-shadow-lg">
-          Barilla Holiday Park Tasmania
+          {hero.heading}
         </h1>
         <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-          Your caravan park makes your perfect holiday base
+          {hero.subheading}
         </p>
-        
-        {/* CTA Buttons */}
         <div className="flex flex-wrap justify-center gap-4">
-          <Link 
-            to="/accommodation/cabins" 
-            className="btn-cta"
-          >
-            Cabin Accommodation
-          </Link>
-          <Link 
-            to="/accommodation/caravans" 
-            className="btn-cta"
-          >
-            Caravan Accommodation
-          </Link>
-          <Link 
-            to="/accommodation/camping" 
-            className="bg-success text-success-foreground font-semibold px-6 py-3 rounded-md hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg"
-          >
-            Camping Ground
-          </Link>
+          {hero.ctaButtons?.map((btn, i) => (
+            <Link
+              key={i}
+              to={btn.href}
+              className={btn.variant === "success"
+                ? "bg-success text-success-foreground font-semibold px-6 py-3 rounded-md hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg"
+                : "btn-cta"}
+            >
+              {btn.label}
+            </Link>
+          ))}
         </div>
       </div>
     </section>
