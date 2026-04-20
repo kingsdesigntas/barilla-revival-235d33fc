@@ -214,9 +214,6 @@ const DayTrips = () => {
                     }}
                   />
                   <div className="absolute top-3 left-3 right-3 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1.5 rounded-full inline-flex items-center gap-2 shadow-md w-fit max-w-[calc(100%-1.5rem)]">
-                    <span className="bg-accent-foreground/15 rounded-full px-2 py-0.5 shrink-0">
-                      Day Trip {idx + 1}
-                    </span>
                     <Users size={14} className="shrink-0" />
                     <span className="truncate">{trip.bestFor}</span>
                   </div>
