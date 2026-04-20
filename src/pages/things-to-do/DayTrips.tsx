@@ -213,20 +213,17 @@ const DayTrips = () => {
                       (e.currentTarget as HTMLImageElement).src = "/placeholder.svg";
                     }}
                   />
-                  <div className="absolute top-3 left-3 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 rounded-full">
-                    Day Trip {idx + 1}
+                  <div className="absolute top-3 left-3 right-3 bg-accent text-accent-foreground text-xs font-semibold px-3 py-1.5 rounded-full inline-flex items-center gap-2 shadow-md w-fit max-w-[calc(100%-1.5rem)]">
+                    <span className="bg-accent-foreground/15 rounded-full px-2 py-0.5 shrink-0">
+                      Day Trip {idx + 1}
+                    </span>
+                    <Users size={14} className="shrink-0" />
+                    <span className="truncate">{trip.bestFor}</span>
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-serif font-semibold text-primary mb-2">{trip.title}</h3>
                   <p className="text-muted-foreground mb-4">{trip.description}</p>
-
-                  <div className="flex items-start gap-2 text-sm mb-4">
-                    <Users size={16} className="shrink-0 mt-0.5 text-accent" />
-                    <span className="text-foreground">
-                      <span className="font-semibold">Best for:</span> {trip.bestFor}
-                    </span>
-                  </div>
 
                   <div className="bg-secondary/50 rounded-md p-4 mb-4 flex-1">
                     <h4 className="font-semibold text-primary text-sm mb-2 flex items-center gap-2">
