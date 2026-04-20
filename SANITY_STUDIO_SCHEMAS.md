@@ -402,6 +402,134 @@ export default defineType({
 
 ---
 
+## Schema: Tourist Attractions Page (`touristAttractionsPage.ts`)
+
+Singleton document powering `/things-to-do/attractions` with a filterable list of attractions.
+
+```ts
+import { defineType, defineField } from 'sanity'
+
+export default defineType({
+  name: 'touristAttractionsPage',
+  title: 'Tourist Attractions Page',
+  type: 'document',
+  fields: [
+    defineField({ name: 'title', title: 'Page Title', type: 'string' }),
+    defineField({ name: 'subtitle', title: 'Subtitle', type: 'string' }),
+    defineField({ name: 'heroImage', title: 'Hero Image', type: 'image' }),
+    defineField({ name: 'sectionHeading', title: 'Section Heading', type: 'string' }),
+    defineField({
+      name: 'introParagraphs',
+      title: 'Introduction Paragraphs',
+      type: 'array',
+      of: [{ type: 'text' }],
+    }),
+    defineField({
+      name: 'categories',
+      title: 'Filter Categories',
+      type: 'array',
+      of: [{ type: 'string' }],
+      description: 'Categories shown as filter pills, e.g. "Markets & Shopping", "Heritage & History"',
+    }),
+    defineField({
+      name: 'attractions',
+      title: 'Attractions',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          defineField({ name: 'name', title: 'Name', type: 'string' }),
+          defineField({ name: 'image', title: 'Image', type: 'image' }),
+          defineField({ name: 'description', title: 'Description', type: 'text' }),
+          defineField({ name: 'address', title: 'Address', type: 'string' }),
+          defineField({ name: 'phone', title: 'Phone', type: 'string' }),
+          defineField({ name: 'website', title: 'Website URL', type: 'url' }),
+          defineField({
+            name: 'categories',
+            title: 'Categories',
+            type: 'array',
+            of: [{ type: 'string' }],
+            description: 'Must match values from the page-level categories list',
+          }),
+        ],
+      }],
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'object',
+      fields: [
+        defineField({ name: 'title', title: 'Page Title', type: 'string' }),
+        defineField({ name: 'description', title: 'Meta Description', type: 'text' }),
+        defineField({ name: 'keywords', title: 'Keywords', type: 'string' }),
+      ],
+    }),
+  ],
+})
+```
+
+---
+
+## Schema: Day Trips Page (`dayTripsPage.ts`)
+
+Singleton document powering `/things-to-do/day-trips` with curated multi-stop itineraries.
+
+```ts
+import { defineType, defineField } from 'sanity'
+
+export default defineType({
+  name: 'dayTripsPage',
+  title: 'Day Trips Page',
+  type: 'document',
+  fields: [
+    defineField({ name: 'title', title: 'Page Title', type: 'string' }),
+    defineField({ name: 'subtitle', title: 'Subtitle', type: 'string' }),
+    defineField({ name: 'heroImage', title: 'Hero Image', type: 'image' }),
+    defineField({ name: 'sectionHeading', title: 'Section Heading', type: 'string' }),
+    defineField({
+      name: 'introParagraphs',
+      title: 'Introduction Paragraphs',
+      type: 'array',
+      of: [{ type: 'text' }],
+    }),
+    defineField({
+      name: 'trips',
+      title: 'Day Trips',
+      type: 'array',
+      of: [{
+        type: 'object',
+        fields: [
+          defineField({ name: 'title', title: 'Trip Title', type: 'string' }),
+          defineField({ name: 'image', title: 'Image', type: 'image' }),
+          defineField({ name: 'description', title: 'Short Description', type: 'text' }),
+          defineField({ name: 'bestFor', title: 'Best For', type: 'string', description: 'Shown in the pill on the image, e.g. "Families, low-intensity nature"' }),
+          defineField({
+            name: 'stops',
+            title: 'Stops Breakdown',
+            type: 'array',
+            of: [{ type: 'string' }],
+            description: 'Ordered list of stops on the itinerary',
+          }),
+          defineField({ name: 'mapsUrl', title: 'Google Maps URL', type: 'url' }),
+        ],
+      }],
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO Settings',
+      type: 'object',
+      fields: [
+        defineField({ name: 'title', title: 'Page Title', type: 'string' }),
+        defineField({ name: 'description', title: 'Meta Description', type: 'text' }),
+        defineField({ name: 'keywords', title: 'Keywords', type: 'string' }),
+      ],
+    }),
+  ],
+})
+```
+
+---
+
 ## Schema Index (`index.ts`)
 
 ```ts
@@ -410,6 +538,8 @@ import homePage from './homePage'
 import accommodationPage from './accommodationPage'
 import activityPage from './activityPage'
 import contactPage from './contactPage'
+import touristAttractionsPage from './touristAttractionsPage'
+import dayTripsPage from './dayTripsPage'
 
 export const schemaTypes = [
   siteSettings,
@@ -417,6 +547,8 @@ export const schemaTypes = [
   accommodationPage,
   activityPage,
   contactPage,
+  touristAttractionsPage,
+  dayTripsPage,
 ]
 ```
 
@@ -429,7 +561,9 @@ After setting up Sanity Studio with these schemas:
 1. **Site Settings** — Create one document with your business details, nav menu, and default SEO
 2. **Home Page** — Create one document with hero, introduction, accommodation cards, and info section
 3. **Accommodation Pages** — Create 4 documents with slugs: `cabins`, `caravans`, `camping`, `airport`
-4. **Activity Pages** — Create 3 documents with slugs: `at-barilla`, `attractions`, `mini-golf`
-5. **Contact Page** — Create one document with contact details and form heading
+4. **Activity Pages** — Create 2 documents with slugs: `at-barilla`, `mini-golf`
+5. **Tourist Attractions Page** — Create one document with categories and attractions list
+6. **Day Trips Page** — Create one document with curated itineraries
+7. **Contact Page** — Create one document with contact details and form heading
 
 All fields are optional — the website falls back to static content for any missing fields.
