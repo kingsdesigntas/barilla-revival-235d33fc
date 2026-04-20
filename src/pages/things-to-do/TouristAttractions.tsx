@@ -227,6 +227,7 @@ const TouristAttractions = () => {
       <PageHero
         title="Tourist Attractions Near Hobart"
         subtitle="Discover the best things to see and do during your stay at Barilla Holiday Park"
+        backgroundImage="https://upload.wikimedia.org/wikipedia/commons/0/0e/Mount_Wellington_Tasmania.jpg"
       />
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
