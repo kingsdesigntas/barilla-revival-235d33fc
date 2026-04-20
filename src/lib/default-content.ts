@@ -30,6 +30,7 @@ export const defaultSiteSettings = {
       children: [
         { label: "At Barilla", href: "/things-to-do/at-barilla" },
         { label: "Tourist Attractions", href: "/things-to-do/attractions" },
+        { label: "Day Trips", href: "/things-to-do/day-trips" },
         { label: "Mini Golf", href: "/things-to-do/mini-golf" },
       ],
     },
