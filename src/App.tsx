@@ -12,6 +12,7 @@ import AirportAccommodation from "./pages/accommodation/AirportAccommodation";
 import AtBarilla from "./pages/things-to-do/AtBarilla";
 import TouristAttractions from "./pages/things-to-do/TouristAttractions";
 import MiniGolf from "./pages/things-to-do/MiniGolf";
+import DayTrips from "./pages/things-to-do/DayTrips";
 import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/things-to-do/at-barilla" element={<AtBarilla />} />
           <Route path="/things-to-do/attractions" element={<TouristAttractions />} />
           <Route path="/things-to-do/mini-golf" element={<MiniGolf />} />
+          <Route path="/things-to-do/day-trips" element={<DayTrips />} />
           
           {/* Contact */}
           <Route path="/contact" element={<Contact />} />
