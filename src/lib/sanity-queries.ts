@@ -123,6 +123,7 @@ export const ACTIVITY_PAGE_QUERY = `*[_type == "activityPage" && slug.current ==
   "heroImage": heroImage.asset->url,
   sectionHeading,
   sectionDescription,
+  introParagraphs,
   activities[]{
     icon,
     title,
@@ -145,6 +146,50 @@ export const ACTIVITY_PAGE_QUERY = `*[_type == "activityPage" && slug.current ==
   ctaButton{
     label,
     href
+  },
+  seo{
+    title,
+    description,
+    keywords
+  }
+}`;
+
+export const TOURIST_ATTRACTIONS_QUERY = `*[_type == "touristAttractionsPage"][0]{
+  title,
+  subtitle,
+  "heroImage": heroImage.asset->url,
+  sectionHeading,
+  introParagraphs,
+  categories,
+  attractions[]{
+    name,
+    "image": image.asset->url,
+    description,
+    address,
+    phone,
+    website,
+    categories
+  },
+  seo{
+    title,
+    description,
+    keywords
+  }
+}`;
+
+export const DAY_TRIPS_QUERY = `*[_type == "dayTripsPage"][0]{
+  title,
+  subtitle,
+  "heroImage": heroImage.asset->url,
+  sectionHeading,
+  introParagraphs,
+  trips[]{
+    title,
+    "image": image.asset->url,
+    description,
+    bestFor,
+    stops,
+    mapsUrl
   },
   seo{
     title,
