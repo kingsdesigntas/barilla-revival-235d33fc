@@ -56,6 +56,33 @@ npm run build
 npm run preview
 ```
 
+## Sanity Visual Editing
+
+This project now includes Sanity Visual Editing support for React Router.
+
+### Environment variables
+
+Add these in `.env`:
+
+```bash
+VITE_SANITY_PROJECT_ID=your_project_id
+VITE_SANITY_DATASET=production
+VITE_SANITY_STUDIO_URL=http://localhost:3333
+VITE_SANITY_VISUAL_EDITING=false
+```
+
+- `VITE_SANITY_STUDIO_URL`: your Studio URL (local or hosted)
+- `VITE_SANITY_VISUAL_EDITING`: set to `true` to always enable overlays locally
+
+Visual Editing also auto-enables when Sanity preview URL params are present.
+
+### How to use
+
+1. Start the site (`npm run dev`)
+2. Open from Sanity Presentation/preview
+3. Ensure `VITE_SANITY_STUDIO_URL` points to your Studio
+4. Toggle `VITE_SANITY_VISUAL_EDITING=true` if you want overlays always on in local preview
+
 ## Deployment to Vercel
 
 ### Option 1: GitHub Integration (Recommended)
@@ -89,6 +116,7 @@ vercel
 In your DNS provider (domain registrar), add these records:
 
 **For root domain (`barilla.com.au`):**
+
 ```
 Type: A
 Name: @
@@ -96,6 +124,7 @@ Value: 76.76.21.21
 ```
 
 **For www subdomain:**
+
 ```
 Type: CNAME
 Name: www
@@ -109,6 +138,7 @@ Vercel automatically provisions SSL certificates. Wait a few minutes after DNS p
 ### Verify DNS Propagation
 
 Use these tools to check:
+
 - [whatsmydns.net](https://www.whatsmydns.net/)
 - [dnschecker.org](https://www.dnschecker.org/)
 
