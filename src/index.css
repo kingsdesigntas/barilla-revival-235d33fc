@@ -1,177 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
-
 @layer base {
-  :root {
-    /* Barilla Holiday Park Design System */
-    --background: 0 0% 100%;
-    --foreground: 210 11% 15%;
+	:root {
+		/* Barilla Holiday Park Design System */
+		--background: 0 0% 100%;
+		--foreground: 210 11% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 11% 15%;
+		--card: 0 0% 100%;
+		--card-foreground: 210 11% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 11% 15%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 210 11% 15%;
 
-    /* Primary Blue - Header & Headings */
-    --primary: 201 64% 28%;
-    --primary-foreground: 0 0% 100%;
+		/* Primary Blue - Header & Headings */
+		--primary: 201 64% 28%;
+		--primary-foreground: 0 0% 100%;
 
-    /* Secondary - Light blue/gray */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 201 64% 28%;
+		/* Secondary - Light blue/gray */
+		--secondary: 210 40% 96%;
+		--secondary-foreground: 201 64% 28%;
 
-    /* Muted */
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+		/* Muted */
+		--muted: 210 40% 96%;
+		--muted-foreground: 215 16% 47%;
 
-    /* Accent - Orange/Yellow for CTAs */
-    --accent: 37 90% 51%;
-    --accent-foreground: 0 0% 100%;
+		/* Accent - Orange/Yellow for CTAs */
+		--accent: 37 90% 51%;
+		--accent-foreground: 0 0% 100%;
 
-    /* Success/Green for highlights */
-    --success: 145 63% 42%;
-    --success-foreground: 0 0% 100%;
+		/* Success/Green for highlights */
+		--success: 145 63% 42%;
+		--success-foreground: 0 0% 100%;
 
-    /* Destructive */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+		/* Destructive */
+		--destructive: 0 84% 60%;
+		--destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 201 64% 28%;
+		--border: 214 32% 91%;
+		--input: 214 32% 91%;
+		--ring: 201 64% 28%;
 
-    --radius: 0.5rem;
+		--radius: 0.5rem;
 
-    /* Custom Barilla colors */
-    --barilla-blue: 201 64% 28%;
-    --barilla-blue-dark: 201 70% 22%;
-    --barilla-orange: 37 90% 51%;
-    --barilla-orange-hover: 37 90% 45%;
-    --barilla-green: 145 63% 42%;
-    --barilla-cream: 40 33% 97%;
-    --barilla-footer: 210 29% 24%;
+		/* Custom Barilla colors */
+		--barilla-blue: 201 64% 28%;
+		--barilla-blue-dark: 201 70% 22%;
+		--barilla-orange: 37 90% 51%;
+		--barilla-orange-hover: 37 90% 45%;
+		--barilla-green: 145 63% 42%;
+		--barilla-cream: 40 33% 97%;
+		--barilla-footer: 210 29% 24%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+		--sidebar-background: 0 0% 98%;
+		--sidebar-foreground: 240 5.3% 26.1%;
+		--sidebar-primary: 240 5.9% 10%;
+		--sidebar-primary-foreground: 0 0% 98%;
+		--sidebar-accent: 240 4.8% 95.9%;
+		--sidebar-accent-foreground: 240 5.9% 10%;
+		--sidebar-border: 220 13% 91%;
+		--sidebar-ring: 217.2 91.2% 59.8%;
+	}
 
-  .dark {
-    --background: 210 29% 24%;
-    --foreground: 0 0% 98%;
-    --card: 210 29% 20%;
-    --card-foreground: 0 0% 98%;
-    --popover: 210 29% 20%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 37 90% 51%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 210 29% 30%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 210 29% 30%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 37 90% 51%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 210 29% 30%;
-    --input: 210 29% 30%;
-    --ring: 37 90% 51%;
-  }
+	.dark {
+		--background: 210 29% 24%;
+		--foreground: 0 0% 98%;
+		--card: 210 29% 20%;
+		--card-foreground: 0 0% 98%;
+		--popover: 210 29% 20%;
+		--popover-foreground: 0 0% 98%;
+		--primary: 37 90% 51%;
+		--primary-foreground: 0 0% 100%;
+		--secondary: 210 29% 30%;
+		--secondary-foreground: 0 0% 98%;
+		--muted: 210 29% 30%;
+		--muted-foreground: 215 20% 65%;
+		--accent: 37 90% 51%;
+		--accent-foreground: 0 0% 100%;
+		--destructive: 0 63% 31%;
+		--destructive-foreground: 0 0% 98%;
+		--border: 210 29% 30%;
+		--input: 210 29% 30%;
+		--ring: 37 90% 51%;
+	}
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+	* {
+		@apply border-border;
+	}
 
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Open Sans', sans-serif;
-  }
+	body {
+		@apply bg-background text-foreground font-sans antialiased;
+		font-family: "Open Sans", sans-serif;
+	}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', serif;
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: "Merriweather", serif;
+	}
 }
 
 @layer components {
-  .btn-cta {
-    @apply bg-accent text-accent-foreground font-semibold px-6 py-3 rounded-md 
+	.btn-cta {
+		@apply bg-accent text-accent-foreground font-semibold px-6 py-3 rounded-md 
            hover:bg-[hsl(var(--barilla-orange-hover))] transition-all duration-200
            shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
-  }
+	}
 
-  .btn-cta-outline {
-    @apply border-2 border-accent text-accent font-semibold px-6 py-3 rounded-md 
+	.btn-cta-outline {
+		@apply border-2 border-accent text-accent font-semibold px-6 py-3 rounded-md 
            hover:bg-accent hover:text-accent-foreground transition-all duration-200;
-  }
+	}
 
-  .section-heading {
-    @apply text-primary text-2xl md:text-3xl font-bold text-center mb-2;
-    font-family: 'Merriweather', serif;
-  }
+	.section-heading {
+		@apply text-primary text-2xl md:text-3xl font-bold text-center mb-2;
+		font-family: "Merriweather", serif;
+	}
 
-  .section-underline {
-    @apply w-16 h-1 bg-accent mx-auto mb-8;
-  }
+	.section-underline {
+		@apply w-16 h-1 bg-accent mx-auto mb-8;
+	}
 
-  .card-accommodation {
-    @apply bg-card rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 
+	.card-accommodation {
+		@apply bg-card rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 
            hover:shadow-xl hover:-translate-y-1;
-  }
+	}
 
-  .card-header {
-    @apply bg-primary text-primary-foreground py-3 px-4 font-semibold text-center uppercase tracking-wide text-sm;
-  }
+	.card-header {
+		@apply bg-primary text-primary-foreground py-3 px-4 font-semibold text-center uppercase tracking-wide text-sm;
+	}
 
-  .nav-link {
-    @apply text-primary hover:text-accent transition-colors duration-200 font-medium;
-  }
+	.nav-link {
+		@apply text-primary hover:text-accent transition-colors duration-200 font-medium;
+	}
 
-  .nav-link-mobile {
-    @apply block py-3 px-4 text-primary hover:bg-secondary transition-colors duration-200 font-medium;
-  }
+	.nav-link-mobile {
+		@apply block py-3 px-4 text-primary hover:bg-secondary transition-colors duration-200 font-medium;
+	}
 
-  .footer-link {
-    @apply text-white/80 hover:text-white transition-colors duration-200;
-  }
+	.footer-link {
+		@apply text-white/80 hover:text-white transition-colors duration-200;
+	}
 
-  .contact-card {
-    @apply bg-card rounded-lg shadow-md overflow-hidden;
-  }
+	.contact-card {
+		@apply bg-card rounded-lg shadow-md overflow-hidden;
+	}
 
-  .contact-card-header {
-    @apply bg-primary text-primary-foreground py-3 px-4 font-semibold uppercase tracking-wide text-sm;
-  }
+	.contact-card-header {
+		@apply bg-primary text-primary-foreground py-3 px-4 font-semibold uppercase tracking-wide text-sm;
+	}
 
-  .star-rating {
-    @apply text-accent text-xl;
-  }
+	.star-rating {
+		@apply text-accent text-xl;
+	}
 
-  .page-hero {
-    @apply relative bg-cover bg-center py-20 md:py-32;
-  }
+	.page-hero {
+		@apply relative bg-cover bg-center py-20 md:py-32;
+	}
 
-  .page-hero-overlay {
-    @apply absolute inset-0 bg-black/40;
-  }
+	.page-hero-overlay {
+		@apply absolute inset-0 bg-black/40;
+	}
 
-  .page-hero-content {
-    @apply relative z-10 text-center text-white;
-  }
+	.page-hero-content {
+		@apply relative z-10 text-center text-white;
+	}
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
 }
