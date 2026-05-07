@@ -1,9 +1,16 @@
 // Default/fallback content for all pages when Sanity is not configured
-import heroImage from "@/assets/hero-cabin.jpg";
-import cabinImage from "@/assets/cabin-accommodation.jpg";
-import caravanImage from "@/assets/caravan-site.jpg";
-import campingImage from "@/assets/camping-grounds.jpg";
-import miniGolfImage from "@/assets/mini-golf.jpg";
+import cabinImage from "@/assets/barillapark-cabin.jpg";
+import caravanImage from "@/assets/barillapark-powered-site.jpg";
+import caravanAltImage from "@/assets/barillapark-caravan-1.jpg";
+import campingImage from "@/assets/barillapark-camping-1.jpg";
+import campingAltImage from "@/assets/barillapark-camping-2.jpg";
+import miniGolfImage from "@/assets/barillapark-mini-golf.jpg";
+import miniGolfAerialImage from "@/assets/barillapark-aerial-mini-golf.jpg";
+import aerialImage from "@/assets/barillapark-aerial-1.jpg";
+import aerialImage2 from "@/assets/barillapark-aerial-2.jpg";
+import receptionImage from "@/assets/barillapark-reception.jpg";
+
+const heroImage = aerialImage;
 
 export const defaultSiteSettings = {
   siteName: "BARILLA",
