@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
-import { MapPin, Phone, ExternalLink } from "lucide-react";
+import { MapPin, Phone, ExternalLink, Map } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { TOURIST_ATTRACTIONS_QUERY } from "@/lib/sanity-queries";
@@ -96,6 +96,16 @@ const TouristAttractions = () => {
                       <MapPin size={14} className="shrink-0 mt-0.5 text-accent" />
                       <span>{a.address}</span>
                     </div>
+                    {a.address && (
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${a.name} ${a.address}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-accent font-medium hover:underline"
+                      >
+                        <Map size={14} /> View on Google Maps
+                      </a>
+                    )}
                     {a.phone && (
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Phone size={14} className="shrink-0 text-accent" />
