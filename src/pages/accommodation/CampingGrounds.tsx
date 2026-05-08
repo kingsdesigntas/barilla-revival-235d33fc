@@ -1,11 +1,11 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
-import { Link } from "react-router-dom";
 import { Tent, ShowerHead, Wifi, Flame, Trees, Sun } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultCampingPage } from "@/lib/default-content";
+import { BOOKING_URL } from "@/lib/booking";
 
 const iconMap: Record<string, any> = { Tent, ShowerHead, Wifi, Flame, Trees, Sun };
 
@@ -43,9 +43,9 @@ const CampingGrounds = () => {
                       ))}
                     </ul>
                   )}
-                  <Link to={item.buttonLink || "/contact"} className="btn-cta block text-center">
+                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center">
                     {item.buttonText || "Book Your Campsite"}
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}

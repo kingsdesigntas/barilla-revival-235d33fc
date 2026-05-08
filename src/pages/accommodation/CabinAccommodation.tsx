@@ -6,6 +6,7 @@ import { Bed, Users, Wifi, Tv, UtensilsCrossed, Car, Sun, Check } from "lucide-r
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultCabinPage } from "@/lib/default-content";
+import { BOOKING_URL } from "@/lib/booking";
 
 const iconMap: Record<string, any> = { Bed, Users, Wifi, Tv, UtensilsCrossed, Car, Sun };
 
@@ -86,9 +87,9 @@ const CabinAccommodation = () => {
                       ))}
                     </ul>
                   )}
-                  <Link to={cabin.buttonLink || "/contact"} className="btn-cta block text-center text-sm mt-auto">
+                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm mt-auto">
                     {cabin.buttonText || "Book Now"}
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}

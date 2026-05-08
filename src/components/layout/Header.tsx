@@ -4,6 +4,7 @@ import { Menu, X, Phone, Mail, ChevronDown, Calendar } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { SITE_SETTINGS_QUERY } from "@/lib/sanity-queries";
 import { defaultSiteSettings } from "@/lib/default-content";
+import { BOOKING_URL } from "@/lib/booking";
 import logo from "@/assets/barilla-holiday-park-logo.png";
 
 const Header = () => {
@@ -75,13 +76,15 @@ const Header = () => {
 						<Mail size={14} />
 						<span>Mail Us: {settings.email}</span>
 					</a>
-					<Link
-						to="/contact"
+					<a
+						href={BOOKING_URL}
+						target="_blank"
+						rel="noopener noreferrer"
 						className="flex items-center gap-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-semibold hover:bg-accent/90 transition-colors"
 					>
 						<Calendar size={14} />
 						Book your Holiday
-					</Link>
+					</a>
 				</div>
 			</div>
 
@@ -151,9 +154,9 @@ const Header = () => {
 							Contact
 						</Link>
 
-						<Link to="/contact" className="btn-cta">
+						<a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta">
 							Book Now
-						</Link>
+						</a>
 					</div>
 
 					{/* Mobile menu button */}
@@ -206,9 +209,15 @@ const Header = () => {
 						</Link>
 
 						<div className="p-4">
-							<Link to="/contact" className="btn-cta block text-center" onClick={() => setIsMenuOpen(false)}>
+							<a
+								href={BOOKING_URL}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="btn-cta block text-center"
+								onClick={() => setIsMenuOpen(false)}
+							>
 								Book Now
-							</Link>
+							</a>
 						</div>
 					</div>
 				)}

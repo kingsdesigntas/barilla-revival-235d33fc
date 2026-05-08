@@ -1,11 +1,11 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
-import { Link } from "react-router-dom";
 import { Zap, ShowerHead, Wifi, Car, Trees, Sun } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultCaravanPage } from "@/lib/default-content";
+import { BOOKING_URL } from "@/lib/booking";
 
 const iconMap: Record<string, any> = { Zap, ShowerHead, Wifi, Car, Trees, Sun };
 
@@ -34,9 +34,9 @@ const CaravanAccommodation = () => {
                     <Sun className="text-accent" size={24} />
                   </div>
                   <p className="text-muted-foreground text-center text-sm mb-6">{site.description}</p>
-                  <Link to={site.buttonLink || "/contact"} className="btn-cta block text-center text-sm">
+                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
                     {site.buttonText || "Book Now"}
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
