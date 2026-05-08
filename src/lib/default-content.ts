@@ -184,8 +184,8 @@ export const defaultCaravanPage = {
   sectionDescription: "All of our caravan sites are spacious with sheltered and friendly surroundings. A perfect site for your Caravan or Motorhome!",
   items: [
     { name: "Powered Site", description: "Spacious powered sites with easy access to amenities. Suitable for caravans and motorhomes of all sizes.", image: caravanImage, buttonText: "Book Now", buttonLink: "/contact" },
-    { name: "Premium Powered Site", description: "Our premium sites offer extra space, better views, and are located in the quietest areas of the park.", image: caravanImage, buttonText: "Book Now", buttonLink: "/contact" },
-    { name: "Drive-Through Site", description: "Convenient drive-through sites perfect for larger rigs. No reversing required!", image: caravanImage, buttonText: "Book Now", buttonLink: "/contact" },
+    { name: "Premium Powered Site", description: "Our premium sites offer extra space, better views, and are located in the quietest areas of the park.", image: caravanAltImage, buttonText: "Book Now", buttonLink: "/contact" },
+    { name: "Drive-Through Site", description: "Convenient drive-through sites perfect for larger rigs. No reversing required!", image: campingAltImage, buttonText: "Book Now", buttonLink: "/contact" },
   ],
   amenitiesHeading: "Site Amenities",
   amenities: [
@@ -244,7 +244,7 @@ export const defaultAirportPage = {
     {
       name: "Caravan/Motorhome Site",
       description: "Powered site for your caravan or motorhome. Easy access and secure overnight parking near the airport.",
-      image: "",
+      image: caravanAltImage,
       buttonText: "Book Site",
       buttonLink: "/contact",
     },
