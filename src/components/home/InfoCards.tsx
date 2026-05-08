@@ -69,9 +69,18 @@ const InfoCards = () => {
         {/* Rating Stars */}
         <div className="text-center mt-12">
           <div className="flex items-center justify-center gap-1 mb-2">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={28} className={i < Math.floor(section.ratingsCard?.rating || 4) ? "fill-accent text-accent" : "text-accent"} />
-            ))}
+            {[...Array(5)].map((_, i) => {
+              const rating = section.ratingsCard?.rating || 4.5;
+              const fillPercent = Math.max(0, Math.min(1, rating - i)) * 100;
+              return (
+                <div key={i} className="relative" style={{ width: 28, height: 28 }}>
+                  <Star size={28} className="absolute inset-0 text-accent" />
+                  <div className="absolute inset-0 overflow-hidden" style={{ width: `${fillPercent}%` }}>
+                    <Star size={28} className="text-accent fill-accent" />
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <a href="#" className="text-accent hover:underline text-sm">
             {section.ratingsCard?.rating}/5 from {section.ratingsCard?.reviewCount} reviews
