@@ -5,8 +5,23 @@ import { Clock, DollarSign, Users, Star } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACTIVITY_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultMiniGolfPage } from "@/lib/default-content";
+import gallery1 from "@/assets/mini-golf-gallery-1.jpg";
+import gallery2 from "@/assets/mini-golf-gallery-2.jpg";
+import gallery3 from "@/assets/mini-golf-gallery-3.jpg";
+import gallery4 from "@/assets/mini-golf-gallery-4.jpg";
+import gallery5 from "@/assets/mini-golf-gallery-5.jpg";
+import gallery6 from "@/assets/mini-golf-gallery-6.jpg";
 
 const iconMap: Record<string, any> = { Clock, DollarSign, Users, Star };
+
+const galleryImages = [
+  { src: gallery1, alt: "Aerial view of the Putt & Play mini golf course" },
+  { src: gallery2, alt: "Entrance to Barilla Holiday Park Putt & Play mini golf" },
+  { src: gallery3, alt: "Mini golf fairway lined with cypress trees and rocks" },
+  { src: gallery4, alt: "Hole 11 of the Barilla mini golf course" },
+  { src: gallery5, alt: "Landscaped mini golf hole with rules sign" },
+  { src: gallery6, alt: "Lush mini golf course at Barilla Holiday Park" },
+];
 
 const MiniGolf = () => {
   const { content } = useSanityContent("mini-golf-page", ACTIVITY_PAGE_QUERY, defaultMiniGolfPage, { slug: "mini-golf" });
@@ -72,6 +87,29 @@ const MiniGolf = () => {
               </Link>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="py-16 md:py-20 bg-barilla-cream">
+        <div className="container">
+          <h2 className="section-heading">Mini Golf Gallery</h2>
+          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-4">
+            Take a peek at our 18-hole landscaped course at Barilla Holiday Park.
+          </p>
+          <div className="section-underline" />
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            {galleryImages.map((img) => (
+              <div key={img.src} className="overflow-hidden rounded-lg shadow-md aspect-square group">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </Layout>
