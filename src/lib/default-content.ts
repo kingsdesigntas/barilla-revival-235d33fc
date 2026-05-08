@@ -1,5 +1,6 @@
 // Default/fallback content for all pages when Sanity is not configured
 import cabinImage from "@/assets/barillapark-cabin.jpg";
+import studioCabinImage from "@/assets/barillapark-studio-cabin.jpg";
 import caravanImage from "@/assets/barillapark-powered-site.jpg";
 import caravanAltImage from "@/assets/barillapark-caravan-1.jpg";
 import campingImage from "@/assets/barillapark-camping-1.jpg";
@@ -176,7 +177,7 @@ export const defaultCabinPage = {
         "Couch, TV & breakfast bar",
         "Split-system air conditioning",
       ],
-      image: cabinImage,
+      image: studioCabinImage,
       buttonText: "Book Now",
       buttonLink: "/contact",
     },
