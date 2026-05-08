@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
+import { BOOKING_URL } from "@/lib/booking";
 
 const Hero = () => {
   const { content } = useSanityContent("homePage", HOME_PAGE_QUERY, defaultHomePage);
@@ -22,15 +22,17 @@ const Hero = () => {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           {hero.ctaButtons?.map((btn, i) => (
-            <Link
+            <a
               key={i}
-              to={btn.href}
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className={btn.variant === "success"
                 ? "bg-success text-success-foreground font-semibold px-6 py-3 rounded-md hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg"
                 : "btn-cta"}
             >
               {btn.label}
-            </Link>
+            </a>
           ))}
         </div>
       </div>

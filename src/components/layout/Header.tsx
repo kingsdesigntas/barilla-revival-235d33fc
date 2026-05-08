@@ -209,9 +209,15 @@ const Header = () => {
 						</Link>
 
 						<div className="p-4">
-							<Link to="/contact" className="btn-cta block text-center" onClick={() => setIsMenuOpen(false)}>
+							<a
+								href={BOOKING_URL}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="btn-cta block text-center"
+								onClick={() => setIsMenuOpen(false)}
+							>
 								Book Now
-							</Link>
+							</a>
 						</div>
 					</div>
 				)}
