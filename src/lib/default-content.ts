@@ -266,7 +266,7 @@ export const defaultAirportPage = {
 export const defaultAtBarillaPage = {
   title: "Things to Do at Barilla",
   subtitle: "Fun activities and facilities right here at the park",
-  heroImage: heroImage,
+  heroImage: aerialImage2,
   sectionHeading: "Activities at the Park",
   sectionDescription: "There's never a dull moment at Barilla Holiday Park. We've designed our park to provide fun for all ages.",
   activities: [
@@ -359,7 +359,7 @@ export const defaultDayTripsPage = {
 export const defaultMiniGolfPage = {
   title: "Putt & Play Mini Golf",
   subtitle: "18 holes of family fun in a beautiful garden setting",
-  heroImage: heroImage,
+  heroImage: miniGolfAerialImage,
   sectionHeading: "Mini Golf at Barilla",
   sectionDescription: "Challenge yourself on our beautifully landscaped 18-hole mini golf course. Fun for players of all ages and abilities!",
   bodyText: [
@@ -379,7 +379,7 @@ export const defaultMiniGolfPage = {
 export const defaultContactPage = {
   title: "Contact Us",
   subtitle: "We'd love to hear from you",
-  heroImage: heroImage,
+  heroImage: receptionImage,
   contactHeading: "Get in Touch",
   contactDescription: "Have a question or ready to book? Contact us by phone, email, or fill out the form and we'll get back to you as soon as possible.",
   phone: "1800 465 453",
