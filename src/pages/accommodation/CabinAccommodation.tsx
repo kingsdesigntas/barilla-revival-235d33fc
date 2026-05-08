@@ -87,9 +87,9 @@ const CabinAccommodation = () => {
                       ))}
                     </ul>
                   )}
-                  <Link to={cabin.buttonLink || "/contact"} className="btn-cta block text-center text-sm mt-auto">
+                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm mt-auto">
                     {cabin.buttonText || "Book Now"}
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
