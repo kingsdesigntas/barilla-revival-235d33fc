@@ -97,18 +97,24 @@ const MiniGolf = () => {
             Take a peek at our 18-hole landscaped course at Barilla Holiday Park.
           </p>
           <div className="section-underline" />
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {galleryImages.map((img) => (
-              <div key={img.src} className="overflow-hidden rounded-lg shadow-md aspect-square group">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-            ))}
-          </div>
+          <Carousel opts={{ align: "start", loop: true }} className="mt-12">
+            <CarouselContent className="-ml-4">
+              {galleryImages.map((img) => (
+                <CarouselItem key={img.src} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3">
+                  <div className="overflow-hidden rounded-lg shadow-md aspect-[4/3] group">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </section>
     </Layout>
