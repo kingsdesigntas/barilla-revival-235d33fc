@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Facebook, Star } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { SITE_SETTINGS_QUERY } from "@/lib/sanity-queries";
 import { defaultSiteSettings } from "@/lib/default-content";
+import logo from "@/assets/barilla-holiday-park-logo.png";
 
 const Footer = () => {
   const { content: settings } = useSanityContent("siteSettings", SITE_SETTINGS_QUERY, defaultSiteSettings);
