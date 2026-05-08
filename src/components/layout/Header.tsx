@@ -40,34 +40,24 @@ const Header = () => {
 
 	return (
 		<header className="sticky top-0 z-50 bg-background shadow-sm">
-			{/* Top bar with location */}
+			{/* Top bar with location + translate */}
 			<div className="bg-primary text-primary-foreground py-2">
 				<div className="container flex justify-between items-center text-sm">
 					<div className="flex items-center gap-2">
 						<MapPin size={14} />
 						<span>Barilla Holiday Park - Hobart, Tasmania</span>
 					</div>
-					<a href={`mailto:${settings.email}`} className="flex items-center gap-2 hover:text-accent transition-colors">
-						<Mail size={14} />
-						<span className="hidden sm:inline">{settings.email}</span>
-					</a>
-				</div>
-			</div>
-
-			{/* Booking info bar */}
-			<div className="bg-secondary border-b border-border py-2">
-				<div className="container flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm">
 					<div
 						className="relative"
 						onMouseEnter={() => setOpenDropdown("translate")}
 						onMouseLeave={() => setOpenDropdown(null)}
 					>
-						<button className="flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors">
+						<button className="flex items-center gap-2 hover:text-accent transition-colors">
 							<Languages size={14} />
-							Translate this page
+							<span>Translate this page</span>
 							<ChevronDown size={14} />
 						</button>
-						<div className={`absolute top-full left-0 pt-2 z-50 ${openDropdown === "translate" ? "block" : "hidden"}`}>
+						<div className={`absolute top-full right-0 pt-2 z-50 ${openDropdown === "translate" ? "block" : "hidden"}`}>
 							<div className="bg-background shadow-lg rounded-lg py-2 min-w-[180px] border">
 								{[
 									{ label: "中文 (Chinese)", code: "zh-CN" },
@@ -87,6 +77,12 @@ const Header = () => {
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+
+			{/* Booking info bar */}
+			<div className="bg-secondary border-b border-border py-2">
+				<div className="container flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm">
 					<a
 						href={`tel:${settings.freeCallPhone?.replace(/\s/g, "")}`}
 						className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
