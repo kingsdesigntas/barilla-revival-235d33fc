@@ -117,8 +117,8 @@ export const defaultHomePage = {
       heading: "Ratings",
       description: "Barilla Holiday Park has a 4 star rating on Tripadvisor and a certificate of excellence.",
       tripadvisorLink: "https://tripadvisor.com",
-      rating: 4.6,
-      reviewCount: 160,
+      rating: 4.4,
+      reviewCount: 369,
     },
     socialCard: {
       heading: "Like Us on Facebook",
