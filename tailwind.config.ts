@@ -64,6 +64,8 @@ export default {
           "blue-dark": "hsl(var(--barilla-blue-dark))",
           orange: "hsl(var(--barilla-orange))",
           green: "hsl(var(--barilla-green))",
+          yellow: "hsl(var(--barilla-yellow))",
+          red: "hsl(var(--barilla-red))",
           cream: "hsl(var(--barilla-cream))",
           footer: "hsl(var(--barilla-footer))",
         },
