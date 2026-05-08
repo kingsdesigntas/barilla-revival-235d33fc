@@ -29,11 +29,11 @@
 		--muted-foreground: 215 16% 47%;
 
 		/* Accent - Orange/Yellow for CTAs */
-		--accent: 37 90% 51%;
+		--accent: 35 99% 50%;
 		--accent-foreground: 0 0% 100%;
 
 		/* Success/Green for highlights */
-		--success: 145 63% 42%;
+		--success: 166 100% 25%;
 		--success-foreground: 0 0% 100%;
 
 		/* Destructive */
