@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, MapPin, Star, Facebook, ExternalLink } from "lucide-react";
+import { Phone, MapPin, Star, Facebook, ExternalLink, Map } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
@@ -28,8 +28,13 @@ const InfoCards = () => {
                 <Phone size={18} />
                 <span>{section.contactCard?.phone}</span>
               </a>
-              <a href={section.contactCard?.mapLink} target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:underline flex items-center gap-1">
-                Find us on the map <ExternalLink size={14} />
+              <a
+                href={section.contactCard?.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
+              >
+                <Map size={16} /> Get Directions on Google Maps
               </a>
               <Link to="/contact" className="btn-cta block text-center text-sm mt-4">Contact Us</Link>
             </div>

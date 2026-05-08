@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, Map } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useSanityContent } from "@/hooks/useSanityContent";
@@ -56,7 +56,15 @@ const Contact = () => {
                   <div className="bg-barilla-cream rounded-full p-3 shrink-0"><MapPin className="text-primary" size={24} /></div>
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Address</h3>
-                    <p className="text-muted-foreground whitespace-pre-line">{content.address}</p>
+                    <p className="text-muted-foreground whitespace-pre-line mb-2">{content.address}</p>
+                    <a
+                      href={content.mapLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
+                    >
+                      <Map size={16} /> Get Directions on Google Maps
+                    </a>
                   </div>
                 </div>
 
@@ -69,13 +77,18 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
+              {/* Map CTA */}
               <div className="mt-8">
                 <div className="bg-barilla-cream rounded-lg p-8 text-center">
-                  <MapPin className="text-primary mx-auto mb-2" size={32} />
-                  <p className="text-sm text-muted-foreground mb-4">View on Google Maps</p>
-                  <a href={content.mapLink} target="_blank" rel="noopener noreferrer" className="btn-cta inline-block text-sm">
-                    Get Directions
+                  <Map className="text-primary mx-auto mb-2" size={32} />
+                  <p className="text-sm text-muted-foreground mb-4">View our location on Google Maps</p>
+                  <a
+                    href={content.mapLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-cta inline-flex items-center gap-2 text-sm"
+                  >
+                    <Map size={16} /> Get Directions on Google Maps
                   </a>
                 </div>
               </div>
