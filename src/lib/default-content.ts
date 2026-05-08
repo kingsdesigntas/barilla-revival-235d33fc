@@ -9,6 +9,8 @@ import miniGolfAerialImage from "@/assets/barillapark-aerial-mini-golf.jpg";
 import aerialImage from "@/assets/barillapark-aerial-1.jpg";
 import aerialImage2 from "@/assets/barillapark-aerial-2.jpg";
 import receptionImage from "@/assets/barillapark-reception.jpg";
+import heroCaravan from "@/assets/hero-caravan.jpg";
+import heroCamping from "@/assets/hero-camping.jpg";
 
 const heroImage = aerialImage;
 
@@ -179,7 +181,7 @@ export const defaultCabinPage = {
 export const defaultCaravanPage = {
   title: "Caravan Accommodation",
   subtitle: "Spacious sites with power and modern amenities for your caravan or motorhome",
-  heroImage: heroImage,
+  heroImage: heroCaravan,
   sectionHeading: "Our Caravan Sites",
   sectionDescription: "All of our caravan sites are spacious with sheltered and friendly surroundings. A perfect site for your Caravan or Motorhome!",
   items: [
@@ -202,7 +204,7 @@ export const defaultCaravanPage = {
 export const defaultCampingPage = {
   title: "Camping Grounds",
   subtitle: "Sheltered, family-friendly camping in beautiful Tasmania",
-  heroImage: heroImage,
+  heroImage: heroCamping,
   sectionHeading: "Camp at Barilla",
   sectionDescription: "Barilla Holiday Park offers sheltered and friendly camping grounds with lots of things to do for all the family.",
   items: [
