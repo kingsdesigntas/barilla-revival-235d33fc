@@ -1,3 +1,4 @@
+import { Star } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
@@ -6,6 +7,9 @@ import { BOOKING_URL } from "@/lib/booking";
 const Hero = () => {
   const { content } = useSanityContent("homePage", HOME_PAGE_QUERY, defaultHomePage);
   const hero = content.hero;
+  const ratings = content.infoSection?.ratingsCard;
+  const rating = ratings?.rating ?? 4.4;
+  const reviewCount = ratings?.reviewCount ?? 369;
 
   return (
     <section
