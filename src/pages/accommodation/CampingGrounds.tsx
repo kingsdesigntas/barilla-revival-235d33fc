@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
+import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
 import { Link } from "react-router-dom";
 import { Tent, ShowerHead, Wifi, Flame, Trees, Sun } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
@@ -14,6 +15,7 @@ const CampingGrounds = () => {
   return (
     <Layout>
       <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} />
+      <AccommodationHighlights />
       <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-4xl">
           <h2 className="section-heading">{content.sectionHeading}</h2>

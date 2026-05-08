@@ -1,4 +1,4 @@
-import { Wifi, Car, Utensils, ShowerHead, Flame, Dog, Trees, Baby } from "lucide-react";
+import { Wifi, Car, Utensils, ShowerHead, Flame, Trees, Baby, Tv } from "lucide-react";
 import aerial from "@/assets/barillapark-aerial-1.jpg";
 import reception from "@/assets/barillapark-reception.jpg";
 import camping from "@/assets/barillapark-camping-2.jpg";
@@ -10,7 +10,7 @@ const facilities = [
   { icon: Car, label: "Plenty of off-street parking" },
   { icon: Flame, label: "Laundry facilities" },
   { icon: Trees, label: "Shaded grassy sites" },
-  { icon: Dog, label: "Pet-friendly options" },
+  { icon: Tv, label: "TV lounge & games room" },
   { icon: Baby, label: "Family playground" },
 ];
 
