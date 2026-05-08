@@ -10,7 +10,7 @@ import gallery2 from "@/assets/mini-golf-gallery-2.jpg";
 import gallery3 from "@/assets/mini-golf-gallery-3.jpg";
 import gallery4 from "@/assets/mini-golf-gallery-4.jpg";
 import gallery5 from "@/assets/mini-golf-gallery-5.jpg";
-import gallery6 from "@/assets/mini-golf-gallery-6.jpg";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const iconMap: Record<string, any> = { Clock, DollarSign, Users, Star };
 
@@ -20,7 +20,6 @@ const galleryImages = [
   { src: gallery3, alt: "Mini golf fairway lined with cypress trees and rocks" },
   { src: gallery4, alt: "Hole 11 of the Barilla mini golf course" },
   { src: gallery5, alt: "Landscaped mini golf hole with rules sign" },
-  { src: gallery6, alt: "Lush mini golf course at Barilla Holiday Park" },
 ];
 
 const MiniGolf = () => {
@@ -98,18 +97,24 @@ const MiniGolf = () => {
             Take a peek at our 18-hole landscaped course at Barilla Holiday Park.
           </p>
           <div className="section-underline" />
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {galleryImages.map((img) => (
-              <div key={img.src} className="overflow-hidden rounded-lg shadow-md aspect-square group">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-            ))}
-          </div>
+          <Carousel opts={{ align: "start", loop: true }} className="mt-12">
+            <CarouselContent className="-ml-4">
+              {galleryImages.map((img) => (
+                <CarouselItem key={img.src} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3">
+                  <div className="overflow-hidden rounded-lg shadow-md aspect-[4/3] group">
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </section>
     </Layout>
