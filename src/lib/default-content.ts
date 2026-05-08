@@ -110,7 +110,7 @@ export const defaultHomePage = {
       heading: "Contact Us",
       address: "75 Richmond Road, Cambridge 7170",
       phone: "Freecall: 1800 465 453",
-      mapLink: "https://maps.google.com",
+      mapLink: "https://maps.google.com/?q=75+Richmond+Road+Cambridge+Tasmania+7170",
     },
     ratingsCard: {
       heading: "Ratings",

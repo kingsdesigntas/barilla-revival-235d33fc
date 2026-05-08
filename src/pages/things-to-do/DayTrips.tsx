@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
-import { MapPin, ExternalLink, Users } from "lucide-react";
+import { MapPin, ExternalLink, Users, Map } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { DAY_TRIPS_QUERY } from "@/lib/sanity-queries";
 import { defaultDayTripsPage } from "@/lib/default-content";
@@ -76,7 +76,7 @@ const DayTrips = () => {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-semibold px-5 py-2.5 rounded-md hover:bg-primary/90 transition-colors"
                     >
-                      Open Route in Google Maps <ExternalLink size={14} />
+                      <Map size={16} /> Open Route in Google Maps <ExternalLink size={14} />
                     </a>
                   )}
                 </div>

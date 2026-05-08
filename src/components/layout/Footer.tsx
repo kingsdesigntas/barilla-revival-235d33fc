@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Star } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Star, Map } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { SITE_SETTINGS_QUERY } from "@/lib/sanity-queries";
 import { defaultSiteSettings } from "@/lib/default-content";
@@ -25,6 +25,14 @@ const Footer = () => {
                 <MapPin size={18} className="mt-0.5 shrink-0" />
                 <span>{settings.address}</span>
               </div>
+              <a
+                href="https://maps.google.com/?q=75+Richmond+Road+Cambridge+Tasmania+7170"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 footer-link text-accent font-medium"
+              >
+                <Map size={16} /> Get Directions on Google Maps
+              </a>
               <a href={`tel:${settings.freeCallPhone?.replace(/\s/g, "")}`} className="flex items-center gap-3 footer-link">
                 <Phone size={18} />
                 <span>Freecall: {settings.freeCallPhone}</span>
