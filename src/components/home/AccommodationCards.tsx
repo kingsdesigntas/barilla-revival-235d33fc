@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Sun } from "lucide-react";
+import { Home, Caravan, Tent } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
@@ -12,21 +12,31 @@ interface AccommodationCardProps {
   buttonText: string;
 }
 
-const AccommodationCard = ({ title, description, image, link, buttonText }: AccommodationCardProps) => (
-  <div className="card-accommodation">
-    <div className="card-header">{title}</div>
-    <div className="relative aspect-[4/3] overflow-hidden">
-      <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-    </div>
-    <div className="p-6">
-      <div className="flex justify-center mb-4">
-        <Sun className="text-accent" size={24} />
+const iconForTitle = (title: string) => {
+  const t = title.toLowerCase();
+  if (t.includes("caravan")) return Caravan;
+  if (t.includes("camp")) return Tent;
+  return Home;
+};
+
+const AccommodationCard = ({ title, description, image, link, buttonText }: AccommodationCardProps) => {
+  const Icon = iconForTitle(title);
+  return (
+    <div className="card-accommodation">
+      <div className="card-header">{title}</div>
+      <div className="relative aspect-[4/3] overflow-hidden">
+        <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
       </div>
-      <p className="text-muted-foreground text-center text-sm mb-6">{description}</p>
-      <Link to={link} className="btn-cta block text-center text-sm">{buttonText}</Link>
+      <div className="p-6">
+        <div className="flex justify-center mb-4">
+          <Icon className="text-accent" size={28} />
+        </div>
+        <p className="text-muted-foreground text-center text-sm mb-6">{description}</p>
+        <Link to={link} className="btn-cta block text-center text-sm">{buttonText}</Link>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const AccommodationCards = () => {
   const { content } = useSanityContent("homePage", HOME_PAGE_QUERY, defaultHomePage);
