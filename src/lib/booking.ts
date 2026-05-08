@@ -1,0 +1,2 @@
+export const BOOKING_URL =
+  "https://bookings8.rmscloud.com/obookings3/Search/Index/602/1?_gl=1*coq98j*_gcl_au*MTE5MzQ2MTY5Ni4xNzc2MzA0ODg4*_ga*MTg0NjYzMjk2My4xNzY4Mjc1NTY4*_ga_VVXE040E9F*czE3NzgxOTg2MDMkbzMyJGcxJHQxNzc4MTk5OTU5JGo2MCRsMCRoMA..&_ga=2.241882951.413372827.1778198603-1846632963.1768275568";
