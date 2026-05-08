@@ -4,6 +4,7 @@ import { Menu, X, Phone, Mail, ChevronDown, Calendar } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { SITE_SETTINGS_QUERY } from "@/lib/sanity-queries";
 import { defaultSiteSettings } from "@/lib/default-content";
+import logo from "@/assets/barilla-holiday-park-logo.png";
 
 const Header = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -88,9 +89,8 @@ const Header = () => {
 			<nav className="container py-4">
 				<div className="flex justify-between items-center">
 					{/* Logo */}
-					<Link to="/" className="flex items-center">
-						<span className="text-2xl font-serif font-bold text-primary tracking-wide">{settings.siteName}</span>
-						<span className="hidden sm:block ml-2 text-sm text-muted-foreground">{settings.tagline}</span>
+					<Link to="/" className="flex items-center" aria-label="Barilla Holiday Park - Home">
+						<img src={logo} alt="Barilla Holiday Park" className="h-12 md:h-14 w-auto" />
 					</Link>
 
 					{/* Desktop Navigation */}

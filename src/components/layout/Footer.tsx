@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Facebook, Star } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { SITE_SETTINGS_QUERY } from "@/lib/sanity-queries";
 import { defaultSiteSettings } from "@/lib/default-content";
+import logo from "@/assets/barilla-holiday-park-logo.png";
 
 const Footer = () => {
   const { content: settings } = useSanityContent("siteSettings", SITE_SETTINGS_QUERY, defaultSiteSettings);
@@ -10,6 +11,11 @@ const Footer = () => {
   return (
     <footer className="bg-barilla-footer text-primary-foreground">
       <div className="container py-12">
+        <div className="mb-10 flex justify-center md:justify-start">
+          <div className="bg-white rounded-lg px-5 py-3 inline-block">
+            <img src={logo} alt="Barilla Holiday Park" className="h-12 w-auto" />
+          </div>
+        </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Contact Info */}
           <div>
