@@ -10,7 +10,7 @@ import gallery2 from "@/assets/mini-golf-gallery-2.jpg";
 import gallery3 from "@/assets/mini-golf-gallery-3.jpg";
 import gallery4 from "@/assets/mini-golf-gallery-4.jpg";
 import gallery5 from "@/assets/mini-golf-gallery-5.jpg";
-import gallery6 from "@/assets/mini-golf-gallery-6.jpg";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const iconMap: Record<string, any> = { Clock, DollarSign, Users, Star };
 
@@ -20,7 +20,6 @@ const galleryImages = [
   { src: gallery3, alt: "Mini golf fairway lined with cypress trees and rocks" },
   { src: gallery4, alt: "Hole 11 of the Barilla mini golf course" },
   { src: gallery5, alt: "Landscaped mini golf hole with rules sign" },
-  { src: gallery6, alt: "Lush mini golf course at Barilla Holiday Park" },
 ];
 
 const MiniGolf = () => {
