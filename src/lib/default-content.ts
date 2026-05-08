@@ -1,9 +1,16 @@
 // Default/fallback content for all pages when Sanity is not configured
-import heroImage from "@/assets/hero-cabin.jpg";
-import cabinImage from "@/assets/cabin-accommodation.jpg";
-import caravanImage from "@/assets/caravan-site.jpg";
-import campingImage from "@/assets/camping-grounds.jpg";
-import miniGolfImage from "@/assets/mini-golf.jpg";
+import cabinImage from "@/assets/barillapark-cabin.jpg";
+import caravanImage from "@/assets/barillapark-powered-site.jpg";
+import caravanAltImage from "@/assets/barillapark-caravan-1.jpg";
+import campingImage from "@/assets/barillapark-camping-1.jpg";
+import campingAltImage from "@/assets/barillapark-camping-2.jpg";
+import miniGolfImage from "@/assets/barillapark-mini-golf.jpg";
+import miniGolfAerialImage from "@/assets/barillapark-aerial-mini-golf.jpg";
+import aerialImage from "@/assets/barillapark-aerial-1.jpg";
+import aerialImage2 from "@/assets/barillapark-aerial-2.jpg";
+import receptionImage from "@/assets/barillapark-reception.jpg";
+
+const heroImage = aerialImage;
 
 export const defaultSiteSettings = {
   siteName: "BARILLA",
@@ -177,8 +184,8 @@ export const defaultCaravanPage = {
   sectionDescription: "All of our caravan sites are spacious with sheltered and friendly surroundings. A perfect site for your Caravan or Motorhome!",
   items: [
     { name: "Powered Site", description: "Spacious powered sites with easy access to amenities. Suitable for caravans and motorhomes of all sizes.", image: caravanImage, buttonText: "Book Now", buttonLink: "/contact" },
-    { name: "Premium Powered Site", description: "Our premium sites offer extra space, better views, and are located in the quietest areas of the park.", image: caravanImage, buttonText: "Book Now", buttonLink: "/contact" },
-    { name: "Drive-Through Site", description: "Convenient drive-through sites perfect for larger rigs. No reversing required!", image: caravanImage, buttonText: "Book Now", buttonLink: "/contact" },
+    { name: "Premium Powered Site", description: "Our premium sites offer extra space, better views, and are located in the quietest areas of the park.", image: caravanAltImage, buttonText: "Book Now", buttonLink: "/contact" },
+    { name: "Drive-Through Site", description: "Convenient drive-through sites perfect for larger rigs. No reversing required!", image: campingAltImage, buttonText: "Book Now", buttonLink: "/contact" },
   ],
   amenitiesHeading: "Site Amenities",
   amenities: [
@@ -237,7 +244,7 @@ export const defaultAirportPage = {
     {
       name: "Caravan/Motorhome Site",
       description: "Powered site for your caravan or motorhome. Easy access and secure overnight parking near the airport.",
-      image: "",
+      image: caravanAltImage,
       buttonText: "Book Site",
       buttonLink: "/contact",
     },
@@ -259,7 +266,7 @@ export const defaultAirportPage = {
 export const defaultAtBarillaPage = {
   title: "Things to Do at Barilla",
   subtitle: "Fun activities and facilities right here at the park",
-  heroImage: heroImage,
+  heroImage: aerialImage2,
   sectionHeading: "Activities at the Park",
   sectionDescription: "There's never a dull moment at Barilla Holiday Park. We've designed our park to provide fun for all ages.",
   activities: [
@@ -352,7 +359,7 @@ export const defaultDayTripsPage = {
 export const defaultMiniGolfPage = {
   title: "Putt & Play Mini Golf",
   subtitle: "18 holes of family fun in a beautiful garden setting",
-  heroImage: heroImage,
+  heroImage: miniGolfAerialImage,
   sectionHeading: "Mini Golf at Barilla",
   sectionDescription: "Challenge yourself on our beautifully landscaped 18-hole mini golf course. Fun for players of all ages and abilities!",
   bodyText: [
@@ -372,7 +379,7 @@ export const defaultMiniGolfPage = {
 export const defaultContactPage = {
   title: "Contact Us",
   subtitle: "We'd love to hear from you",
-  heroImage: heroImage,
+  heroImage: receptionImage,
   contactHeading: "Get in Touch",
   contactDescription: "Have a question or ready to book? Contact us by phone, email, or fill out the form and we'll get back to you as soon as possible.",
   phone: "1800 465 453",
