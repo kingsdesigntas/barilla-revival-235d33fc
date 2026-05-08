@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
 import { Link } from "react-router-dom";
+import { BOOKING_URL } from "@/lib/booking";
 import { Plane, Clock, Car, Bed, MapPin, Sun } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
@@ -59,9 +60,9 @@ const AirportAccommodation = () => {
                       <Sun className="text-accent" size={24} />
                     </div>
                     <p className="text-muted-foreground text-center text-sm mb-4">{item.description}</p>
-                    <Link to={item.buttonLink || "/contact"} className="btn-cta block text-center text-sm">
+                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
                       {item.buttonText || "Book"}
-                    </Link>
+                    </a>
                   </div>
                 </div>
               ))}

@@ -6,6 +6,7 @@ import { Bed, Users, Wifi, Tv, UtensilsCrossed, Car, Sun, Check } from "lucide-r
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultCabinPage } from "@/lib/default-content";
+import { BOOKING_URL } from "@/lib/booking";
 
 const iconMap: Record<string, any> = { Bed, Users, Wifi, Tv, UtensilsCrossed, Car, Sun };
 
