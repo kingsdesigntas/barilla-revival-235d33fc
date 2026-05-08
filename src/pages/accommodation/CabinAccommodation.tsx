@@ -1,5 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
+import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
 import { Link } from "react-router-dom";
 import { Bed, Users, Wifi, Tv, UtensilsCrossed, Car, Sun, Check } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
@@ -17,6 +18,7 @@ const CabinAccommodation = () => {
   return (
     <Layout>
       <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} />
+      <AccommodationHighlights />
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-5xl">
