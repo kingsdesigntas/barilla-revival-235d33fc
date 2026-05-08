@@ -11,7 +11,7 @@ const highlights = [
     icon: Users,
     title: "Family Friendly",
     description: "Barilla Holiday Park offers affordable, inclusive, and family-friendly accommodation.",
-    bg: "bg-barilla-yellow",
+    bg: "bg-barilla-orange",
   },
   {
     icon: Award,
