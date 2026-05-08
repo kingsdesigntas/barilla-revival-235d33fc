@@ -8,63 +8,66 @@
 	:root {
 		/* Barilla Holiday Park Design System */
 		--background: 0 0% 100%;
-		--foreground: 210 11% 15%;
+		--foreground: 0 0% 13%;
 
 		--card: 0 0% 100%;
-		--card-foreground: 210 11% 15%;
+		--card-foreground: 0 0% 13%;
 
 		--popover: 0 0% 100%;
-		--popover-foreground: 210 11% 15%;
+		--popover-foreground: 0 0% 13%;
 
-		/* Primary Blue - Header & Headings */
-		--primary: 201 64% 28%;
+		/* Primary - Barilla Blue #00337B */
+		--primary: 214 100% 24%;
 		--primary-foreground: 0 0% 100%;
 
-		/* Secondary - Light blue/gray */
-		--secondary: 210 40% 96%;
-		--secondary-foreground: 201 64% 28%;
+		/* Secondary - Light Cream #F6F1E7 */
+		--secondary: 39 51% 94%;
+		--secondary-foreground: 214 100% 24%;
 
-		/* Muted */
-		--muted: 210 40% 96%;
-		--muted-foreground: 215 16% 47%;
+		/* Muted - Warm Beige */
+		--muted: 34 44% 84%;
+		--muted-foreground: 0 0% 30%;
 
-		/* Accent - Orange/Yellow for CTAs */
-		--accent: 37 90% 51%;
-		--accent-foreground: 0 0% 100%;
+		/* Accent - Pasta Gold #D8A24A */
+		--accent: 36 64% 57%;
+		--accent-foreground: 0 0% 13%;
 
 		/* Success/Green for highlights */
 		--success: 145 63% 42%;
 		--success-foreground: 0 0% 100%;
 
-		/* Destructive */
-		--destructive: 0 84% 60%;
+		/* Destructive - Barilla Red #D22630 */
+		--destructive: 356 70% 49%;
 		--destructive-foreground: 0 0% 100%;
 
-		--border: 214 32% 91%;
-		--input: 214 32% 91%;
-		--ring: 201 64% 28%;
+		--border: 34 30% 86%;
+		--input: 34 30% 86%;
+		--ring: 214 100% 24%;
 
 		--radius: 0.5rem;
 
 		/* Custom Barilla colors */
-		--barilla-blue: 201 64% 28%;
-		--barilla-blue-dark: 201 70% 22%;
-		--barilla-orange: 37 90% 51%;
-		--barilla-orange-hover: 37 90% 45%;
+		--barilla-blue: 214 100% 24%;
+		--barilla-blue-dark: 220 100% 18%;
+		--barilla-orange: 36 64% 57%;
+		--barilla-orange-hover: 36 64% 50%;
 		--barilla-green: 145 63% 42%;
-		--barilla-yellow: 45 95% 52%;
-		--barilla-red: 0 78% 50%;
-		--barilla-cream: 40 33% 97%;
-		--barilla-footer: 210 29% 24%;
+		--barilla-yellow: 36 64% 57%;
+		--barilla-red: 356 70% 49%;
+		--barilla-cream: 39 51% 94%;
+		--barilla-beige: 34 44% 84%;
+		--barilla-gold: 36 64% 57%;
+		--barilla-charcoal: 0 0% 13%;
+		--barilla-footer: 220 100% 18%;
 
-		--sidebar-background: 0 0% 98%;
-		--sidebar-foreground: 240 5.3% 26.1%;
-		--sidebar-primary: 240 5.9% 10%;
-		--sidebar-primary-foreground: 0 0% 98%;
-		--sidebar-accent: 240 4.8% 95.9%;
-		--sidebar-accent-foreground: 240 5.9% 10%;
-		--sidebar-border: 220 13% 91%;
-		--sidebar-ring: 217.2 91.2% 59.8%;
+		--sidebar-background: 39 51% 94%;
+		--sidebar-foreground: 0 0% 13%;
+		--sidebar-primary: 214 100% 24%;
+		--sidebar-primary-foreground: 0 0% 100%;
+		--sidebar-accent: 34 44% 84%;
+		--sidebar-accent-foreground: 0 0% 13%;
+		--sidebar-border: 34 30% 86%;
+		--sidebar-ring: 214 100% 24%;
 	}
 
 	.dark {

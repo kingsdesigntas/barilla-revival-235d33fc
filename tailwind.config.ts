@@ -67,6 +67,9 @@ export default {
           yellow: "hsl(var(--barilla-yellow))",
           red: "hsl(var(--barilla-red))",
           cream: "hsl(var(--barilla-cream))",
+          beige: "hsl(var(--barilla-beige))",
+          gold: "hsl(var(--barilla-gold))",
+          charcoal: "hsl(var(--barilla-charcoal))",
           footer: "hsl(var(--barilla-footer))",
         },
         sidebar: {
