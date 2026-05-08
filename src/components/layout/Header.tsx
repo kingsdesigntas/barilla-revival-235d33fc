@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail, ChevronDown, Calendar } from "lucide-react";
+import { Menu, X, Phone, Mail, ChevronDown, Calendar, MapPin, Languages } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { SITE_SETTINGS_QUERY } from "@/lib/sanity-queries";
 import { defaultSiteSettings } from "@/lib/default-content";
@@ -40,16 +40,13 @@ const Header = () => {
 
 	return (
 		<header className="sticky top-0 z-50 bg-background shadow-sm">
-			{/* Top bar with contact info */}
+			{/* Top bar with location */}
 			<div className="bg-primary text-primary-foreground py-2">
 				<div className="container flex justify-between items-center text-sm">
-					<a
-						href={`tel:${settings.freeCallPhone?.replace(/\s/g, "")}`}
-						className="flex items-center gap-2 hover:text-accent transition-colors"
-					>
-						<Phone size={14} />
-						<span>Freecall: {settings.freeCallPhone}</span>
-					</a>
+					<div className="flex items-center gap-2">
+						<MapPin size={14} />
+						<span>Barilla Holiday Park - Hobart, Tasmania</span>
+					</div>
 					<a href={`mailto:${settings.email}`} className="flex items-center gap-2 hover:text-accent transition-colors">
 						<Mail size={14} />
 						<span className="hidden sm:inline">{settings.email}</span>
@@ -60,7 +57,36 @@ const Header = () => {
 			{/* Booking info bar */}
 			<div className="bg-secondary border-b border-border py-2">
 				<div className="container flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm">
-					<span className="text-foreground font-medium">Call Us Anytime</span>
+					<div
+						className="relative"
+						onMouseEnter={() => setOpenDropdown("translate")}
+						onMouseLeave={() => setOpenDropdown(null)}
+					>
+						<button className="flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors">
+							<Languages size={14} />
+							Translate this page
+							<ChevronDown size={14} />
+						</button>
+						<div className={`absolute top-full left-0 pt-2 z-50 ${openDropdown === "translate" ? "block" : "hidden"}`}>
+							<div className="bg-background shadow-lg rounded-lg py-2 min-w-[180px] border">
+								{[
+									{ label: "中文 (Chinese)", code: "zh-CN" },
+									{ label: "Deutsch (German)", code: "de" },
+									{ label: "Français (French)", code: "fr" },
+								].map((lang) => (
+									<a
+										key={lang.code}
+										href={`https://translate.google.com/translate?sl=en&tl=${lang.code}&u=${encodeURIComponent(typeof window !== "undefined" ? window.location.href : "https://barillaholidaypark.com.au")}`}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="block px-4 py-2 hover:bg-secondary transition-colors text-foreground hover:text-accent"
+									>
+										{lang.label}
+									</a>
+								))}
+							</div>
+						</div>
+					</div>
 					<a
 						href={`tel:${settings.freeCallPhone?.replace(/\s/g, "")}`}
 						className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
