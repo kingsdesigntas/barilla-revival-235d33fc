@@ -18,8 +18,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Open Sans', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        sans: ['Kanit', 'sans-serif'],
+        serif: ['Outfit', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

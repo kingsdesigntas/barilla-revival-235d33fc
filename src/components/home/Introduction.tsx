@@ -10,11 +10,11 @@ const Introduction = () => {
     <section className="py-16 md:py-24 bg-background">
       <div className="container max-w-4xl">
         <h2 className="section-heading text-primary">{intro.heading}</h2>
-        <p className="text-center text-accent font-medium mb-8">
+        <p className="text-left text-accent font-medium mb-8">
           {intro.subheading}
         </p>
         <div className="section-underline" />
-        <div className="prose prose-lg max-w-none text-center text-foreground/80 space-y-6">
+        <div className="prose prose-lg max-w-none text-left text-foreground/80 space-y-6">
           {intro.paragraphs?.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
