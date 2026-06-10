@@ -117,7 +117,7 @@ const Header = () => {
 				<div className="flex justify-between items-center">
 					{/* Logo */}
 					<Link to="/" className="flex items-center" aria-label="Barilla Holiday Park - Home" style={{ marginBottom: "-25px" }}>
-						<img src={logo} alt="Barilla Holiday Park" className="w-[75px] h-auto" />
+						<img src={logo} alt="Barilla Holiday Park" className="h-[75px] w-auto" />
 					</Link>
 
 					{/* Desktop Navigation */}
