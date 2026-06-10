@@ -1,6 +1,9 @@
+import type { CSSProperties } from "react";
+
 interface IconProps {
   className?: string;
   size?: number;
+  style?: CSSProperties;
 }
 
 export const CabinIcon = ({ className, size = 40 }: IconProps) => (
