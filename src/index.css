@@ -168,7 +168,12 @@
 	}
 
 	.contact-card-header {
-		@apply bg-primary text-primary-foreground py-9 px-4 font-semibold uppercase tracking-wide text-sm text-center;
+		@apply bg-primary text-primary-foreground py-9 px-4 uppercase text-center;
+		font-family: "Kanit", sans-serif;
+		font-weight: 700;
+		font-size: 20pt;
+		letter-spacing: 0.02em;
+		line-height: 1.1;
 	}
 
 	.star-rating {
