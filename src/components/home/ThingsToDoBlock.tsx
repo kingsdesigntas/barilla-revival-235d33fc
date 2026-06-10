@@ -36,11 +36,11 @@ const ThingsToDoBlock = () => {
   return (
     <section className="py-16 md:py-24 bg-barilla-cream">
       <div className="container">
-        <p className="text-center text-accent font-semibold uppercase tracking-wider text-sm mb-3">
+        <p className="text-left text-accent font-semibold uppercase tracking-wider text-sm mb-3">
           Explore Tasmania
         </p>
         <h2 className="section-heading">Things to Do</h2>
-        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-4">
+        <p className="text-left text-muted-foreground max-w-2xl mb-4">
           From on-park activities to iconic Tasmanian destinations, there's plenty to keep you busy
           during your stay at Barilla.
         </p>
