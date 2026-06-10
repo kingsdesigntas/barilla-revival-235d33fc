@@ -97,13 +97,13 @@
 
 	body {
 		@apply bg-background text-foreground antialiased;
-		font-family: "Kanit", sans-serif;
+		font-family: "Outfit", sans-serif;
 		font-weight: 400;
 		text-align: left;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: "Outfit", sans-serif;
+		font-family: "Kanit", sans-serif;
 		text-align: left;
 	}
 
@@ -129,7 +129,7 @@
 
 	.section-heading {
 		@apply text-primary text-2xl md:text-3xl font-semibold text-left mb-2;
-		font-family: "Outfit", sans-serif;
+		font-family: "Kanit", sans-serif;
 	}
 
 	.section-underline {
