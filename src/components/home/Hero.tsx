@@ -38,6 +38,8 @@ const Hero = () => {
                 const iconSizes = [38, 64, 47]; // sized so each renders at 36px tall
                 const Icon = icons[i] || CabinIcon;
                 const iconSize = iconSizes[i] || 38;
+                const words = btn.label.split(" ");
+                const first = words[0]?.toUpperCase() ?? "";
                 const second = words.slice(1).join(" ").toUpperCase() ?? "";
                 const isGreen = i < 2;
                 return (
@@ -52,7 +54,7 @@ const Hero = () => {
                         : "bg-accent text-accent-foreground hover:bg-[hsl(var(--barilla-orange-hover))]"
                     }`}
                   >
-                    <Icon size={36} className="text-current shrink-0" style={{ height: 36, width: "auto" }} />
+                    <Icon size={iconSize} className="text-current shrink-0" />
                     <div className="flex flex-col text-left">
                       <span
                         className="font-['Kanit'] font-bold uppercase"
