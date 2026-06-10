@@ -163,7 +163,7 @@
 	}
 
 	.contact-card-header {
-		@apply bg-primary text-primary-foreground py-3 px-4 font-semibold uppercase tracking-wide text-sm;
+		@apply bg-primary text-primary-foreground py-9 px-4 font-semibold uppercase tracking-wide text-sm text-center;
 	}
 
 	.star-rating {
