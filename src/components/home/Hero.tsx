@@ -1,4 +1,5 @@
-import { Star, Home, Car, Tent } from "lucide-react";
+import { Star } from "lucide-react";
+import { CabinIcon, CaravanIcon, CampingIcon } from "@/components/icons/AccommodationIcons";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
@@ -29,8 +30,8 @@ const Hero = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               {hero.ctaButtons?.map((btn, i) => {
-                const icons = [Home, Car, Tent];
-                const Icon = icons[i] || Home;
+                const icons = [CabinIcon, CaravanIcon, CampingIcon];
+                const Icon = icons[i] || CabinIcon;
                 const words = btn.label.split(" ");
                 const first = words[0]?.toUpperCase() ?? "";
                 const second = words.slice(1).join(" ").toUpperCase() ?? "";
@@ -47,10 +48,10 @@ const Hero = () => {
                         : "bg-accent text-accent-foreground hover:bg-[hsl(var(--barilla-orange-hover))]"
                     }`}
                   >
-                    <Icon size={28} strokeWidth={1.5} />
-                    <div className="flex flex-col text-right leading-tight">
+                    <Icon size={32} className="text-current" />
+                    <div className="flex flex-col text-left leading-tight">
                       <span
-                        className="font-['Kanit'] uppercase"
+                        className="font-['Kanit'] font-bold uppercase"
                         style={{ fontSize: "20px", letterSpacing: "0.02em" }}
                       >
                         {first}
