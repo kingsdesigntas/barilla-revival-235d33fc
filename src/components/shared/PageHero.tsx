@@ -12,7 +12,7 @@ const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) => {
     >
       <div className="page-hero-overlay" />
       <div className="page-hero-content container">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-4 drop-shadow-lg">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4 drop-shadow-lg">
           {title}
         </h1>
         {subtitle && (

@@ -32,7 +32,7 @@ const AccommodationHighlights = () => {
                 <Icon size={22} />
               </span>
               <div>
-                <h3 className="text-sm font-bold uppercase tracking-wider text-primary mb-1">
+                <h3 className="text-sm uppercase tracking-wider text-primary mb-1">
                   {title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-snug">{description}</p>

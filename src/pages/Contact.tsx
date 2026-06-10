@@ -30,7 +30,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <h2 className="text-2xl font-serif font-bold text-primary mb-6">{content.contactHeading}</h2>
+              <h2 className="text-2xl font-serif text-primary mb-6">{content.contactHeading}</h2>
               <p className="text-muted-foreground mb-8">{content.contactDescription}</p>
 
               <div className="space-y-6">
@@ -96,7 +96,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div>
-              <h2 className="text-2xl font-serif font-bold text-primary mb-6">{content.formHeading}</h2>
+              <h2 className="text-2xl font-serif text-primary mb-6">{content.formHeading}</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Your Name *</label>
