@@ -43,10 +43,10 @@ const ParkFacilities = () => {
 
           {/* Copy */}
           <div className="order-2 lg:order-1">
-            <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">
+            <p className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               About the Park
             </p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent mb-6">
               Everything you need for a relaxed Tasmanian getaway
             </h2>
             <div className="space-y-4 text-muted-foreground mb-8">

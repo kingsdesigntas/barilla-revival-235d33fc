@@ -82,31 +82,33 @@ const Header = () => {
 
 			{/* Booking info bar */}
 			<div className="bg-secondary border-b border-border py-2">
-				<div className="container flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm">
-					<a
-						href={`tel:${settings.freeCallPhone?.replace(/\s/g, "")}`}
-						className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
-					>
-						<Phone size={14} />
-						<span>Freecall: {settings.freeCallPhone}</span>
-					</a>
-					<span className="hidden sm:inline text-muted-foreground">|</span>
-					<a
-						href={`mailto:${settings.email}`}
-						className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
-					>
-						<Mail size={14} />
-						<span>Mail Us: {settings.email}</span>
-					</a>
+				<div className="container flex flex-wrap justify-between items-center gap-4 text-sm">
 					<a
 						href={BOOKING_URL}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex items-center gap-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-semibold hover:bg-accent/90 transition-colors"
+						className="flex items-center gap-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-semibold hover:bg-accent/90 transition-colors order-1"
 					>
 						<Calendar size={14} />
 						Book your Holiday
 					</a>
+					<div className="flex flex-wrap items-center gap-4 sm:gap-8 order-2 ml-auto">
+						<a
+							href={`tel:${settings.freeCallPhone?.replace(/\s/g, "")}`}
+							className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
+						>
+							<Phone size={14} />
+							<span>Freecall: {settings.freeCallPhone}</span>
+						</a>
+						<span className="hidden sm:inline text-muted-foreground">|</span>
+						<a
+							href={`mailto:${settings.email}`}
+							className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
+						>
+							<Mail size={14} />
+							<span>Mail Us: {settings.email}</span>
+						</a>
+					</div>
 				</div>
 			</div>
 

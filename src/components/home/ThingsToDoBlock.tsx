@@ -36,7 +36,7 @@ const ThingsToDoBlock = () => {
   return (
     <section className="py-16 md:py-24 bg-barilla-cream">
       <div className="container">
-        <p className="text-left text-accent font-semibold uppercase tracking-wider text-sm mb-3">
+        <p className="text-left text-primary font-semibold uppercase tracking-wider text-sm mb-3">
           Explore Tasmania
         </p>
         <h2 className="section-heading">Things to Do</h2>

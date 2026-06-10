@@ -18,6 +18,10 @@ const Hero = () => {
       style={{ backgroundImage: `url(${hero.backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
+      <div
+        className="absolute inset-x-0 bottom-0 h-1/2 pointer-events-none"
+        style={{ backgroundImage: "linear-gradient(to top, #0A3029 0%, rgba(10,48,41,0.7) 35%, rgba(10,48,41,0) 100%)" }}
+      />
       <div className="relative z-10 container min-h-[80vh] flex flex-col justify-end pb-10 md:pb-16">
         <div className="grid md:grid-cols-12 gap-6 items-end">
           {/* Bottom-left: Heading, subheading, buttons */}
@@ -31,7 +35,9 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               {hero.ctaButtons?.map((btn, i) => {
                 const icons = [CabinIcon, CaravanIcon, CampingIcon];
+                const iconSizes = [38, 64, 47]; // sized so each renders at 36px tall
                 const Icon = icons[i] || CabinIcon;
+                const iconSize = iconSizes[i] || 38;
                 const words = btn.label.split(" ");
                 const first = words[0]?.toUpperCase() ?? "";
                 const second = words.slice(1).join(" ").toUpperCase() ?? "";
@@ -48,17 +54,17 @@ const Hero = () => {
                         : "bg-accent text-accent-foreground hover:bg-[hsl(var(--barilla-orange-hover))]"
                     }`}
                   >
-                    <Icon size={32} className="text-current" />
-                    <div className="flex flex-col text-left leading-tight">
+                    <Icon size={iconSize} className="text-current shrink-0" />
+                    <div className="flex flex-col text-left">
                       <span
                         className="font-['Kanit'] font-bold uppercase"
-                        style={{ fontSize: "20px", letterSpacing: "0.02em" }}
+                        style={{ fontSize: "20px", letterSpacing: "0.02em", lineHeight: 1 }}
                       >
                         {first}
                       </span>
                       <span
                         className="font-['Outfit'] uppercase"
-                        style={{ fontSize: "12px", letterSpacing: "0.2em" }}
+                        style={{ fontSize: "12px", letterSpacing: "0.2em", lineHeight: 1 }}
                       >
                         {second}
                       </span>

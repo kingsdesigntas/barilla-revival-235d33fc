@@ -23,8 +23,8 @@ const Introduction = () => {
             />
           </div>
           <div className="order-2">
-            <h2 className="section-heading text-primary">{intro.heading}</h2>
-            <p className="text-left text-accent font-medium mb-8">{intro.subheading}</p>
+            <h2 className="section-heading">{intro.heading}</h2>
+            <p className="text-left text-primary font-medium mb-8">{intro.subheading}</p>
             <div className="section-underline" />
             <div className="prose prose-lg max-w-none text-left text-foreground/80 space-y-6">
               {intro.paragraphs?.map((p, i) => (
