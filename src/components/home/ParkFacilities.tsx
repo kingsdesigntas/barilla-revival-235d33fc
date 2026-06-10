@@ -46,7 +46,7 @@ const ParkFacilities = () => {
             <p className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               About the Park
             </p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-accent mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif text-accent mb-6">
               Everything you need for a relaxed Tasmanian getaway
             </h2>
             <div className="space-y-4 text-muted-foreground mb-8">

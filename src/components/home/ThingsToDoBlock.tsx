@@ -63,7 +63,7 @@ const ThingsToDoBlock = () => {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
-                <h3 className="text-xl font-serif font-bold mb-1">{item.title}</h3>
+                <h3 className="text-xl font-serif mb-1">{item.title}</h3>
                 <p className="text-sm text-white/80 mb-3 line-clamp-2">{item.description}</p>
                 <span className="inline-flex items-center gap-1 text-accent text-sm font-semibold">
                   Discover more

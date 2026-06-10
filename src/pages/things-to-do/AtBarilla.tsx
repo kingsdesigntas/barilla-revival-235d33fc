@@ -42,7 +42,7 @@ const AtBarilla = () => {
                 </div>
               )}
               <div>
-                <h3 className="text-2xl font-serif font-bold text-primary mb-4">{content.featureSection.heading}</h3>
+                <h3 className="text-2xl font-serif text-primary mb-4">{content.featureSection.heading}</h3>
                 <p className="text-muted-foreground mb-4">{content.featureSection.description}</p>
                 {(content.featureSection as any).secondaryDescription && (
                   <p className="text-muted-foreground mb-6">{(content.featureSection as any).secondaryDescription}</p>
