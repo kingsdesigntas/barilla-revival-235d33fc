@@ -20,7 +20,7 @@ const ParkFacilities = () => {
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image collage */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 order-1 lg:order-2">
             <img
               src={aerial}
               alt="Aerial view of Barilla Holiday Park"
@@ -42,7 +42,7 @@ const ParkFacilities = () => {
           </div>
 
           {/* Copy */}
-          <div>
+          <div className="order-2 lg:order-1">
             <p className="text-accent font-semibold uppercase tracking-wider text-sm mb-3">
               About the Park
             </p>

@@ -9,10 +9,10 @@ const InfoCards = () => {
   const section = content.infoSection;
 
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24" style={{ backgroundColor: "#f1f5f3" }}>
       <div className="container">
         <h2 className="section-heading">{section.heading}</h2>
-        <p className="text-center text-muted-foreground mb-4">{section.description}</p>
+        <p className="text-left text-muted-foreground mb-4">{section.description}</p>
         <div className="section-underline" />
 
         <div className="grid md:grid-cols-3 gap-6 mt-12">
