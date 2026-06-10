@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, Home, Car, Tent } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
