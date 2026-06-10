@@ -14,6 +14,9 @@ interface AccommodationCardProps {
 
 const AccommodationCard = ({ title, description, image, link, buttonText }: AccommodationCardProps) => {
   const Icon = iconForAccommodationTitle(title);
+  // Width chosen so each icon renders 36px tall (matches the SVG's intrinsic ratio)
+  const t = title.toLowerCase();
+  const iconWidth = t.includes("caravan") ? 64 : t.includes("camp") ? 47 : 38;
   return (
     <div className="card-accommodation">
       <div className="card-header">{title}</div>
@@ -21,8 +24,8 @@ const AccommodationCard = ({ title, description, image, link, buttonText }: Acco
         <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
       </div>
       <div className="p-6">
-        <div className="flex justify-center mb-4">
-          <Icon className="text-accent" size={44} />
+        <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
+          <Icon className="text-accent" size={iconWidth} />
         </div>
         <p className="text-muted-foreground text-center text-sm mb-6">{description}</p>
         <Link to={link} className="btn-cta block text-center text-sm">{buttonText}</Link>
