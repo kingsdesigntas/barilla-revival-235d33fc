@@ -182,9 +182,9 @@
 		@apply relative z-10 text-left text-white;
 	}
 
-	/* Image and card corner radius */
-	img {
-		border-radius: 2rem;
+	/* Dropdown menus: no corner radius */
+	[data-radix-popper-content-wrapper] > * {
+		border-radius: 0 !important;
 	}
 }
 
