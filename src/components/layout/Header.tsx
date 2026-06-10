@@ -116,7 +116,7 @@ const Header = () => {
 			<nav className="container py-4">
 				<div className="flex justify-between items-center">
 					{/* Logo */}
-					<Link to="/" className="flex items-center" aria-label="Barilla Holiday Park - Home" style={{ marginBottom: "-15px" }}>
+					<Link to="/" className="flex items-center" aria-label="Barilla Holiday Park - Home" style={{ marginBottom: "-21px" }}>
 						<img src={logo} alt="Barilla Holiday Park" className="h-[75px] w-auto" />
 					</Link>
 
