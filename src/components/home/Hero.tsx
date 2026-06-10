@@ -35,9 +35,9 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               {hero.ctaButtons?.map((btn, i) => {
                 const icons = [CabinIcon, CaravanIcon, CampingIcon];
+                const iconSizes = [38, 64, 47]; // sized so each renders at 36px tall
                 const Icon = icons[i] || CabinIcon;
-                const words = btn.label.split(" ");
-                const first = words[0]?.toUpperCase() ?? "";
+                const iconSize = iconSizes[i] || 38;
                 const second = words.slice(1).join(" ").toUpperCase() ?? "";
                 const isGreen = i < 2;
                 return (
