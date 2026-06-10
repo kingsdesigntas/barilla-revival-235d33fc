@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, Home, Car, Tent } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
@@ -28,19 +28,43 @@ const Hero = () => {
               {hero.subheading}
             </p>
             <div className="flex flex-wrap gap-4">
-              {hero.ctaButtons?.map((btn, i) => (
-                <a
-                  key={i}
-                  href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={btn.variant === "success"
-                    ? "bg-success text-success-foreground font-semibold px-6 py-3 rounded-md hover:opacity-90 transition-all duration-200"
-                    : "btn-cta"}
-                >
-                  {btn.label}
-                </a>
-              ))}
+              {hero.ctaButtons?.map((btn, i) => {
+                const icons = [Home, Car, Tent];
+                const Icon = icons[i] || Home;
+                const words = btn.label.split(" ");
+                const first = words[0]?.toUpperCase() ?? "";
+                const second = words.slice(1).join(" ").toUpperCase() ?? "";
+                const isGreen = i < 2;
+                return (
+                  <a
+                    key={i}
+                    href={btn.href || BOOKING_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-3 px-5 py-3 rounded-md transition-all duration-200 ${
+                      isGreen
+                        ? "bg-success text-success-foreground hover:opacity-90"
+                        : "bg-accent text-accent-foreground hover:bg-[hsl(var(--barilla-orange-hover))]"
+                    }`}
+                  >
+                    <Icon size={28} strokeWidth={1.5} />
+                    <div className="flex flex-col text-right leading-tight">
+                      <span
+                        className="font-['Kanit'] uppercase"
+                        style={{ fontSize: "20px", letterSpacing: "0.02em" }}
+                      >
+                        {first}
+                      </span>
+                      <span
+                        className="font-['Outfit'] uppercase"
+                        style={{ fontSize: "12px", letterSpacing: "0.2em" }}
+                      >
+                        {second}
+                      </span>
+                    </div>
+                  </a>
+                );
+              })}
             </div>
           </div>
 
