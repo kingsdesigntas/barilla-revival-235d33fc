@@ -28,8 +28,8 @@
 		--muted: 150 20% 96%;
 		--muted-foreground: 215 16% 47%;
 
-		/* Accent - Orange for CTAs */
-		--accent: 35 99% 50%;
+		/* Accent - Orange #E7853A for CTAs */
+		--accent: 24 78% 57%;
 		--accent-foreground: 0 0% 100%;
 
 		/* Success/Green */
@@ -49,13 +49,13 @@
 		/* Custom Barilla colors */
 		--barilla-blue: 166 100% 25%;
 		--barilla-blue-dark: 166 100% 18%;
-		--barilla-orange: 35 99% 50%;
-		--barilla-orange-hover: 35 99% 42%;
+		--barilla-orange: 24 78% 57%;
+		--barilla-orange-hover: 24 78% 48%;
 		--barilla-green: 166 100% 25%;
 		--barilla-yellow: 45 95% 52%;
 		--barilla-red: 0 78% 50%;
 		--barilla-cream: 40 33% 97%;
-		--barilla-footer: 210 29% 24%;
+		--barilla-footer: 169 66% 11%;
 
 		--sidebar-background: 0 0% 98%;
 		--sidebar-foreground: 240 5.3% 26.1%;
@@ -128,12 +128,12 @@
 	}
 
 	.section-heading {
-		@apply text-primary text-2xl md:text-3xl font-semibold text-left mb-2;
+		@apply text-accent text-2xl md:text-3xl font-semibold text-left mb-2;
 		font-family: "Kanit", sans-serif;
 	}
 
 	.section-underline {
-		@apply w-16 h-1 bg-accent mb-8;
+		@apply w-16 h-1 bg-primary mb-8;
 	}
 
 	.card-accommodation {
@@ -142,7 +142,12 @@
 	}
 
 	.card-header {
-		@apply bg-primary text-primary-foreground py-9 px-4 font-semibold uppercase tracking-wide text-sm text-center;
+		@apply bg-primary text-primary-foreground py-9 px-4 uppercase text-center;
+		font-family: "Kanit", sans-serif;
+		font-weight: 700;
+		font-size: 20pt;
+		letter-spacing: 0.02em;
+		line-height: 1.1;
 	}
 
 	.nav-link {
