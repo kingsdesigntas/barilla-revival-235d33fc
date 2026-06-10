@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Kanit:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,23 +16,23 @@
 		--popover: 0 0% 100%;
 		--popover-foreground: 210 11% 15%;
 
-		/* Primary Blue - Header & Headings */
-		--primary: 201 64% 28%;
+		/* Primary - Barilla Green #007F61 */
+		--primary: 166 100% 25%;
 		--primary-foreground: 0 0% 100%;
 
-		/* Secondary - Light blue/gray */
-		--secondary: 210 40% 96%;
-		--secondary-foreground: 201 64% 28%;
+		/* Secondary - Light neutral */
+		--secondary: 150 20% 96%;
+		--secondary-foreground: 166 100% 25%;
 
 		/* Muted */
-		--muted: 210 40% 96%;
+		--muted: 150 20% 96%;
 		--muted-foreground: 215 16% 47%;
 
-		/* Accent - Orange/Yellow for CTAs */
+		/* Accent - Orange for CTAs */
 		--accent: 35 99% 50%;
 		--accent-foreground: 0 0% 100%;
 
-		/* Success/Green for highlights */
+		/* Success/Green */
 		--success: 166 100% 25%;
 		--success-foreground: 0 0% 100%;
 
@@ -42,13 +42,13 @@
 
 		--border: 214 32% 91%;
 		--input: 214 32% 91%;
-		--ring: 201 64% 28%;
+		--ring: 166 100% 25%;
 
-		--radius: 0.5rem;
+		--radius: 2rem;
 
 		/* Custom Barilla colors */
-		--barilla-blue: 201 64% 28%;
-		--barilla-blue-dark: 201 70% 22%;
+		--barilla-blue: 166 100% 25%;
+		--barilla-blue-dark: 166 100% 18%;
 		--barilla-orange: 35 99% 50%;
 		--barilla-orange-hover: 35 99% 42%;
 		--barilla-green: 166 100% 25%;
@@ -96,25 +96,30 @@
 	}
 
 	body {
-		@apply bg-background text-foreground font-sans antialiased;
-		font-family: "Open Sans", sans-serif;
+		@apply bg-background text-foreground antialiased;
+		font-family: "Kanit", sans-serif;
+		font-weight: 400;
+		text-align: left;
 	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: "Merriweather", serif;
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Outfit", sans-serif;
+		text-align: left;
+	}
+
+	h1, h2 {
+		font-weight: 600;
+	}
+
+	h3, h4, h5, h6 {
+		font-weight: 400;
 	}
 }
 
 @layer components {
 	.btn-cta {
 		@apply bg-accent text-accent-foreground font-semibold px-6 py-3 rounded-md 
-           hover:bg-[hsl(var(--barilla-orange-hover))] transition-all duration-200
-           shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+           hover:bg-[hsl(var(--barilla-orange-hover))] transition-all duration-200;
 	}
 
 	.btn-cta-outline {
@@ -123,21 +128,21 @@
 	}
 
 	.section-heading {
-		@apply text-primary text-2xl md:text-3xl font-bold text-center mb-2;
-		font-family: "Merriweather", serif;
+		@apply text-primary text-2xl md:text-3xl font-semibold text-left mb-2;
+		font-family: "Outfit", sans-serif;
 	}
 
 	.section-underline {
-		@apply w-16 h-1 bg-accent mx-auto mb-8;
+		@apply w-16 h-1 bg-accent mb-8;
 	}
 
 	.card-accommodation {
-		@apply bg-card rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 
-           hover:shadow-xl hover:-translate-y-1;
+		@apply bg-card overflow-hidden transition-all duration-300;
+		border-radius: 2rem;
 	}
 
 	.card-header {
-		@apply bg-primary text-primary-foreground py-3 px-4 font-semibold text-center uppercase tracking-wide text-sm;
+		@apply bg-primary text-primary-foreground py-3 px-4 font-semibold uppercase tracking-wide text-sm text-left;
 	}
 
 	.nav-link {
@@ -153,7 +158,8 @@
 	}
 
 	.contact-card {
-		@apply bg-card rounded-lg shadow-md overflow-hidden;
+		@apply bg-card overflow-hidden;
+		border-radius: 2rem;
 	}
 
 	.contact-card-header {
@@ -173,12 +179,27 @@
 	}
 
 	.page-hero-content {
-		@apply relative z-10 text-center text-white;
+		@apply relative z-10 text-left text-white;
+	}
+
+	/* Image and card corner radius */
+	img {
+		border-radius: 2rem;
 	}
 }
 
 @layer utilities {
 	.text-balance {
 		text-wrap: balance;
+	}
+
+	/* Remove all drop shadows */
+	.shadow-sm, .shadow, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl,
+	.hover\:shadow-sm:hover, .hover\:shadow:hover, .hover\:shadow-md:hover,
+	.hover\:shadow-lg:hover, .hover\:shadow-xl:hover, .hover\:shadow-2xl:hover,
+	.drop-shadow, .drop-shadow-sm, .drop-shadow-md, .drop-shadow-lg, .drop-shadow-xl {
+		box-shadow: none !important;
+		filter: none !important;
+		text-shadow: none !important;
 	}
 }

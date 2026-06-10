@@ -13,54 +13,65 @@ const Hero = () => {
 
   return (
     <section
-      className="relative min-h-[70vh] flex items-center justify-center bg-cover bg-center"
+      className="relative min-h-[80vh] bg-cover bg-center"
       style={{ backgroundImage: `url(${hero.backgroundImage})` }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4 drop-shadow-lg">
-          {hero.heading}
-        </h1>
-        <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-          {hero.subheading}
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          {hero.ctaButtons?.map((btn, i) => (
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
+      <div className="relative z-10 container min-h-[80vh] flex flex-col justify-end pb-10 md:pb-16">
+        <div className="grid md:grid-cols-12 gap-6 items-end">
+          {/* Bottom-left: Heading, subheading, buttons */}
+          <div className="md:col-span-7 lg:col-span-8 text-left animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-4">
+              {hero.heading}
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl">
+              {hero.subheading}
+            </p>
+            <div className="flex flex-wrap gap-4">
+              {hero.ctaButtons?.map((btn, i) => (
+                <a
+                  key={i}
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={btn.variant === "success"
+                    ? "bg-success text-success-foreground font-semibold px-6 py-3 rounded-md hover:opacity-90 transition-all duration-200"
+                    : "btn-cta"}
+                >
+                  {btn.label}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom-right: Reviews card (larger) */}
+          <div className="md:col-span-5 lg:col-span-4">
             <a
-              key={i}
-              href={BOOKING_URL}
+              href={ratings?.tripadvisorLink || "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className={btn.variant === "success"
-                ? "bg-success text-success-foreground font-semibold px-6 py-3 rounded-md hover:opacity-90 transition-all duration-200 shadow-md hover:shadow-lg"
-                : "btn-cta"}
+              className="block bg-white/10 backdrop-blur-md border border-white/20 p-6 text-white hover:bg-white/20 transition-colors"
+              style={{ borderRadius: "2rem" }}
             >
-              {btn.label}
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => {
+                  const fillPercent = Math.max(0, Math.min(1, rating - i)) * 100;
+                  return (
+                    <span key={i} className="relative inline-block" style={{ width: 22, height: 22 }}>
+                      <Star size={22} className="absolute inset-0 text-accent" />
+                      <span className="absolute inset-0 overflow-hidden block" style={{ width: `${fillPercent}%` }}>
+                        <Star size={22} className="text-accent fill-accent" />
+                      </span>
+                    </span>
+                  );
+                })}
+              </div>
+              <div className="text-2xl font-semibold">{rating}/5</div>
+              <div className="text-sm text-white/80 mt-1">Based on {reviewCount} reviews</div>
+              <div className="text-xs text-white/70 mt-3 uppercase tracking-wide">View on Tripadvisor →</div>
             </a>
-          ))}
+          </div>
         </div>
-        <a
-          href={ratings?.tripadvisorLink || "#"}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 text-white hover:bg-white/20 transition-colors"
-        >
-          <span className="flex items-center gap-0.5">
-            {[...Array(5)].map((_, i) => {
-              const fillPercent = Math.max(0, Math.min(1, rating - i)) * 100;
-              return (
-                <span key={i} className="relative inline-block" style={{ width: 16, height: 16 }}>
-                  <Star size={16} className="absolute inset-0 text-accent" />
-                  <span className="absolute inset-0 overflow-hidden block" style={{ width: `${fillPercent}%` }}>
-                    <Star size={16} className="text-accent fill-accent" />
-                  </span>
-                </span>
-              );
-            })}
-          </span>
-          <span className="text-sm font-semibold">{rating}/5</span>
-          <span className="text-sm text-white/80">· {reviewCount} reviews</span>
-        </a>
       </div>
     </section>
   );
