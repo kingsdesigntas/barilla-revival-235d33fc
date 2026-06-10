@@ -58,7 +58,7 @@ const Header = () => {
 							<ChevronDown size={14} />
 						</button>
 						<div className={`absolute top-full right-0 pt-2 z-50 ${openDropdown === "translate" ? "block" : "hidden"}`}>
-							<div className="bg-background shadow-lg rounded-lg py-2 min-w-[180px] border">
+							<div className="bg-background shadow-lg py-2 min-w-[180px] border">
 								{[
 									{ label: "中文 (Chinese)", code: "zh-CN" },
 									{ label: "Deutsch (German)", code: "de" },
@@ -136,7 +136,7 @@ const Header = () => {
 								Accommodation <ChevronDown size={16} />
 							</button>
 							<div className={`absolute top-full left-0 pt-2 ${openDropdown === "accommodation" ? "block" : "hidden"}`}>
-								<div className="bg-background shadow-lg rounded-lg py-2 min-w-[220px] border">
+								<div className="bg-background shadow-lg py-2 min-w-[220px] border">
 									{accommodationLinks.map((link) => (
 										<Link
 											key={link.href}
@@ -160,7 +160,7 @@ const Header = () => {
 								Things to Do <ChevronDown size={16} />
 							</button>
 							<div className={`absolute top-full left-0 pt-2 ${openDropdown === "things" ? "block" : "hidden"}`}>
-								<div className="bg-background shadow-lg rounded-lg py-2 min-w-[200px] border">
+								<div className="bg-background shadow-lg py-2 min-w-[200px] border">
 									{thingsToDoLinks.map((link) => (
 										<Link
 											key={link.href}
