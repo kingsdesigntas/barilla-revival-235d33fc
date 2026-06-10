@@ -10,15 +10,13 @@ const Introduction = () => {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 items-stretch">
           <div className="order-1">
             <img
               src={hobartImage}
               alt="Hobart skyline with Mount Wellington in the background"
-              width={1024}
-              height={1024}
               loading="lazy"
-              className="w-full h-auto object-cover"
+              className="w-full h-full object-cover"
               style={{ borderRadius: "2rem" }}
             />
           </div>

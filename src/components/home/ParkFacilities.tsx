@@ -18,25 +18,25 @@ const ParkFacilities = () => {
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
           {/* Image collage */}
-          <div className="grid grid-cols-2 gap-4 order-1 lg:order-2">
+          <div className="grid grid-cols-2 grid-rows-[2fr_1fr] gap-4 order-1 lg:order-2 h-full">
             <img
               src={aerial}
               alt="Aerial view of Barilla Holiday Park"
-              className="rounded-lg shadow-lg w-full h-64 object-cover col-span-2"
+              className="rounded-lg w-full h-full object-cover col-span-2"
               loading="lazy"
             />
             <img
               src={reception}
               alt="Barilla Holiday Park reception building"
-              className="rounded-lg shadow-lg w-full h-48 object-cover"
+              className="rounded-lg w-full h-full object-cover"
               loading="lazy"
             />
             <img
               src={camping}
               alt="Camping area at Barilla Holiday Park"
-              className="rounded-lg shadow-lg w-full h-48 object-cover"
+              className="rounded-lg w-full h-full object-cover"
               loading="lazy"
             />
           </div>
