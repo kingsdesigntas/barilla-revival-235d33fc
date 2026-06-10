@@ -18,17 +18,17 @@ const AccommodationCard = ({ title, description, image, link, buttonText }: Acco
   const t = title.toLowerCase();
   const iconWidth = t.includes("caravan") ? 64 : t.includes("camp") ? 47 : 38;
   return (
-    <div className="card-accommodation">
+    <div className="card-accommodation flex flex-col">
       <div className="card-header">{title}</div>
       <div className="relative aspect-[4/3] overflow-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
       </div>
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
           <Icon className="text-accent" size={iconWidth} />
         </div>
         <p className="text-muted-foreground text-center text-sm mb-6">{description}</p>
-        <Link to={link} className="btn-cta block text-center text-sm">{buttonText}</Link>
+        <Link to={link} className="btn-cta block text-center text-sm mt-auto">{buttonText}</Link>
       </div>
     </div>
   );
