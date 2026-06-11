@@ -4,6 +4,7 @@ import AccommodationHighlights from "@/components/shared/AccommodationHighlights
 import { Link } from "react-router-dom";
 import { BOOKING_URL } from "@/lib/booking";
 import { Plane, Clock, Car, Bed, MapPin, Sun } from "lucide-react";
+import { CabinIcon, CaravanIcon, iconForAccommodationTitle } from "@/components/icons/AccommodationIcons";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultAirportPage } from "@/lib/default-content";
@@ -20,7 +21,7 @@ const AirportAccommodation = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-4xl">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
           <div className="section-underline" />
 
           {/* Benefits */}
@@ -29,7 +30,7 @@ const AirportAccommodation = () => {
               {(content as any).benefits.map((benefit: any) => {
                 const Icon = iconMap[benefit.icon] || Sun;
                 return (
-                  <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg">
+                  <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg text-center flex flex-col items-center">
                     <Icon className="text-primary mx-auto mb-4" size={40} />
                     <h3 className="font-semibold text-primary mb-2">{benefit.heading}</h3>
                     <p className="text-sm text-muted-foreground">{benefit.description}</p>
@@ -43,35 +44,38 @@ const AirportAccommodation = () => {
           <div className="mt-16">
             <h3 className="section-heading mb-8">Available Options</h3>
             <div className="grid md:grid-cols-2 gap-8">
-              {content.items?.map((item) => (
-                <div key={item.name} className="card-accommodation">
-                  <div className="card-header">{item.name}</div>
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    {item.image ? (
-                      <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-                    ) : (
-                      <div className="w-full h-full bg-barilla-cream flex items-center justify-center">
-                        <Car className="text-primary" size={64} />
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <div className="flex justify-center mb-4">
-                      <Sun className="text-accent" size={24} />
+              {content.items?.map((item) => {
+                const ItemIcon = iconForAccommodationTitle(item.name);
+                return (
+                  <div key={item.name} className="card-accommodation">
+                    <div className="card-header">{item.name}</div>
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      {item.image ? (
+                        <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                      ) : (
+                        <div className="w-full h-full bg-barilla-cream flex items-center justify-center">
+                          <ItemIcon className="text-primary" size={64} />
+                        </div>
+                      )}
                     </div>
-                    <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
-                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
-                      {item.buttonText || "Book"}
-                    </a>
+                    <div className="p-6">
+                      <div className="flex justify-center mb-4">
+                        <ItemIcon className="text-accent" size={40} />
+                      </div>
+                      <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
+                      <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
+                        {item.buttonText || "Book"}
+                      </a>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
           {/* Location Info */}
           {(content as any).locationInfo && (
-            <div className="mt-16 bg-primary text-primary-foreground rounded-lg p-8">
+            <div className="mt-16 bg-primary text-primary-foreground rounded-lg p-8 text-center flex flex-col items-center">
               <MapPin className="mx-auto mb-4" size={40} />
               <h3 className="text-xl font-semibold mb-2">Easy to Find</h3>
               <p className="mb-4">
