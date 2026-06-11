@@ -47,7 +47,7 @@ const AirportAccommodation = () => {
               {content.items?.map((item) => {
                 const ItemIcon = iconForAccommodationTitle(item.name);
                 return (
-                  <div key={item.name} className="card-accommodation">
+                  <div key={item.name} className="card-accommodation bg-[#f1f6f3]">
                     <div className="card-header">{item.name}</div>
                     <div className="relative aspect-[4/3] overflow-hidden">
                       {item.image ? (
