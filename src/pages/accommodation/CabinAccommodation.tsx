@@ -71,7 +71,7 @@ const CabinAccommodation = () => {
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   {cabin.sleeps && (
-                    <div className="flex items-center justify-center gap-2 mb-4 text-primary">
+                    <div className="flex items-center gap-2 mb-4 text-primary">
                       <Users size={18} />
                       <span className="text-sm font-medium">{cabin.sleeps}</span>
                     </div>
