@@ -24,7 +24,7 @@ const CabinAccommodation = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-5xl">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground mb-4">{content.sectionDescription}</p>
           <div className="section-underline" />
         </div>
       </section>
