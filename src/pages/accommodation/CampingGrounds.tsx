@@ -17,21 +17,21 @@ const CampingGrounds = () => {
       <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} />
       <AccommodationHighlights />
       <section className="py-16 md:py-24 bg-background">
-        <div className="container max-w-4xl">
+        <div className="container max-w-5xl">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
           <div className="section-underline" />
 
-          <div className="mt-12">
+          <div className="mt-12 space-y-12">
             {content.items?.map((item) => (
-              <div key={item.name} className="card-accommodation max-w-2xl mx-auto">
-                <div className="card-header">{item.name}</div>
+              <div key={item.name} className="grid md:grid-cols-2 gap-8 items-center">
                 {item.image && (
-                  <div className="relative aspect-video overflow-hidden">
+                  <div className="relative aspect-video overflow-hidden rounded-lg">
                     <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                   </div>
                 )}
-                <div className="p-6">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-4">{item.name}</h3>
                   <p className="text-muted-foreground mb-6">{item.description}</p>
                   {item.features && (
                     <ul className="space-y-3 mb-6">
@@ -43,13 +43,14 @@ const CampingGrounds = () => {
                       ))}
                     </ul>
                   )}
-                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center">
+                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta inline-block text-center">
                     {item.buttonText || "Book Your Campsite"}
                   </a>
                 </div>
               </div>
             ))}
           </div>
+
 
           {content.amenities?.length > 0 && (
             <div className="mt-16 bg-barilla-cream rounded-lg p-8 md:p-12">
