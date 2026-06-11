@@ -24,11 +24,13 @@ const CaravanAccommodation = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-4 text-center">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
           <div className="section-underline" />
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {content.items?.map((site) => (
+            {content.items?.map((site) => {
+              const SiteIcon = siteIconMap[site.name] || Sun;
+              return (
               <div key={site.name} className="card-accommodation bg-barilla-cream">
                 <div className="card-header">{site.name}</div>
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -36,15 +38,16 @@ const CaravanAccommodation = () => {
                 </div>
                 <div className="p-6">
                   <div className="flex justify-center mb-4">
-                    <Sun className="text-accent" size={24} />
+                    <SiteIcon className="text-accent" size={24} />
                   </div>
-                  <p className="text-muted-foreground text-sm mb-6">{site.description}</p>
+                  <p className="text-muted-foreground text-sm mb-6 text-left">{site.description}</p>
                   <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
                     {site.buttonText || "Book Now"}
                   </a>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
 
           {content.amenities?.length > 0 && (
