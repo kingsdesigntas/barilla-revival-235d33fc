@@ -16,7 +16,7 @@ const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) => {
           {title}
         </h1>
         {subtitle && (
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl text-left">
             {subtitle}
           </p>
         )}
