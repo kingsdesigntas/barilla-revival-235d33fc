@@ -87,14 +87,14 @@ const Footer = () => {
                   <span>Like us on Facebook</span>
                 </a>
               ))}
-              <div className="flex flex-col items-end">
+              <div>
                 <div className="flex items-center gap-1 mb-1">
                   {[...Array(4)].map((_, i) => (
                     <Star key={i} size={16} className="fill-accent text-accent" />
                   ))}
                   <Star size={16} className="text-accent" />
                 </div>
-                <p className="text-sm text-white/70 text-center w-[104px]">4.6/5 from 160+ reviews</p>
+                <p className="text-sm text-white/70">4.6/5 from 160+ reviews</p>
               </div>
             </div>
           </div>
