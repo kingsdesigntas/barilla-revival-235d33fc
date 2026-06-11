@@ -36,7 +36,7 @@ const CabinAccommodation = () => {
             <div className="bg-barilla-cream rounded-lg p-8 md:p-12">
               <h3 className="section-heading mb-3">{sharedHeading}</h3>
               {sharedDescription && (
-                <p className="text-muted-foreground max-w-2xl mx-auto mb-8">{sharedDescription}</p>
+                <p className="text-muted-foreground mb-8">{sharedDescription}</p>
               )}
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {shared.map((f) => {
