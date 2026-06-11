@@ -1,13 +1,18 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
-import { Zap, ShowerHead, Wifi, Car, Trees, Sun } from "lucide-react";
+import { Zap, ShowerHead, Wifi, Car, Trees, Sun, Caravan } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultCaravanPage } from "@/lib/default-content";
 import { BOOKING_URL } from "@/lib/booking";
 
-const iconMap: Record<string, any> = { Zap, ShowerHead, Wifi, Car, Trees, Sun };
+const iconMap: Record<string, any> = { Zap, ShowerHead, Wifi, Car, Trees, Sun, Caravan };
+
+const siteIconMap: Record<string, any> = {
+  "Premium Powered Site": Zap,
+  "Drive-Through Site": Caravan,
+};
 
 const CaravanAccommodation = () => {
   const { content } = useSanityContent("caravan-page", ACCOMMODATION_PAGE_QUERY, defaultCaravanPage, { slug: "caravans" });
