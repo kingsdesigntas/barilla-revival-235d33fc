@@ -44,29 +44,32 @@ const AirportAccommodation = () => {
           <div className="mt-16">
             <h3 className="section-heading mb-8">Available Options</h3>
             <div className="grid md:grid-cols-2 gap-8">
-              {content.items?.map((item) => (
-                <div key={item.name} className="card-accommodation">
-                  <div className="card-header">{item.name}</div>
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    {item.image ? (
-                      <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-                    ) : (
-                      <div className="w-full h-full bg-barilla-cream flex items-center justify-center">
-                        <Car className="text-primary" size={64} />
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <div className="flex justify-center mb-4">
-                      <Sun className="text-accent" size={24} />
+              {content.items?.map((item) => {
+                const ItemIcon = iconForAccommodationTitle(item.name);
+                return (
+                  <div key={item.name} className="card-accommodation">
+                    <div className="card-header">{item.name}</div>
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      {item.image ? (
+                        <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                      ) : (
+                        <div className="w-full h-full bg-barilla-cream flex items-center justify-center">
+                          <ItemIcon className="text-primary" size={64} />
+                        </div>
+                      )}
                     </div>
-                    <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
-                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
-                      {item.buttonText || "Book"}
-                    </a>
+                    <div className="p-6">
+                      <div className="flex justify-center mb-4">
+                        <ItemIcon className="text-accent" size={40} />
+                      </div>
+                      <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
+                      <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
+                        {item.buttonText || "Book"}
+                      </a>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
