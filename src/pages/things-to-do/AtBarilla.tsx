@@ -17,7 +17,7 @@ const AtBarilla = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
           <div className="section-underline" />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
