@@ -31,7 +31,9 @@ const AirportAccommodation = () => {
                 const Icon = iconMap[benefit.icon] || Sun;
                 return (
                   <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg text-center flex flex-col items-center">
-                    <Icon className="text-primary mx-auto mb-4" size={40} />
+                    <div className="flex items-center justify-center mb-4" style={{ height: 36 }}>
+                      <Icon className="text-primary" size={36} />
+                    </div>
                     <h3 className="font-semibold text-primary mb-2">{benefit.heading}</h3>
                     <p className="text-sm text-muted-foreground">{benefit.description}</p>
                   </div>
@@ -47,7 +49,7 @@ const AirportAccommodation = () => {
               {content.items?.map((item) => {
                 const ItemIcon = iconForAccommodationTitle(item.name);
                 return (
-                  <div key={item.name} className="card-accommodation bg-[#f1f6f3]">
+                  <div key={item.name} className="card-accommodation bg-[#f1f6f3] flex flex-col">
                     <div className="card-header">{item.name}</div>
                     <div className="relative aspect-[4/3] overflow-hidden">
                       {item.image ? (
@@ -58,12 +60,12 @@ const AirportAccommodation = () => {
                         </div>
                       )}
                     </div>
-                    <div className="p-6">
-                      <div className="flex justify-center mb-4">
-                        <ItemIcon className="text-accent" size={40} />
+                    <div className="p-6 flex flex-col flex-1">
+                      <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
+                        <ItemIcon className="text-accent" size={36} />
                       </div>
                       <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
-                      <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
+                      <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm mt-auto">
                         {item.buttonText || "Book"}
                       </a>
                     </div>

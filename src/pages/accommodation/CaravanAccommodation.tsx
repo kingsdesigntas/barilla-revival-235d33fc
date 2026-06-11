@@ -31,17 +31,17 @@ const CaravanAccommodation = () => {
             {content.items?.map((site) => {
               const SiteIcon = siteIconMap[site.name] || Sun;
               return (
-              <div key={site.name} className="card-accommodation bg-barilla-cream">
+              <div key={site.name} className="card-accommodation bg-barilla-cream flex flex-col">
                 <div className="card-header">{site.name}</div>
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={site.image} alt={site.name} className="w-full h-full object-cover" />
                 </div>
-                <div className="p-6">
-                  <div className="flex justify-center mb-4">
-                    <SiteIcon className="text-accent" size={24} />
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
+                    <SiteIcon className="text-accent" size={36} />
                   </div>
                   <p className="text-muted-foreground text-sm mb-6 text-left">{site.description}</p>
-                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
+                  <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm mt-auto">
                     {site.buttonText || "Book Now"}
                   </a>
                 </div>
