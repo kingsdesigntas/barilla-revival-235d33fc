@@ -75,7 +75,7 @@ const AirportAccommodation = () => {
 
           {/* Location Info */}
           {(content as any).locationInfo && (
-            <div className="mt-16 bg-primary text-primary-foreground rounded-lg p-8">
+            <div className="mt-16 bg-primary text-primary-foreground rounded-lg p-8 text-center flex flex-col items-center">
               <MapPin className="mx-auto mb-4" size={40} />
               <h3 className="text-xl font-semibold mb-2">Easy to Find</h3>
               <p className="mb-4">
