@@ -19,7 +19,7 @@ const CaravanAccommodation = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4 text-center">{content.sectionDescription}</p>
           <div className="section-underline" />
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
