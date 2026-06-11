@@ -25,7 +25,7 @@ const AtBarilla = () => {
               const Icon = iconMap[activity.icon] || Sun;
               return (
                 <div key={activity.title} className="bg-card rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                  <Icon className="text-primary mx-auto mb-4" size={48} />
+                  <Icon className="text-primary mb-4" size={48} />
                   <h3 className="font-semibold text-primary mb-2">{activity.title}</h3>
                   <p className="text-sm text-muted-foreground">{activity.description}</p>
                 </div>
