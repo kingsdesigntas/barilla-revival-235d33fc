@@ -124,14 +124,13 @@ const TouristAttractions = () => {
                     ))}
                   </div>
                   {a.website && (
-                    <a
-                      href={a.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-1 text-accent font-medium text-sm hover:underline"
-                    >
-                      Visit website <ExternalLink size={14} />
-                    </a>
+                    <div className="mt-4 flex justify-center">
+                      <Button asChild size="sm">
+                        <a href={a.website} target="_blank" rel="noopener noreferrer">
+                          Visit website <ExternalLink size={14} className="ml-1" />
+                        </a>
+                      </Button>
+                    </div>
                   )}
                 </div>
               </article>
