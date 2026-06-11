@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { TOURIST_ATTRACTIONS_QUERY } from "@/lib/sanity-queries";
 import { defaultTouristAttractionsPage } from "@/lib/default-content";
+import heroImage from "@/assets/hobart-attractions-hero.jpg.asset.json";
 
 interface Attraction {
   name: string;
