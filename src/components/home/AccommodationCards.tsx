@@ -27,7 +27,7 @@ const AccommodationCard = ({ title, description, image, link, buttonText }: Acco
         <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
           <Icon className="text-accent" size={iconWidth} />
         </div>
-        <p className="text-muted-foreground text-center text-sm mb-6">{description}</p>
+        <p className="text-muted-foreground text-sm mb-6">{description}</p>
         <Link to={link} className="btn-cta block text-center text-sm mt-auto">{buttonText}</Link>
       </div>
     </div>

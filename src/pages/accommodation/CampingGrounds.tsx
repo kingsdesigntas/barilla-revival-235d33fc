@@ -19,7 +19,7 @@ const CampingGrounds = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-4xl">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
           <div className="section-underline" />
 
           <div className="mt-12">
@@ -32,7 +32,7 @@ const CampingGrounds = () => {
                   </div>
                 )}
                 <div className="p-6">
-                  <p className="text-muted-foreground text-center mb-6">{item.description}</p>
+                  <p className="text-muted-foreground mb-6">{item.description}</p>
                   {item.features && (
                     <ul className="space-y-3 mb-6">
                       {item.features.map((feature) => (
@@ -54,7 +54,7 @@ const CampingGrounds = () => {
           {content.amenities?.length > 0 && (
             <div className="mt-16 bg-barilla-cream rounded-lg p-8 md:p-12">
               <h3 className="section-heading mb-8">{content.amenitiesHeading}</h3>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {content.amenities.map((amenity) => {
                   const Icon = iconMap[amenity.icon] || Sun;
                   return (

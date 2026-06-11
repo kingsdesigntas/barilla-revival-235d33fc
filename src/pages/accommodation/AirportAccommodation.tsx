@@ -20,7 +20,7 @@ const AirportAccommodation = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-4xl">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
           <div className="section-underline" />
 
           {/* Benefits */}
@@ -29,7 +29,7 @@ const AirportAccommodation = () => {
               {(content as any).benefits.map((benefit: any) => {
                 const Icon = iconMap[benefit.icon] || Sun;
                 return (
-                  <div key={benefit.heading} className="text-center p-6 bg-barilla-cream rounded-lg">
+                  <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg">
                     <Icon className="text-primary mx-auto mb-4" size={40} />
                     <h3 className="font-semibold text-primary mb-2">{benefit.heading}</h3>
                     <p className="text-sm text-muted-foreground">{benefit.description}</p>
@@ -59,7 +59,7 @@ const AirportAccommodation = () => {
                     <div className="flex justify-center mb-4">
                       <Sun className="text-accent" size={24} />
                     </div>
-                    <p className="text-muted-foreground text-center text-sm mb-4">{item.description}</p>
+                    <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
                     <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
                       {item.buttonText || "Book"}
                     </a>
@@ -71,7 +71,7 @@ const AirportAccommodation = () => {
 
           {/* Location Info */}
           {(content as any).locationInfo && (
-            <div className="mt-16 bg-primary text-primary-foreground rounded-lg p-8 text-center">
+            <div className="mt-16 bg-primary text-primary-foreground rounded-lg p-8">
               <MapPin className="mx-auto mb-4" size={40} />
               <h3 className="text-xl font-semibold mb-2">Easy to Find</h3>
               <p className="mb-4">
