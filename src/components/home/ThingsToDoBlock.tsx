@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import miniGolf from "@/assets/barillapark-mini-golf.jpg";
-import attractions from "@/assets/barillapark-aerial-2.jpg";
+import attractionsAsset from "@/assets/richmond-bridge.jpg.asset.json";
 import dayTrips from "@/assets/barillapark-aerial-mini-golf.jpg";
 import atBarilla from "@/assets/barillapark-camping-1.jpg";
+
+const attractions = attractionsAsset.url;
 
 const items = [
   {
