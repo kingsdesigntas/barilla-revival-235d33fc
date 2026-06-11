@@ -1,13 +1,24 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
-import { Tent, ShowerHead, Wifi, Flame, Trees, Sun } from "lucide-react";
+import { Tent, ShowerHead, Wifi, Flame, Trees, Sun, LandPlot, CheckCircle2 } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultCampingPage } from "@/lib/default-content";
 import { BOOKING_URL } from "@/lib/booking";
 
 const iconMap: Record<string, any> = { Tent, ShowerHead, Wifi, Flame, Trees, Sun };
+
+const getFeatureIcon = (feature: string) => {
+  const f = feature.toLowerCase();
+  if (f.includes("wifi")) return Wifi;
+  if (f.includes("bbq") || f.includes("campfire") || f.includes("fire")) return Flame;
+  if (f.includes("amenity") || f.includes("shower") || f.includes("bathroom")) return ShowerHead;
+  if (f.includes("shaded") || f.includes("shelter") || f.includes("tree")) return Trees;
+  if (f.includes("flat") || f.includes("spacious") || f.includes("site")) return LandPlot;
+  return CheckCircle2;
+};
+
 
 const CampingGrounds = () => {
   const { content } = useSanityContent("camping-page", ACCOMMODATION_PAGE_QUERY, defaultCampingPage, { slug: "camping" });
