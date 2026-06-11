@@ -24,7 +24,7 @@ const CaravanAccommodation = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
             {content.items?.map((site) => (
-              <div key={site.name} className="card-accommodation">
+              <div key={site.name} className="card-accommodation bg-barilla-cream">
                 <div className="card-header">{site.name}</div>
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={site.image} alt={site.name} className="w-full h-full object-cover" />
