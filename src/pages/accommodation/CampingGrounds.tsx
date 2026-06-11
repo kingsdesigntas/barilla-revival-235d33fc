@@ -42,7 +42,7 @@ const CampingGrounds = () => {
                   </div>
                 )}
                 <div>
-                  <h3 className="text-2xl font-semibold mb-4">{item.name}</h3>
+                  <h3 className="text-2xl font-semibold mb-4 text-barilla-blue-dark">{item.name}</h3>
                   <p className="text-muted-foreground mb-6">{item.description}</p>
                   {item.features && (
                     <ul className="space-y-3 mb-6">
@@ -67,22 +67,6 @@ const CampingGrounds = () => {
           </div>
 
 
-          {content.amenities?.length > 0 && (
-            <div className="mt-16 bg-barilla-cream rounded-lg p-8 md:p-12">
-              <h3 className="section-heading mb-8">{content.amenitiesHeading}</h3>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-                {content.amenities.map((amenity) => {
-                  const Icon = iconMap[amenity.icon] || Sun;
-                  return (
-                    <div key={amenity.label} className="flex flex-col items-center gap-2">
-                      <Icon className="text-primary" size={32} />
-                      <span className="text-sm font-medium">{amenity.label}</span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
         </div>
       </section>
     </Layout>
