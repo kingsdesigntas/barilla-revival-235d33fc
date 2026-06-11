@@ -59,7 +59,7 @@ const CabinAccommodation = () => {
         <div className="container">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {content.items?.map((cabin: any) => (
-              <div key={cabin.name} className="card-accommodation flex flex-col">
+              <div key={cabin.name} className="card-accommodation flex flex-col bg-barilla-cream">
                 <div className="card-header">{cabin.name}</div>
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img src={cabin.image} alt={cabin.name} className="w-full h-full object-cover" />
