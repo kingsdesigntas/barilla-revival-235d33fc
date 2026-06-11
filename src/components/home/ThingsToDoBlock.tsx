@@ -2,10 +2,11 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import miniGolf from "@/assets/barillapark-mini-golf.jpg";
 import attractionsAsset from "@/assets/richmond-bridge.jpg.asset.json";
-import dayTrips from "@/assets/barillapark-aerial-mini-golf.jpg";
+import dayTripsAsset from "@/assets/tasman-peninsula.jpg.asset.json";
 import atBarilla from "@/assets/barillapark-camping-1.jpg";
 
 const attractions = attractionsAsset.url;
+const dayTrips = dayTripsAsset.url;
 
 const items = [
   {
