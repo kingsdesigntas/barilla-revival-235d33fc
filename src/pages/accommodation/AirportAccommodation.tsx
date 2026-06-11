@@ -30,7 +30,7 @@ const AirportAccommodation = () => {
               {(content as any).benefits.map((benefit: any) => {
                 const Icon = iconMap[benefit.icon] || Sun;
                 return (
-                  <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg">
+                  <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg text-center flex flex-col items-center">
                     <Icon className="text-primary mx-auto mb-4" size={40} />
                     <h3 className="font-semibold text-primary mb-2">{benefit.heading}</h3>
                     <p className="text-sm text-muted-foreground">{benefit.description}</p>
