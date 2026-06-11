@@ -40,7 +40,7 @@ const TouristAttractions = () => {
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
           <div className="section-underline" />
-          <div className="max-w-3xl mx-auto text-center text-muted-foreground space-y-4 mt-6">
+          <div className="max-w-3xl mx-auto text-muted-foreground space-y-4 mt-6">
             {content.introParagraphs?.map((p: string, i: number) => (
               <p key={i}>{p}</p>
             ))}
@@ -138,7 +138,7 @@ const TouristAttractions = () => {
           </div>
 
           {filtered.length === 0 && (
-            <p className="text-center text-muted-foreground mt-10">No attractions found in this category.</p>
+            <p className="text-muted-foreground mt-10">No attractions found in this category.</p>
           )}
         </div>
       </section>

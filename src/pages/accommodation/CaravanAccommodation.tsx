@@ -19,7 +19,7 @@ const CaravanAccommodation = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
           <div className="section-underline" />
 
           <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -33,7 +33,7 @@ const CaravanAccommodation = () => {
                   <div className="flex justify-center mb-4">
                     <Sun className="text-accent" size={24} />
                   </div>
-                  <p className="text-muted-foreground text-center text-sm mb-6">{site.description}</p>
+                  <p className="text-muted-foreground text-sm mb-6">{site.description}</p>
                   <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm">
                     {site.buttonText || "Book Now"}
                   </a>
@@ -45,7 +45,7 @@ const CaravanAccommodation = () => {
           {content.amenities?.length > 0 && (
             <div className="mt-16 bg-barilla-cream rounded-lg p-8 md:p-12">
               <h3 className="section-heading mb-8">{content.amenitiesHeading}</h3>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
                 {content.amenities.map((amenity) => {
                   const Icon = iconMap[amenity.icon] || Sun;
                   return (

@@ -24,7 +24,7 @@ const CabinAccommodation = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-5xl">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
           <div className="section-underline" />
         </div>
       </section>
@@ -36,7 +36,7 @@ const CabinAccommodation = () => {
             <div className="bg-barilla-cream rounded-lg p-8 md:p-12">
               <h3 className="section-heading mb-3">{sharedHeading}</h3>
               {sharedDescription && (
-                <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">{sharedDescription}</p>
+                <p className="text-muted-foreground max-w-2xl mx-auto mb-8">{sharedDescription}</p>
               )}
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {shared.map((f) => {

@@ -17,15 +17,15 @@ const AtBarilla = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
           <div className="section-underline" />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             {content.activities?.map((activity) => {
               const Icon = iconMap[activity.icon] || Sun;
               return (
-                <div key={activity.title} className="bg-card rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow">
-                  <Icon className="text-primary mx-auto mb-4" size={48} />
+                <div key={activity.title} className="bg-card rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                  <Icon className="text-primary mb-4" size={48} />
                   <h3 className="font-semibold text-primary mb-2">{activity.title}</h3>
                   <p className="text-sm text-muted-foreground">{activity.description}</p>
                 </div>

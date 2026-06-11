@@ -31,7 +31,7 @@ const MiniGolf = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-4xl">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">{content.sectionDescription}</p>
           <div className="section-underline" />
 
           {/* Main Image */}
@@ -49,7 +49,7 @@ const MiniGolf = () => {
               {content.infoCards.map((card) => {
                 const Icon = iconMap[card.icon] || Clock;
                 return (
-                  <div key={card.heading} className="bg-barilla-cream rounded-lg p-6 text-center">
+                  <div key={card.heading} className="bg-barilla-cream rounded-lg p-6">
                     <Icon className="text-primary mx-auto mb-3" size={36} />
                     <h3 className="font-semibold text-primary mb-2">{card.heading}</h3>
                     <p className="text-sm text-muted-foreground whitespace-pre-line">{card.content}</p>
@@ -61,7 +61,7 @@ const MiniGolf = () => {
 
           {/* Body Text */}
           {(content as any).bodyText && (
-            <div className="prose prose-lg max-w-none text-center text-muted-foreground mb-12">
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-12">
               {(content as any).bodyText.map((p: string, i: number) => (
                 <p key={i}>{p}</p>
               ))}
@@ -69,7 +69,7 @@ const MiniGolf = () => {
           )}
 
           {/* Rating */}
-          <div className="text-center mb-12">
+          <div className="mb-12">
             <div className="flex items-center justify-center gap-1 mb-2">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={24} className={i < 4 ? "fill-accent text-accent" : "text-accent"} />
@@ -80,7 +80,7 @@ const MiniGolf = () => {
 
           {/* CTA */}
           {content.ctaButton && (
-            <div className="text-center">
+            <div className="text-left">
               <Link to={content.ctaButton.href || "/contact"} className="btn-cta inline-block">
                 {content.ctaButton.label}
               </Link>
@@ -93,7 +93,7 @@ const MiniGolf = () => {
       <section className="py-16 md:py-20 bg-barilla-cream">
         <div className="container">
           <h2 className="section-heading">Mini Golf Gallery</h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-4">
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">
             Take a peek at our 18-hole landscaped course at Barilla Holiday Park.
           </p>
           <div className="section-underline" />
