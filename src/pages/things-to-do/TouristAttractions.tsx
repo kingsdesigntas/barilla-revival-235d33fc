@@ -76,7 +76,7 @@ const TouristAttractions = () => {
             {filtered.map((a) => (
               <article
                 key={a.name}
-                className="bg-card rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow"
+                className="bg-barilla-cream rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow"
               >
                 <div className="aspect-[4/3] overflow-hidden bg-muted">
                   <img
