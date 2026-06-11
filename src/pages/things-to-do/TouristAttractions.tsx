@@ -36,12 +36,12 @@ const TouristAttractions = () => {
 
   return (
     <Layout>
-      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} />
+      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={heroImage.url} />
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
           <div className="section-underline" />
-          <div className="max-w-3xl mx-auto text-muted-foreground space-y-4 mt-6">
+          <div className="max-w-3xl text-muted-foreground space-y-4 mt-6 text-left">
             {content.introParagraphs?.map((p: string, i: number) => (
               <p key={i}>{p}</p>
             ))}
