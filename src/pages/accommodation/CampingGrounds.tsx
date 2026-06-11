@@ -35,10 +35,10 @@ const CampingGrounds = () => {
 
           <div className="mt-12 space-y-12">
             {content.items?.map((item) => (
-              <div key={item.name} className="grid md:grid-cols-2 gap-8 items-center">
+              <div key={item.name} className="grid md:grid-cols-2 gap-8 items-stretch">
                 {item.image && (
-                  <div className="relative aspect-video overflow-hidden rounded-lg">
-                    <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                  <div className="relative overflow-hidden rounded-lg min-h-[300px]">
+                    <img src={item.image} alt={item.name} className="absolute inset-0 w-full h-full object-cover" />
                   </div>
                 )}
                 <div>
@@ -46,12 +46,15 @@ const CampingGrounds = () => {
                   <p className="text-muted-foreground mb-6">{item.description}</p>
                   {item.features && (
                     <ul className="space-y-3 mb-6">
-                      {item.features.map((feature) => (
-                        <li key={feature} className="flex items-center gap-3 text-muted-foreground">
-                          <Trees className="text-accent shrink-0" size={20} />
-                          {feature}
-                        </li>
-                      ))}
+                      {item.features.map((feature) => {
+                        const FeatureIcon = getFeatureIcon(feature);
+                        return (
+                          <li key={feature} className="flex items-center gap-3 text-muted-foreground">
+                            <FeatureIcon className="text-accent shrink-0" size={20} />
+                            {feature}
+                          </li>
+                        );
+                      })}
                     </ul>
                   )}
                   <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta inline-block text-center">
@@ -59,6 +62,7 @@ const CampingGrounds = () => {
                   </a>
                 </div>
               </div>
+
             ))}
           </div>
 
