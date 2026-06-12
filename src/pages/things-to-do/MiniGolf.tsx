@@ -161,34 +161,6 @@ const MiniGolf = () => {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="py-16 md:py-20 bg-barilla-cream">
-        <div className="container">
-          <h2 className="section-heading">Mini Golf Gallery</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">
-            Take a peek at our 18-hole landscaped course at Barilla Holiday Park.
-          </p>
-          <div className="section-underline" />
-          <Carousel opts={{ align: "start", loop: true }} className="mt-12">
-            <CarouselContent className="-ml-4">
-              {galleryImages.map((img) => (
-                <CarouselItem key={img.src} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3">
-                  <div className="overflow-hidden rounded-lg shadow-md aspect-[4/3] group">
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
-        </div>
-      </section>
     </Layout>
   );
 };
