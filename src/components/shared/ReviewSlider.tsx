@@ -79,10 +79,10 @@ const ReviewSlider = () => {
 
   return (
     <section className="py-16 bg-secondary border-t border-border overflow-hidden">
-      <div className="container mb-8 text-center">
+      <div className="container mb-8">
         <h2 className="section-heading">What Our Guests Are Saying</h2>
-        <div className="section-underline mx-auto" />
-        <p className="text-muted-foreground max-w-2xl mx-auto">
+        <div className="section-underline" />
+        <p className="text-muted-foreground max-w-2xl">
           Real feedback from happy guests who have stayed at Barilla Holiday Park.
         </p>
       </div>
