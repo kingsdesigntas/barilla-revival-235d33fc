@@ -79,7 +79,7 @@ const Contact = () => {
 
               {/* Map CTA */}
               <div className="mt-8">
-                <div className="bg-barilla-cream rounded-lg p-8 text-center w-fit mx-auto">
+                <div className="bg-barilla-cream rounded-lg p-8 text-center w-fit">
                   <Map className="text-primary mx-auto mb-2" size={32} />
                   <p className="text-sm text-muted-foreground mb-4">View our location on Google Maps</p>
                   <a
