@@ -216,4 +216,16 @@
 		filter: none !important;
 		text-shadow: none !important;
 	}
+
+	@keyframes review-marquee {
+		from { transform: translateX(0); }
+		to { transform: translateX(-50%); }
+	}
+	.animate-review-marquee {
+		animation: review-marquee 60s linear infinite;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.animate-review-marquee { animation: none; }
+	}
 }
+
