@@ -21,8 +21,8 @@ const AirportAccommodation = () => {
       <section className="py-16 md:py-24 bg-background">
         <div className="container max-w-4xl">
           <h2 className="section-heading">{content.sectionHeading}</h2>
-          <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
           <div className="section-underline" />
+          <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
 
           {/* Benefits */}
           {(content as any).benefits && (
