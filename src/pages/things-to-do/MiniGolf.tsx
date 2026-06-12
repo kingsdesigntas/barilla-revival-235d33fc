@@ -31,14 +31,14 @@ const MiniGolf = () => {
           <div className="section-underline" />
 
           {/* Top Slider + Info Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mt-12 mb-12 items-stretch">
+          <div className="grid md:grid-cols-3 gap-6 mt-12 mb-12">
             {/* Top Slider — 2/3 width */}
-            <div className="md:col-span-2 h-full">
-              <Carousel opts={{ align: "start", loop: true }} className="h-full">
-                <CarouselContent className="h-full">
+            <div className="md:col-span-2">
+              <Carousel opts={{ align: "start", loop: true }}>
+                <CarouselContent>
                   {topSliderImages.map((img) => (
-                    <CarouselItem key={img.src} className="h-full">
-                      <div className="relative h-full overflow-hidden rounded-lg shadow-lg">
+                    <CarouselItem key={img.src}>
+                      <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg">
                         <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
                       </div>
                     </CarouselItem>
