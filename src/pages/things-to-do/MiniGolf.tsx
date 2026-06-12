@@ -1,7 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
-import { Link } from "react-router-dom";
-import { Clock, DollarSign, Users, Star } from "lucide-react";
+import { Clock, DollarSign, Users, Phone, Mail } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACTIVITY_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultMiniGolfPage } from "@/lib/default-content";
@@ -12,13 +11,19 @@ import gallery4 from "@/assets/mini-golf-gallery-4.jpg";
 import gallery5 from "@/assets/mini-golf-gallery-5.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-const iconMap: Record<string, any> = { Clock, DollarSign, Users, Star };
+const iconMap: Record<string, any> = { Clock, DollarSign, Users };
 
 const galleryImages = [
   { src: gallery1, alt: "Aerial view of the Putt & Play mini golf course" },
   { src: gallery2, alt: "Entrance to Barilla Holiday Park Putt & Play mini golf" },
   { src: gallery3, alt: "Mini golf fairway lined with cypress trees and rocks" },
   { src: gallery4, alt: "Hole 11 of the Barilla mini golf course" },
+  { src: gallery5, alt: "Landscaped mini golf hole with rules sign" },
+];
+
+const topSliderImages = [
+  { src: gallery2, alt: "Entrance to Barilla Holiday Park Putt & Play with shop and landscaped rocks" },
+  { src: gallery3, alt: "Mini golf fairway lined with cypress trees and rocks" },
   { src: gallery5, alt: "Landscaped mini golf hole with rules sign" },
 ];
 
@@ -29,19 +34,27 @@ const MiniGolf = () => {
     <Layout>
       <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} />
       <section className="py-16 md:py-24 bg-background">
-        <div className="container max-w-4xl">
+        <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
           <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
           <div className="section-underline" />
 
-          {/* Main Image */}
-          {(content as any).featureImage && (
-            <div className="mt-12 mb-12">
-              <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg">
-                <img src={(content as any).featureImage} alt={content.title} className="w-full h-full object-cover" />
-              </div>
-            </div>
-          )}
+          {/* Top Slider */}
+          <div className="mt-12 mb-12">
+            <Carousel opts={{ align: "start", loop: true }}>
+              <CarouselContent>
+                {topSliderImages.map((img) => (
+                  <CarouselItem key={img.src}>
+                    <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg">
+                      <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex" />
+              <CarouselNext className="hidden md:flex" />
+            </Carousel>
+          </div>
 
           {/* Info Cards */}
           {content.infoCards && (
@@ -49,8 +62,8 @@ const MiniGolf = () => {
               {content.infoCards.map((card) => {
                 const Icon = iconMap[card.icon] || Clock;
                 return (
-                  <div key={card.heading} className="bg-barilla-cream rounded-lg p-6">
-                    <Icon className="text-primary mx-auto mb-3" size={36} />
+                  <div key={card.heading} className="bg-barilla-cream rounded-lg p-6 text-center flex flex-col items-center">
+                    <Icon className="text-primary mb-3" size={36} />
                     <h3 className="font-semibold text-primary mb-2">{card.heading}</h3>
                     <p className="text-sm text-muted-foreground whitespace-pre-line">{card.content}</p>
                   </div>
@@ -67,25 +80,93 @@ const MiniGolf = () => {
               ))}
             </div>
           )}
+        </div>
+      </section>
 
-          {/* Rating */}
-          <div className="mb-12">
-            <div className="flex items-center justify-center gap-1 mb-2">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={24} className={i < 4 ? "fill-accent text-accent" : "text-accent"} />
-              ))}
+      {/* Prices & Contact */}
+      <section className="py-16 md:py-20 bg-barilla-cream">
+        <div className="container">
+          <h2 className="section-heading">Mini Golf Prices</h2>
+          <div className="section-underline" />
+
+          <div className="grid md:grid-cols-2 gap-10 mt-12 max-w-5xl">
+            <div className="bg-background rounded-lg p-8 shadow-sm">
+              <ul className="space-y-4 text-muted-foreground">
+                <li className="flex justify-between border-b border-border pb-3">
+                  <span className="font-semibold text-foreground">Adults</span>
+                  <span>$18 — members $16</span>
+                </li>
+                <li className="flex justify-between border-b border-border pb-3">
+                  <span className="font-semibold text-foreground">Children (up to 16yrs)</span>
+                  <span>$12 — members $10</span>
+                </li>
+                <li className="flex justify-between border-b border-border pb-3">
+                  <span className="font-semibold text-foreground">Concession</span>
+                  <span>$15 — members $12</span>
+                </li>
+                <li className="flex justify-between border-b border-border pb-3">
+                  <span className="font-semibold text-foreground">Family (2 Adults + 2 Children)</span>
+                  <span>$45 — members $40</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-semibold text-foreground">Extra Child</span>
+                  <span>$10 — members $8</span>
+                </li>
+              </ul>
             </div>
-            <p className="text-sm text-muted-foreground">Rated one of the best mini golf courses in Tasmania</p>
+
+            <div className="flex flex-col justify-center">
+              <p className="text-muted-foreground mb-6">
+                For more information about our Putt &amp; Play Mini Golf in Tasmania, check out the{" "}
+                <a
+                  href="http://www.puttandplay.com.au/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-semibold underline hover:text-primary/80"
+                >
+                  Putt &amp; Play website
+                </a>
+                .
+              </p>
+              <p className="text-muted-foreground mb-6">Or get in touch with us:</p>
+              <div className="space-y-3">
+                <a href="tel:0362484447" className="flex items-center gap-3 text-foreground hover:text-primary">
+                  <Phone size={20} className="text-primary" />
+                  <span>0362 484 447</span>
+                </a>
+                <a href="mailto:stay@barilla.com.au" className="flex items-center gap-3 text-foreground hover:text-primary">
+                  <Mail size={20} className="text-primary" />
+                  <span>stay@barilla.com.au</span>
+                </a>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          {/* CTA */}
-          {content.ctaButton && (
-            <div className="text-left">
-              <Link to={content.ctaButton.href || "/contact"} className="btn-cta inline-block">
-                {content.ctaButton.label}
-              </Link>
+      {/* Family Bonding Section with course image */}
+      <section className="py-16 md:py-20 bg-background">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+              <img
+                src={gallery1}
+                alt="Aerial view of the Barilla Putt & Play mini golf course"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
-          )}
+            <div>
+              <h2 className="section-heading">A Relaxed Family Experience</h2>
+              <div className="section-underline" />
+              <p className="text-muted-foreground mt-6 leading-relaxed">
+                Our mini golf course isn't just a source of entertainment, it also offers a chance for children to gently
+                learn new skills and understand the basics of the game. Every hole presents a different challenge in a
+                non-competitive and fun-filled atmosphere. A day spent at Barilla Holiday Park's Putt &amp; Play promises
+                relaxed enjoyment and calm family bonding amidst the tranquil surroundings of the Holiday Park.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
