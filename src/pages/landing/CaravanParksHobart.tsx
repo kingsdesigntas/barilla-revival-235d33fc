@@ -61,7 +61,7 @@ const CaravanParksHobart = () => {
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-cta inline-block mt-auto"
+                className="btn-cta inline-block self-start mt-auto"
               >
                 View Availability and Prices
               </a>
