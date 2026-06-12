@@ -42,8 +42,8 @@ const AccommodationCards = () => {
     <section className="py-16 md:py-24 bg-barilla-cream">
       <div className="container">
         <h2 className="section-heading">{section.heading}</h2>
-        <p className="text-left text-muted-foreground max-w-2xl mb-4">{section.description}</p>
         <div className="section-underline" />
+        <p className="text-left text-muted-foreground max-w-2xl mb-4">{section.description}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {section.cards?.map((acc) => (
             <AccommodationCard key={acc.title} {...acc} />
