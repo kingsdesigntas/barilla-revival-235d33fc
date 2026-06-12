@@ -27,7 +27,7 @@ const FamilyFriendlyHolidayPark = () => {
       <AccommodationHighlights />
 
       <section className="py-16 md:py-24 bg-background">
-        <div className="container max-w-5xl">
+        <div className="container">
           <h2 className="section-heading">A Holiday Park Designed for Families</h2>
           <div className="section-underline" />
           <div className="space-y-5 text-muted-foreground">
@@ -76,7 +76,7 @@ const FamilyFriendlyHolidayPark = () => {
       </section>
 
       <section className="pb-16 md:pb-24 bg-background">
-        <div className="container max-w-5xl">
+        <div className="container">
           <div className="bg-barilla-cream rounded-lg p-8 md:p-12">
             <h3 className="section-heading">Why Families Choose Barilla Holiday Park</h3>
             <div className="section-underline" />
@@ -97,7 +97,7 @@ const FamilyFriendlyHolidayPark = () => {
       </section>
 
       <section className="pb-16 md:pb-24 bg-background">
-        <div className="container max-w-5xl grid md:grid-cols-2 gap-6">
+        <div className="container grid md:grid-cols-2 gap-6">
           <img src={aerialImage} alt="Aerial view of Barilla Holiday Park" className="w-full h-72 object-cover rounded-lg" />
           <img src={miniGolfImage} alt="Putt & Play mini golf course at Barilla Holiday Park" className="w-full h-72 object-cover rounded-lg" />
         </div>

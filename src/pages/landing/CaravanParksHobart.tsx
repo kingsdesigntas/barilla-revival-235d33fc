@@ -25,7 +25,7 @@ const CaravanParksHobart = () => {
       <AccommodationHighlights />
 
       <section className="py-16 md:py-24 bg-background">
-        <div className="container max-w-5xl">
+        <div className="container">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-stretch">
             <div className="md:w-1/2 flex">
               <img
