@@ -363,7 +363,7 @@ export const defaultTouristAttractionsPage = {
 export const defaultDayTripsPage = {
   title: "Day Trips from Barilla Holiday Park",
   subtitle: "Custom-built itineraries to help you explore Hobart, Port Arthur and Tasmania's south",
-  heroImage: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tasman_Peninsula_Cliffs.jpg",
+  heroImage: "/__l5e/assets-v1/2cb566bb-9fdb-4f2b-8d05-80284ec8d250/day-trips-hero.jpg",
   sectionHeading: "Curated Day Trips for Our Guests",
   introParagraphs: [
     "At Barilla Holiday Park, we've put together a collection of custom day trips designed to help our guests get the most out of their stay. From the convict heritage of Port Arthur and the dramatic coastline of the Tasman Peninsula, to wineries, wildlife parks and cultural icons of Hobart, each itinerary is built around our central location near Cambridge — making it easy to explore and return comfortably each evening.",
