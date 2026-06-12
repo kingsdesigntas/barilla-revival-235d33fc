@@ -44,8 +44,8 @@ const MiniGolf = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="hidden md:flex" />
-                <CarouselNext className="hidden md:flex" />
+                <CarouselPrevious className="hidden md:flex left-4 right-auto" />
+                <CarouselNext className="hidden md:flex right-4 left-auto" />
               </Carousel>
             </div>
 
