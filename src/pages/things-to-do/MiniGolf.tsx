@@ -7,19 +7,10 @@ import { defaultMiniGolfPage } from "@/lib/default-content";
 import gallery1 from "@/assets/mini-golf-gallery-1.jpg";
 import gallery2 from "@/assets/mini-golf-gallery-2.jpg";
 import gallery3 from "@/assets/mini-golf-gallery-3.jpg";
-import gallery4 from "@/assets/mini-golf-gallery-4.jpg";
 import gallery5 from "@/assets/mini-golf-gallery-5.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const iconMap: Record<string, any> = { Clock, DollarSign, Users };
-
-const galleryImages = [
-  { src: gallery1, alt: "Aerial view of the Putt & Play mini golf course" },
-  { src: gallery2, alt: "Entrance to Barilla Holiday Park Putt & Play mini golf" },
-  { src: gallery3, alt: "Mini golf fairway lined with cypress trees and rocks" },
-  { src: gallery4, alt: "Hole 11 of the Barilla mini golf course" },
-  { src: gallery5, alt: "Landscaped mini golf hole with rules sign" },
-];
 
 const topSliderImages = [
   { src: gallery2, alt: "Entrance to Barilla Holiday Park Putt & Play with shop and landscaped rocks" },
@@ -39,38 +30,41 @@ const MiniGolf = () => {
           <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
           <div className="section-underline" />
 
-          {/* Top Slider */}
-          <div className="mt-12 mb-12">
-            <Carousel opts={{ align: "start", loop: true }}>
-              <CarouselContent>
-                {topSliderImages.map((img) => (
-                  <CarouselItem key={img.src}>
-                    <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg">
-                      <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden md:flex" />
-              <CarouselNext className="hidden md:flex" />
-            </Carousel>
-          </div>
-
-          {/* Info Cards */}
-          {content.infoCards && (
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              {content.infoCards.map((card) => {
-                const Icon = iconMap[card.icon] || Clock;
-                return (
-                  <div key={card.heading} className="bg-barilla-cream rounded-lg p-6 text-center flex flex-col items-center">
-                    <Icon className="text-primary mb-3" size={36} />
-                    <h3 className="font-semibold text-primary mb-2">{card.heading}</h3>
-                    <p className="text-sm text-muted-foreground whitespace-pre-line">{card.content}</p>
-                  </div>
-                );
-              })}
+          {/* Top Slider + Info Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mt-12 mb-12">
+            {/* Top Slider — 2/3 width */}
+            <div className="md:col-span-2">
+              <Carousel opts={{ align: "start", loop: true }}>
+                <CarouselContent>
+                  {topSliderImages.map((img) => (
+                    <CarouselItem key={img.src}>
+                      <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg">
+                        <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="hidden md:flex" />
+                <CarouselNext className="hidden md:flex" />
+              </Carousel>
             </div>
-          )}
+
+            {/* Info Cards — stacked in one column */}
+            {content.infoCards && (
+              <div className="flex flex-col gap-6">
+                {content.infoCards.map((card) => {
+                  const Icon = iconMap[card.icon] || Clock;
+                  return (
+                    <div key={card.heading} className="bg-barilla-cream rounded-lg p-6 text-center flex flex-col items-center flex-1">
+                      <Icon className="text-primary mb-3" size={36} />
+                      <h3 className="font-semibold text-primary mb-2">{card.heading}</h3>
+                      <p className="text-sm text-muted-foreground whitespace-pre-line">{card.content}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
 
           {/* Body Text */}
           {(content as any).bodyText && (
@@ -170,34 +164,6 @@ const MiniGolf = () => {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="py-16 md:py-20 bg-barilla-cream">
-        <div className="container">
-          <h2 className="section-heading">Mini Golf Gallery</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-4">
-            Take a peek at our 18-hole landscaped course at Barilla Holiday Park.
-          </p>
-          <div className="section-underline" />
-          <Carousel opts={{ align: "start", loop: true }} className="mt-12">
-            <CarouselContent className="-ml-4">
-              {galleryImages.map((img) => (
-                <CarouselItem key={img.src} className="pl-4 basis-full sm:basis-1/2 md:basis-1/3">
-                  <div className="overflow-hidden rounded-lg shadow-md aspect-[4/3] group">
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
-        </div>
-      </section>
     </Layout>
   );
 };
