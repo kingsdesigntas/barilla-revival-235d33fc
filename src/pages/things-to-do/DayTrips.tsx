@@ -35,7 +35,7 @@ const DayTrips = () => {
             {trips.map((trip) => (
               <article
                 key={trip.title}
-                className="bg-card rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow"
+                className="bg-secondary rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-lg transition-shadow"
               >
                 <div className="aspect-[16/9] overflow-hidden bg-muted relative">
                   <img
@@ -56,11 +56,11 @@ const DayTrips = () => {
                   <h3 className="text-xl font-serif font-semibold text-primary mb-2">{trip.title}</h3>
                   <p className="text-muted-foreground mb-4">{trip.description}</p>
 
-                  <div className="bg-secondary/50 rounded-md p-4 mb-4 flex-1">
+                  <div className="mb-4 flex-1">
                     <h4 className="font-semibold text-primary text-sm mb-2 flex items-center gap-2">
                       <MapPin size={14} className="text-accent" /> Stops Breakdown
                     </h4>
-                    <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside marker:text-accent marker:font-semibold">
+                    <ol className="border-l-4 border-accent pl-4 space-y-2 text-sm text-muted-foreground list-decimal list-inside marker:text-accent marker:font-semibold">
                       {trip.stops?.map((stop) => (
                         <li key={stop} className="leading-relaxed">
                           {stop}
@@ -68,6 +68,7 @@ const DayTrips = () => {
                       ))}
                     </ol>
                   </div>
+
 
                   {trip.mapsUrl && (
                     <a
