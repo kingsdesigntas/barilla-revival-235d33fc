@@ -43,11 +43,11 @@ const ThingsToDoBlock = () => {
           Explore Tasmania
         </p>
         <h2 className="section-heading">Things to Do</h2>
+        <div className="section-underline" />
         <p className="text-left text-muted-foreground max-w-2xl mb-4">
           From on-park activities to iconic Tasmanian destinations, there's plenty to keep you busy
           during your stay at Barilla.
         </p>
-        <div className="section-underline" />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {items.map((item) => (
