@@ -4,7 +4,7 @@ import AccommodationHighlights from "@/components/shared/AccommodationHighlights
 import { Check } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import aerialImage from "@/assets/barillapark-aerial-1.jpg";
-import miniGolfImage from "@/assets/barillapark-mini-golf.jpg";
+
 
 const reasons = [
   "Spacious self-contained cabins with room for families of up to six",
