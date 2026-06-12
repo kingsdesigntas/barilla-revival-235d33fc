@@ -23,7 +23,7 @@ const CabinAccommodationHobart = () => {
       <AccommodationHighlights />
 
       <section className="py-16 md:py-24 bg-background">
-        <div className="container max-w-5xl">
+        <div className="container">
           <h2 className="section-heading">Cabin Accommodation Features</h2>
           <div className="section-underline" />
           <p className="text-muted-foreground mb-6">
@@ -57,7 +57,7 @@ const CabinAccommodationHobart = () => {
       </section>
 
       <section className="pb-16 md:pb-24 bg-background">
-        <div className="container max-w-5xl grid md:grid-cols-2 gap-6">
+        <div className="container grid md:grid-cols-2 gap-6">
           <img src={cabinImage} alt="Ensuite cabin accommodation at Barilla Holiday Park" className="w-full h-72 object-cover rounded-lg" />
           <img src={studioCabinImage} alt="Studio cabin accommodation at Barilla Holiday Park" className="w-full h-72 object-cover rounded-lg" />
         </div>
