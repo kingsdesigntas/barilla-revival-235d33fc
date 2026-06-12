@@ -14,6 +14,9 @@ import TouristAttractions from "./pages/things-to-do/TouristAttractions";
 import MiniGolf from "./pages/things-to-do/MiniGolf";
 import DayTrips from "./pages/things-to-do/DayTrips";
 import Contact from "./pages/Contact";
+import CabinAccommodationHobart from "./pages/landing/CabinAccommodationHobart";
+import CaravanParksHobart from "./pages/landing/CaravanParksHobart";
+import FamilyFriendlyHolidayPark from "./pages/landing/FamilyFriendlyHolidayPark";
 import { isSanityConfigured, isVisualEditingEnabled } from "@/lib/sanity";
 import SanityVisualEditing from "@/components/shared/SanityVisualEditing";
 
@@ -43,6 +46,11 @@ const App = () => (
 
 					{/* Contact */}
 					<Route path="/contact" element={<Contact />} />
+
+					{/* Landing pages (not in main nav) */}
+					<Route path="/cabin-accommodation-hobart" element={<CabinAccommodationHobart />} />
+					<Route path="/caravan-parks-hobart" element={<CaravanParksHobart />} />
+					<Route path="/family-friendly-holiday-park-accommodation-in-hobart" element={<FamilyFriendlyHolidayPark />} />
 
 					{/* Catch-all */}
 					<Route path="*" element={<NotFound />} />
