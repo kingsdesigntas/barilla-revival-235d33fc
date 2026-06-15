@@ -17,6 +17,10 @@ import cabinSlide1 from "@/assets/Barillapark-1.jpg.asset.json";
 import cabinSlide2 from "@/assets/Barillapark-19.jpg.asset.json";
 import cabinSlide3 from "@/assets/Barillapark-28.jpg.asset.json";
 import cabinSlide4 from "@/assets/Barillapark-36.jpg.asset.json";
+import caravanSlide1 from "@/assets/Barillapark-55.jpg.asset.json";
+import caravanSlide2 from "@/assets/Barillapark-59-2.jpg.asset.json";
+import caravanSlide3 from "@/assets/Barillapark-65.jpg.asset.json";
+import caravanSlide4 from "@/assets/Barillapark-90.jpg.asset.json";
 
 const heroImage = aerialImage;
 
@@ -97,7 +101,7 @@ export const defaultHomePage = {
         title: "Caravan Accommodation",
         description: "All of our caravan sites are spacious with sheltered and friendly surroundings. A perfect site for your Caravan or Motorhome!",
         image: caravanHomeImage,
-        images: [caravanHomeImage, caravanAltImage, caravanImage],
+        images: [caravanSlide1.url, caravanSlide2.url, caravanSlide3.url, caravanSlide4.url],
         link: "/accommodation/caravans",
         buttonText: "View All Sites",
       },
