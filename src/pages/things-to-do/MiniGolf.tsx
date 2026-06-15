@@ -154,14 +154,6 @@ const MiniGolf = () => {
       <section className="py-16 md:py-20 bg-background">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
-              <img
-                src={gallery1}
-                alt="Aerial view of the Barilla Putt & Play mini golf course"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
             <div>
               <h2 className="section-heading">A Relaxed Family Experience</h2>
               <div className="section-underline" />
@@ -171,6 +163,14 @@ const MiniGolf = () => {
                 non-competitive and fun-filled atmosphere. A day spent at Barilla Holiday Park's Putt &amp; Play promises
                 relaxed enjoyment and calm family bonding amidst the tranquil surroundings of the Holiday Park.
               </p>
+            </div>
+            <div className="overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+              <img
+                src={gallery1}
+                alt="Aerial view of the Barilla Putt & Play mini golf course"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
