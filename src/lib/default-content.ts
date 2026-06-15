@@ -101,7 +101,7 @@ export const defaultHomePage = {
         title: "Caravan Accommodation",
         description: "All of our caravan sites are spacious with sheltered and friendly surroundings. A perfect site for your Caravan or Motorhome!",
         image: caravanHomeImage,
-        images: [caravanHomeImage, caravanAltImage, caravanImage],
+        images: [caravanSlide1.url, caravanSlide2.url, caravanSlide3.url, caravanSlide4.url],
         link: "/accommodation/caravans",
         buttonText: "View All Sites",
       },
