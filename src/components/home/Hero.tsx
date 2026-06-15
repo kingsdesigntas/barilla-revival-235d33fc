@@ -48,7 +48,7 @@ const Hero = () => {
                     href={btn.href || BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-3 px-9 py-3 rounded-md transition-all duration-200 ${
+                    className={`inline-flex items-center gap-3 px-6 py-3 rounded-md transition-all duration-200 ${
                       isGreen
                         ? "bg-success text-success-foreground hover:opacity-90"
                         : "bg-accent text-accent-foreground hover:bg-[hsl(var(--barilla-orange-hover))]"
