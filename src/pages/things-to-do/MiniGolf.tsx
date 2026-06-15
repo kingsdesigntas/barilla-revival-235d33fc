@@ -31,14 +31,14 @@ const MiniGolf = () => {
           <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
 
           {/* Top Slider + Info Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mt-12 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mt-12 mb-12 items-stretch">
             {/* Top Slider — 2/3 width */}
-            <div className="md:col-span-2">
-              <Carousel opts={{ align: "start", loop: true }}>
-                <CarouselContent>
+            <div className="md:col-span-2 h-full">
+              <Carousel className="h-full" opts={{ align: "start", loop: true }}>
+                <CarouselContent className="h-full">
                   {topSliderImages.map((img) => (
-                    <CarouselItem key={img.src}>
-                      <div className="relative aspect-video overflow-hidden rounded-lg shadow-lg">
+                    <CarouselItem key={img.src} className="h-full">
+                      <div className="relative h-full overflow-hidden rounded-lg shadow-lg">
                         <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
                       </div>
                     </CarouselItem>
