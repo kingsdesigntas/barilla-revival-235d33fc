@@ -30,8 +30,8 @@ export const defaultSiteSettings = {
       href: "#",
       children: [
         { label: "Caravan Accommodation", href: "/accommodation/caravans" },
-        { label: "Camping Grounds", href: "/accommodation/camping" },
         { label: "Cabin Accommodation", href: "/accommodation/cabins" },
+        { label: "Camping Grounds", href: "/accommodation/camping" },
         { label: "Hobart Airport Stay", href: "/accommodation/airport" },
       ],
     },
