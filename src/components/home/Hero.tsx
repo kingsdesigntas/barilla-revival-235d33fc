@@ -48,7 +48,7 @@ const Hero = () => {
                     href={btn.href || BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-3 px-5 py-3 rounded-md transition-all duration-200 ${
+                    className={`inline-flex items-center gap-3 px-9 py-3 rounded-md transition-all duration-200 ${
                       isGreen
                         ? "bg-success text-success-foreground hover:opacity-90"
                         : "bg-accent text-accent-foreground hover:bg-[hsl(var(--barilla-orange-hover))]"
@@ -99,7 +99,6 @@ const Hero = () => {
               </div>
               <div className="text-2xl font-semibold">{rating}/5</div>
               <div className="text-sm text-white/80 mt-1">Based on {reviewCount} reviews</div>
-              <div className="text-xs text-white/70 mt-3 uppercase tracking-wide">View on Tripadvisor →</div>
             </a>
           </div>
         </div>

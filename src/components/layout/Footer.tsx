@@ -105,7 +105,7 @@ const Footer = () => {
       <div className="border-t border-white/10 py-4">
         <div className="container flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/60">
           <p>© {new Date().getFullYear()} Barilla Holiday Park. All rights reserved.</p>
-          <p>Website by <span className="text-accent">Your Team</span></p>
+          <p>Website by <a href="https://personkingsdigital.com.au" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Kings Digital</a></p>
         </div>
       </div>
     </footer>
