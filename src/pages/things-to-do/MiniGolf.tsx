@@ -15,6 +15,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const iconMap: Record<string, any> = { Clock, DollarSign, Users };
 
 const topSliderImages = [
+  { src: sliderImg.url, alt: "Mini golf course hole 11 surrounded by trees and rocks" },
   { src: gallery2, alt: "Entrance to Barilla Holiday Park Putt & Play with shop and landscaped rocks" },
   { src: gallery3, alt: "Mini golf fairway lined with cypress trees and rocks" },
   { src: gallery5, alt: "Landscaped mini golf hole with rules sign" },
