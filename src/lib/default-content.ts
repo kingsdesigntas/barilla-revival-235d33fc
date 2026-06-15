@@ -13,6 +13,10 @@ import aerialImage2 from "@/assets/barillapark-aerial-2.jpg";
 import receptionImage from "@/assets/barillapark-reception.jpg";
 import heroCaravan from "@/assets/hero-caravan.jpg";
 import heroCamping from "@/assets/hero-camping.jpg";
+import cabinSlide1 from "@/assets/Barillapark-1.jpg.asset.json";
+import cabinSlide2 from "@/assets/Barillapark-19.jpg.asset.json";
+import cabinSlide3 from "@/assets/Barillapark-28.jpg.asset.json";
+import cabinSlide4 from "@/assets/Barillapark-36.jpg.asset.json";
 
 const heroImage = aerialImage;
 
@@ -85,6 +89,7 @@ export const defaultHomePage = {
         title: "Cabin Accommodation",
         description: "Our cabins feature open plan design and are fully self-contained. We have accommodation options for up to 8 people.",
         image: cabinImage,
+        images: [cabinSlide1.url, cabinSlide2.url, cabinSlide3.url, cabinSlide4.url],
         link: "/accommodation/cabins",
         buttonText: "View All Cabins",
       },
@@ -92,6 +97,7 @@ export const defaultHomePage = {
         title: "Caravan Accommodation",
         description: "All of our caravan sites are spacious with sheltered and friendly surroundings. A perfect site for your Caravan or Motorhome!",
         image: caravanHomeImage,
+        images: [caravanHomeImage, caravanAltImage, caravanImage],
         link: "/accommodation/caravans",
         buttonText: "View All Sites",
       },
@@ -99,6 +105,7 @@ export const defaultHomePage = {
         title: "Camping Grounds",
         description: "Barilla Holiday Park offers sheltered and friendly camping grounds with lots of things to do for all the family.",
         image: campingImage,
+        images: [campingImage, campingAltImage],
         link: "/accommodation/camping",
         buttonText: "View All Sites",
       },
