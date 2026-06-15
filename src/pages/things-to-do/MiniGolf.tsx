@@ -8,6 +8,7 @@ import gallery1 from "@/assets/mini-golf-gallery-1.jpg";
 import gallery2 from "@/assets/mini-golf-gallery-2.jpg";
 import gallery3 from "@/assets/mini-golf-gallery-3.jpg";
 import gallery5 from "@/assets/mini-golf-gallery-5.jpg";
+import miniGolfPricesImg from "@/assets/Barillapark-77.jpg.asset.json";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const iconMap: Record<string, any> = { Clock, DollarSign, Users };
@@ -83,55 +84,66 @@ const MiniGolf = () => {
           <h2 className="section-heading">Mini Golf Prices</h2>
           <div className="section-underline" />
 
-          <div className="grid md:grid-cols-2 gap-10 mt-12 max-w-5xl">
-            <div className="bg-background rounded-lg p-8 shadow-sm">
-              <ul className="space-y-4 text-muted-foreground">
-                <li className="flex justify-between border-b border-border pb-3">
-                  <span className="font-semibold text-foreground">Adults</span>
-                  <span>$18 — members $16</span>
-                </li>
-                <li className="flex justify-between border-b border-border pb-3">
-                  <span className="font-semibold text-foreground">Children (up to 16yrs)</span>
-                  <span>$12 — members $10</span>
-                </li>
-                <li className="flex justify-between border-b border-border pb-3">
-                  <span className="font-semibold text-foreground">Concession</span>
-                  <span>$15 — members $12</span>
-                </li>
-                <li className="flex justify-between border-b border-border pb-3">
-                  <span className="font-semibold text-foreground">Family (2 Adults + 2 Children)</span>
-                  <span>$45 — members $40</span>
-                </li>
-                <li className="flex justify-between">
-                  <span className="font-semibold text-foreground">Extra Child</span>
-                  <span>$10 — members $8</span>
-                </li>
-              </ul>
+          <div className="grid md:grid-cols-2 gap-10 mt-12 items-start">
+            <div className="overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
+              <img
+                src={miniGolfPricesImg.url}
+                alt="Putt & Play mini golf course hole 2 sign"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
 
-            <div className="flex flex-col justify-center">
-              <p className="text-muted-foreground mb-6">
-                For more information about our Putt &amp; Play Mini Golf in Tasmania, check out the{" "}
-                <a
-                  href="http://www.puttandplay.com.au/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary font-semibold underline hover:text-primary/80"
-                >
-                  Putt &amp; Play website
-                </a>
-                .
-              </p>
-              <p className="text-muted-foreground mb-6">Or get in touch with us:</p>
-              <div className="space-y-3">
-                <a href="tel:0362484447" className="flex items-center gap-3 text-foreground hover:text-primary">
-                  <Phone size={20} className="text-primary" />
-                  <span>0362 484 447</span>
-                </a>
-                <a href="mailto:stay@barilla.com.au" className="flex items-center gap-3 text-foreground hover:text-primary">
-                  <Mail size={20} className="text-primary" />
-                  <span>stay@barilla.com.au</span>
-                </a>
+            <div className="flex flex-col gap-10">
+              <div className="bg-background rounded-lg p-8 shadow-sm">
+                <ul className="space-y-4 text-muted-foreground">
+                  <li className="flex justify-between border-b border-border pb-3">
+                    <span className="font-semibold text-foreground">Adults</span>
+                    <span>$18 — members $16</span>
+                  </li>
+                  <li className="flex justify-between border-b border-border pb-3">
+                    <span className="font-semibold text-foreground">Children (up to 16yrs)</span>
+                    <span>$12 — members $10</span>
+                  </li>
+                  <li className="flex justify-between border-b border-border pb-3">
+                    <span className="font-semibold text-foreground">Concession</span>
+                    <span>$15 — members $12</span>
+                  </li>
+                  <li className="flex justify-between border-b border-border pb-3">
+                    <span className="font-semibold text-foreground">Family (2 Adults + 2 Children)</span>
+                    <span>$45 — members $40</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span className="font-semibold text-foreground">Extra Child</span>
+                    <span>$10 — members $8</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="flex flex-col justify-center">
+                <p className="text-muted-foreground mb-6">
+                  For more information about our Putt &amp; Play Mini Golf in Tasmania, check out the{" "}
+                  <a
+                    href="http://www.puttandplay.com.au/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary font-semibold underline hover:text-primary/80"
+                  >
+                    Putt &amp; Play website
+                  </a>
+                  .
+                </p>
+                <p className="text-muted-foreground mb-6">Or get in touch with us:</p>
+                <div className="space-y-3">
+                  <a href="tel:0362484447" className="flex items-center gap-3 text-foreground hover:text-primary">
+                    <Phone size={20} className="text-primary" />
+                    <span>0362 484 447</span>
+                  </a>
+                  <a href="mailto:stay@barilla.com.au" className="flex items-center gap-3 text-foreground hover:text-primary">
+                    <Mail size={20} className="text-primary" />
+                    <span>stay@barilla.com.au</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
