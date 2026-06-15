@@ -9,6 +9,7 @@ import gallery2 from "@/assets/mini-golf-gallery-2.jpg";
 import gallery3 from "@/assets/mini-golf-gallery-3.jpg";
 import gallery5 from "@/assets/mini-golf-gallery-5.jpg";
 import miniGolfPricesImg from "@/assets/Barillapark-77.jpg.asset.json";
+import sliderImg from "@/assets/Barillapark-78.jpg.asset.json";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const iconMap: Record<string, any> = { Clock, DollarSign, Users };
