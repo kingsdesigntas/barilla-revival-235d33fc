@@ -27,6 +27,7 @@ import campingSlide1 from "@/assets/camping-couple-tent.jpg.asset.json";
 import campingSlide2 from "@/assets/Barillapark-66.jpg.asset.json";
 import campingSlide3 from "@/assets/Barillapark-68.jpg.asset.json";
 import campingSlide4 from "@/assets/Barillapark-62.jpg.asset.json";
+import atBarillaHero from "@/assets/Barillapark-68-2.jpg.asset.json";
 
 const heroImage = aerialImage;
 
