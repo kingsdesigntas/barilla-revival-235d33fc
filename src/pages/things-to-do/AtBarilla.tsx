@@ -45,7 +45,7 @@ const AtBarilla = () => {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {content.activities?.map((activity) => {
-              const Icon = iconMap[activity.icon] || Sun;
+              const Icon = iconMap[activity.icon] || SlideIcon;
               return (
                 <div key={activity.title} className="bg-[hsl(155,35%,93%)] rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex flex-col items-center justify-center text-center">
                   <div className="flex items-center justify-center mb-4" style={{ height: 36 }}>
