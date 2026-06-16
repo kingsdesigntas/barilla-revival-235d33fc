@@ -313,7 +313,7 @@ export const defaultAirportPage = {
 export const defaultAtBarillaPage = {
   title: "Things to Do at Barilla",
   subtitle: "Fun activities and facilities right here at the park",
-  heroImage: aerialImage2,
+  heroImage: atBarillaHero.url,
   sectionHeading: "Activities at the Park",
   sectionDescription: "There's never a dull moment at Barilla Holiday Park. We've designed our park to provide fun for all ages.",
   activities: [
