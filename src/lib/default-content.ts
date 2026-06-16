@@ -13,6 +13,7 @@ import aerialImage2 from "@/assets/barillapark-aerial-2.jpg";
 import receptionImage from "@/assets/barillapark-reception.jpg";
 import heroCaravan from "@/assets/hero-caravan.jpg";
 import heroCamping from "@/assets/hero-camping.jpg";
+import cabinSlideNew from "@/assets/cabin-exterior.png.asset.json";
 import cabinSlide1 from "@/assets/Barillapark-1.jpg.asset.json";
 import cabinSlide2 from "@/assets/Barillapark-19.jpg.asset.json";
 import cabinSlide3 from "@/assets/Barillapark-28.jpg.asset.json";
@@ -98,7 +99,7 @@ export const defaultHomePage = {
         title: "Cabin Accommodation",
         description: "Our cabins feature open plan design and are fully self-contained. We have accommodation options for up to 8 people.",
         image: cabinImage,
-        images: [cabinSlide1.url, cabinSlide2.url, cabinSlide3.url, cabinSlide4.url],
+        images: [cabinSlideNew.url, cabinSlide1.url, cabinSlide2.url, cabinSlide3.url, cabinSlide4.url],
         link: "/accommodation/cabins",
         buttonText: "View All Cabins",
       },
