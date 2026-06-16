@@ -21,6 +21,10 @@ import caravanSlide1 from "@/assets/Barillapark-55.jpg.asset.json";
 import caravanSlide2 from "@/assets/Barillapark-59-2.jpg.asset.json";
 import caravanSlide3 from "@/assets/Barillapark-65.jpg.asset.json";
 import caravanSlide4 from "@/assets/Barillapark-90.jpg.asset.json";
+import campingSlide1 from "@/assets/camping-couple-tent.jpg.asset.json";
+import campingSlide2 from "@/assets/Barillapark-66.jpg.asset.json";
+import campingSlide3 from "@/assets/Barillapark-68.jpg.asset.json";
+import campingSlide4 from "@/assets/Barillapark-62.jpg.asset.json";
 
 const heroImage = aerialImage;
 
@@ -109,7 +113,7 @@ export const defaultHomePage = {
         title: "Camping Grounds",
         description: "Barilla Holiday Park offers sheltered and friendly camping grounds with lots of things to do for all the family.",
         image: campingImage,
-        images: [campingImage, campingAltImage],
+        images: [campingSlide1.url, campingSlide2.url, campingSlide3.url, campingSlide4.url],
         link: "/accommodation/camping",
         buttonText: "View All Sites",
       },
