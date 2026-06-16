@@ -5,6 +5,7 @@ import caravanImage from "@/assets/barillapark-powered-site.jpg";
 import caravanHomeImage from "@/assets/barillapark-caravan-home.jpg";
 import caravanAltImage from "@/assets/barillapark-caravan-1.jpg";
 import premiumPoweredSiteImage from "@/assets/Barillapark-55-2.jpg.asset.json";
+import poweredSiteImage from "@/assets/Barillapark-65-2.jpg.asset.json";
 import campingImage from "@/assets/barillapark-camping-1.jpg";
 import campingAltImage from "@/assets/barillapark-camping-2.jpg";
 import miniGolfImage from "@/assets/barillapark-mini-golf.jpg";
