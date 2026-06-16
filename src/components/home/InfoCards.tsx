@@ -19,7 +19,7 @@ const InfoCards = () => {
           {/* Contact Card */}
           <div className="contact-card h-full flex flex-col">
             <div className="contact-card-header">{section.contactCard?.heading}</div>
-            <div className="p-6 space-y-4 flex flex-col flex-1">
+            <div className="p-6 gap-4 flex flex-col flex-1">
               <div className="flex items-start gap-3 text-sm">
                 <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
                 <span>{section.contactCard?.address}</span>
