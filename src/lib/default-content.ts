@@ -9,7 +9,7 @@ import caravanAltImage from "@/assets/barillapark-caravan-1.jpg";
 import premiumPoweredSiteImage from "@/assets/Barillapark-55-2.jpg.asset.json";
 import poweredSiteImage from "@/assets/Barillapark-65-2.jpg.asset.json";
 import driveThroughImage from "@/assets/Barillapark-40.jpg.asset.json";
-import campingImage from "@/assets/barillapark-camping-1.jpg";
+import campingImage from "@/assets/Barillapark-67.jpg.asset.json";
 import campingAltImage from "@/assets/barillapark-camping-2.jpg";
 import miniGolfImage from "@/assets/barillapark-mini-golf.jpg";
 import miniGolfAerialImage from "@/assets/barillapark-aerial-mini-golf.jpg";
@@ -121,7 +121,7 @@ export const defaultHomePage = {
       {
         title: "Camping Grounds",
         description: "Barilla Holiday Park offers sheltered and friendly camping grounds with lots of things to do for all the family.",
-        image: campingImage,
+        image: campingImage.url,
         images: [campingSlide1.url, campingSlide2.url, campingSlide3.url, campingSlide4.url],
         link: "/accommodation/camping",
         buttonText: "View All Sites",
@@ -262,7 +262,7 @@ export const defaultCampingPage = {
     {
       name: "Camping Site",
       description: "Experience the great Tasmanian outdoors at our well-maintained camping grounds. Set up your tent among the eucalyptus trees and enjoy the peaceful surroundings. Our camping sites offer easy access to modern amenity blocks, BBQ areas, and all the park facilities.",
-      image: campingImage,
+      image: campingImage.url,
       features: ["Spacious flat camping sites", "Sheltered and shaded areas", "Clean modern amenity blocks", "BBQ and campfire areas", "Free WiFi access"],
       buttonText: "Book Your Campsite",
       buttonLink: "/contact",
