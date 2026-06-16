@@ -58,9 +58,6 @@ const InfoCards = () => {
                   );
                 })}
               </div>
-              <p className="text-sm font-semibold text-foreground">
-                {section.ratingsCard?.rating}/5 from {section.ratingsCard?.reviewCount} Google reviews
-              </p>
               <p className="text-sm text-muted-foreground">{section.ratingsCard?.description}</p>
               <a
                 href={section.ratingsCard?.googleReviewsLink}
