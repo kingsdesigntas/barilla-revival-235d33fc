@@ -25,7 +25,7 @@ const CampingGrounds = () => {
 
   return (
     <Layout>
-      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} />
+      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} backgroundPosition="bg-top" />
       <AccommodationHighlights />
       <section className="py-16 md:py-24 bg-background">
         <div className="container">

@@ -2,12 +2,13 @@ interface PageHeroProps {
   title: string;
   subtitle?: string;
   backgroundImage: string;
+  backgroundPosition?: string;
 }
 
-const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) => {
+const PageHero = ({ title, subtitle, backgroundImage, backgroundPosition = "bg-center" }: PageHeroProps) => {
   return (
     <section
-      className="relative bg-cover bg-center min-h-[25vh] md:min-h-[30vh] flex"
+      className={`relative bg-cover ${backgroundPosition} min-h-[25vh] md:min-h-[30vh] flex`}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div
