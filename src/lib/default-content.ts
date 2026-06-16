@@ -27,6 +27,7 @@ import campingSlide1 from "@/assets/camping-couple-tent.jpg.asset.json";
 import campingSlide2 from "@/assets/Barillapark-66.jpg.asset.json";
 import campingSlide3 from "@/assets/Barillapark-68.jpg.asset.json";
 import campingSlide4 from "@/assets/Barillapark-62.jpg.asset.json";
+import atBarillaHero from "@/assets/Barillapark-68-2.jpg.asset.json";
 
 const heroImage = aerialImage;
 
@@ -312,7 +313,7 @@ export const defaultAirportPage = {
 export const defaultAtBarillaPage = {
   title: "Things to Do at Barilla",
   subtitle: "Fun activities and facilities right here at the park",
-  heroImage: aerialImage2,
+  heroImage: atBarillaHero.url,
   sectionHeading: "Activities at the Park",
   sectionDescription: "There's never a dull moment at Barilla Holiday Park. We've designed our park to provide fun for all ages.",
   activities: [
