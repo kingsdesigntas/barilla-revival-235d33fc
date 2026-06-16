@@ -22,10 +22,16 @@ const CabinAccommodation = () => {
       <AccommodationHighlights />
 
       <section className="py-16 md:py-24 bg-background">
-        <div className="container max-w-5xl">
-          <h2 className="section-heading">{content.sectionHeading}</h2>
-          <div className="section-underline" />
-          <p className="text-muted-foreground mb-4">{content.sectionDescription}</p>
+        <div className="container">
+          <div className="grid md:grid-cols-3 gap-8 items-start">
+            <div className="md:col-span-1">
+              <h2 className="section-heading text-left">{content.sectionHeading}</h2>
+              <div className="section-underline mx-0" />
+            </div>
+            <div className="md:col-span-2">
+              <p className="text-muted-foreground">{content.sectionDescription}</p>
+            </div>
+          </div>
         </div>
       </section>
 
