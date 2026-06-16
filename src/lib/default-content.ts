@@ -6,6 +6,7 @@ import caravanHomeImage from "@/assets/barillapark-caravan-home.jpg";
 import caravanAltImage from "@/assets/barillapark-caravan-1.jpg";
 import premiumPoweredSiteImage from "@/assets/Barillapark-55-2.jpg.asset.json";
 import poweredSiteImage from "@/assets/Barillapark-65-2.jpg.asset.json";
+import driveThroughImage from "@/assets/Barillapark-40.jpg.asset.json";
 import campingImage from "@/assets/barillapark-camping-1.jpg";
 import campingAltImage from "@/assets/barillapark-camping-2.jpg";
 import miniGolfImage from "@/assets/barillapark-mini-golf.jpg";
@@ -234,7 +235,7 @@ export const defaultCaravanPage = {
   items: [
     { name: "Powered Site", description: "Spacious powered sites with easy access to amenities. Suitable for caravans and motorhomes of all sizes.", image: poweredSiteImage.url, buttonText: "Book Now", buttonLink: "/contact" },
     { name: "Premium Powered Site", description: "Our premium sites offer extra space, better views, and are located in the quietest areas of the park.", image: premiumPoweredSiteImage.url, buttonText: "Book Now", buttonLink: "/contact" },
-    { name: "Drive-Through Site", description: "Convenient drive-through sites perfect for larger rigs. No reversing required!", image: campingAltImage, buttonText: "Book Now", buttonLink: "/contact" },
+    { name: "Drive-Through Site", description: "Convenient drive-through sites perfect for larger rigs. No reversing required!", image: driveThroughImage.url, buttonText: "Book Now", buttonLink: "/contact" },
   ],
   amenitiesHeading: "Site Amenities",
   amenities: [
