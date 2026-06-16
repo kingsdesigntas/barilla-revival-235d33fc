@@ -19,7 +19,7 @@ const InfoCards = () => {
           {/* Contact Card */}
           <div className="contact-card h-full flex flex-col">
             <div className="contact-card-header">{section.contactCard?.heading}</div>
-            <div className="p-6 space-y-4 flex flex-col flex-1">
+            <div className="p-6 gap-4 flex flex-col flex-1">
               <div className="flex items-start gap-3 text-sm">
                 <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
                 <span>{section.contactCard?.address}</span>
@@ -43,7 +43,7 @@ const InfoCards = () => {
           {/* Ratings Card */}
           <div className="contact-card h-full flex flex-col">
             <div className="contact-card-header">{section.ratingsCard?.heading}</div>
-            <div className="p-6 space-y-4 flex flex-col flex-1">
+            <div className="p-6 gap-4 flex flex-col flex-1">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => {
                   const rating = section.ratingsCard?.rating || 4.4;
@@ -76,7 +76,7 @@ const InfoCards = () => {
           {/* Social Card */}
           <div className="contact-card h-full flex flex-col">
             <div className="contact-card-header">{section.socialCard?.heading}</div>
-            <div className="p-6 space-y-4 flex flex-col flex-1">
+            <div className="p-6 gap-4 flex flex-col flex-1">
               <p className="text-sm text-muted-foreground">{section.socialCard?.description}</p>
               <a
                 href={section.socialCard?.facebookLink}
