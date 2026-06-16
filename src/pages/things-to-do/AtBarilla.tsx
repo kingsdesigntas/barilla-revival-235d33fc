@@ -1,12 +1,12 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import { Link } from "react-router-dom";
-import { Gamepad2, Trees, Users, Sun } from "lucide-react";
+import { Flag, Trees, Flame, Sun } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACTIVITY_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultAtBarillaPage } from "@/lib/default-content";
 
-const iconMap: Record<string, any> = { Gamepad2, Trees, Users, Sun };
+const iconMap: Record<string, any> = { Flag, Trees, Flame, Sun };
 
 const AtBarilla = () => {
   const { content } = useSanityContent("at-barilla-page", ACTIVITY_PAGE_QUERY, defaultAtBarillaPage, { slug: "at-barilla" });
