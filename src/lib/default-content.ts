@@ -17,6 +17,7 @@ import cabinSlide1 from "@/assets/Barillapark-1.jpg.asset.json";
 import cabinSlide2 from "@/assets/Barillapark-19.jpg.asset.json";
 import cabinSlide3 from "@/assets/Barillapark-28.jpg.asset.json";
 import cabinSlide4 from "@/assets/Barillapark-36.jpg.asset.json";
+import caravanSlideNew from "@/assets/roadpass-9R4ghJq0Fe8-unsplash.jpg.asset.json";
 import caravanSlide1 from "@/assets/Barillapark-55.jpg.asset.json";
 import caravanSlide2 from "@/assets/Barillapark-59-2.jpg.asset.json";
 import caravanSlide3 from "@/assets/Barillapark-65.jpg.asset.json";
