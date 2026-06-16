@@ -2,6 +2,7 @@
 import cabinImage from "@/assets/barillapark-cabin.jpg";
 import studioCabinImage from "@/assets/barillapark-studio-cabin.jpg";
 import ensuiteCabinImage from "@/assets/Barillapark-31.jpg.asset.json";
+import twoBedroomCabinImage from "@/assets/Barillapark-6.jpg.asset.json";
 import caravanImage from "@/assets/barillapark-powered-site.jpg";
 import caravanHomeImage from "@/assets/barillapark-caravan-home.jpg";
 import caravanAltImage from "@/assets/barillapark-caravan-1.jpg";
@@ -184,7 +185,7 @@ export const defaultCabinPage = {
         "All linen and crockery provided",
         "Fully self-contained",
       ],
-      image: cabinImage,
+      image: twoBedroomCabinImage.url,
       buttonText: "Book Now",
       buttonLink: "/contact",
     },
