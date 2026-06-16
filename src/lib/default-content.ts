@@ -317,10 +317,8 @@ export const defaultAtBarillaPage = {
   sectionDescription: "There's never a dull moment at Barilla Holiday Park. We've designed our park to provide fun for all ages.",
   activities: [
     { icon: "Gamepad2", title: "Putt & Play Mini Golf", description: "Our 18-hole mini golf course is fun for the whole family. Challenge your friends and family!" },
-    { icon: "Bike", title: "Bike Paths", description: "Explore the area on two wheels with easy access to local bike paths and trails." },
     { icon: "Trees", title: "Nature Walks", description: "Enjoy peaceful walks through our gardens and the surrounding natural bushland." },
     { icon: "Users", title: "BBQ Areas", description: "Gather the family for a classic Aussie BBQ at our communal cooking facilities." },
-    { icon: "Dog", title: "Pet Friendly", description: "We welcome well-behaved pets in designated areas of the park." },
     { icon: "Sun", title: "Playground", description: "The kids will love our playground - a safe space for them to run and play." },
   ],
   featureSection: {
