@@ -17,7 +17,7 @@ const InfoCards = () => {
 
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {/* Contact Card */}
-          <div className="contact-card">
+          <div className="contact-card h-full flex flex-col">
             <div className="contact-card-header">{section.contactCard?.heading}</div>
             <div className="p-6 space-y-4 flex flex-col">
               <div className="flex items-start gap-3 text-sm">
@@ -41,7 +41,7 @@ const InfoCards = () => {
           </div>
 
           {/* Ratings Card */}
-          <div className="contact-card">
+          <div className="contact-card h-full flex flex-col">
             <div className="contact-card-header">{section.ratingsCard?.heading}</div>
             <div className="p-6 space-y-4 flex flex-col">
               <div className="flex items-center gap-1">
@@ -74,7 +74,7 @@ const InfoCards = () => {
           </div>
 
           {/* Social Card */}
-          <div className="contact-card">
+          <div className="contact-card h-full flex flex-col">
             <div className="contact-card-header">{section.socialCard?.heading}</div>
             <div className="p-6 space-y-4 flex flex-col">
               <p className="text-sm text-muted-foreground">{section.socialCard?.description}</p>
