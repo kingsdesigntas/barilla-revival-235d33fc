@@ -18,6 +18,7 @@ import aerialImage2 from "@/assets/barillapark-aerial-2.jpg";
 import receptionImage from "@/assets/barillapark-reception.jpg";
 import heroCaravan from "@/assets/hero-caravan.jpg";
 import heroCamping from "@/assets/hero-camping.jpg";
+import campingHeroRotated from "@/assets/camping-hero-rotated.jpg.asset.json";
 import cabinSlideNew from "@/assets/cabin-exterior.png.asset.json";
 import cabinSlide1 from "@/assets/Barillapark-1.jpg.asset.json";
 import cabinSlide2 from "@/assets/Barillapark-19.jpg.asset.json";
