@@ -6,7 +6,7 @@ import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACTIVITY_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultAtBarillaPage } from "@/lib/default-content";
 
-const iconMap: Record<string, any> = { Gamepad2, Trees, Users, Sun };
+const iconMap: Record<string, any> = { Flag, Trees, Flame, Sun };
 
 const AtBarilla = () => {
   const { content } = useSanityContent("at-barilla-page", ACTIVITY_PAGE_QUERY, defaultAtBarillaPage, { slug: "at-barilla" });
