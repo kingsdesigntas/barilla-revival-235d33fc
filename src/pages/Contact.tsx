@@ -77,21 +77,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map CTA */}
-              <div className="mt-8">
-                <div className="bg-barilla-cream rounded-lg p-8 text-center w-fit">
-                  <Map className="text-primary mx-auto mb-2" size={32} />
-                  <p className="text-sm text-muted-foreground mb-4">View our location on Google Maps</p>
-                  <a
-                    href={content.mapLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-cta inline-flex items-center gap-2 text-sm"
-                  >
-                    <Map size={16} /> Get Directions on Google Maps
-                  </a>
-                </div>
-              </div>
             </div>
 
             {/* Contact Form */}
