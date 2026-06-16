@@ -20,12 +20,12 @@ const AtBarilla = () => {
           <div className="section-underline" />
           <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {content.activities?.map((activity) => {
               const Icon = iconMap[activity.icon] || Sun;
               return (
-                <div key={activity.title} className="bg-card rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-center mb-4" style={{ height: 36 }}>
+                <div key={activity.title} className="bg-[hsl(155,35%,93%)] rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex flex-col items-center justify-center text-center">
+                  <div className="flex items-center justify-center mb-4" style={{ height: 36 }}>
                     <Icon className="text-primary" size={36} />
                   </div>
                   <h3 className="font-semibold text-primary mb-2">{activity.title}</h3>
