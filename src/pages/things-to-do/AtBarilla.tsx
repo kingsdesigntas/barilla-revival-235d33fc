@@ -1,12 +1,35 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import { Link } from "react-router-dom";
-import { Flag, Trees, Flame, Sun } from "lucide-react";
+import { Flag, Trees } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACTIVITY_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultAtBarillaPage } from "@/lib/default-content";
 
-const iconMap: Record<string, any> = { Flag, Trees, Flame, Sun };
+const BbqGrillIcon = (props: any) => (
+  <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6 14c0 3.31 2.69 6 6 6s6-2.69 6-6" />
+    <path d="M4 14h16" />
+    <path d="M8 20l-2 3" />
+    <path d="M16 20l2 3" />
+    <path d="M9 8c0-1.66 1.34-3 3-3s3 1.34 3 3" />
+    <path d="M12 5V3" />
+    <path d="M9 8c-1 .5-1.5 1.5-1.5 2.5" />
+    <path d="M15 8c1 .5 1.5 1.5 1.5 2.5" />
+  </svg>
+);
+
+const SlideIcon = (props: any) => (
+  <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6 20V10" />
+    <path d="M6 10h12l-4 10H6z" />
+    <path d="M6 10l-2-2" />
+    <path d="M8 8l-2 2" />
+    <path d="M4 20h16" />
+  </svg>
+);
+
+const iconMap: Record<string, any> = { Flag, Trees, BbqGrillIcon, SlideIcon };
 
 const AtBarilla = () => {
   const { content } = useSanityContent("at-barilla-page", ACTIVITY_PAGE_QUERY, defaultAtBarillaPage, { slug: "at-barilla" });
