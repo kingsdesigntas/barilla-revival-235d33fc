@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import { Link } from "react-router-dom";
-import { Gamepad2, Bike, Trees, Users, Dog, Sun } from "lucide-react";
+import { Gamepad2, Trees, Users, Sun } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACTIVITY_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultAtBarillaPage } from "@/lib/default-content";
