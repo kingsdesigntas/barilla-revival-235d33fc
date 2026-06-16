@@ -24,28 +24,9 @@ const AirportAccommodation = () => {
           <div className="section-underline" />
           <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
 
-          {/* Benefits */}
-          {(content as any).benefits && (
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              {(content as any).benefits.map((benefit: any) => {
-                const Icon = iconMap[benefit.icon] || Sun;
-                return (
-                  <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg text-center flex flex-col items-center">
-                    <div className="flex items-center justify-center mb-4" style={{ height: 36 }}>
-                      <Icon className="text-primary" size={36} />
-                    </div>
-                    <h3 className="font-semibold text-primary mb-2">{benefit.heading}</h3>
-                    <p className="text-sm text-muted-foreground">{benefit.description}</p>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-
-          {/* Accommodation Options */}
-          <div className="mt-16">
-            <h3 className="section-heading mb-8">Available Options</h3>
-            <div className="grid md:grid-cols-2 gap-8">
+          {/* Accommodation Options + Benefits */}
+          <div className="mt-12 grid md:grid-cols-3 gap-8">
+            <div className="md:col-span-2 grid md:grid-cols-2 gap-8">
               {content.items?.map((item) => {
                 const ItemIcon = iconForAccommodationTitle(item.name);
                 return (
@@ -73,6 +54,24 @@ const AirportAccommodation = () => {
                 );
               })}
             </div>
+
+            {/* Benefits - stacked vertically as third column */}
+            {(content as any).benefits && (
+              <div className="flex flex-col gap-8">
+                {(content as any).benefits.map((benefit: any) => {
+                  const Icon = iconMap[benefit.icon] || Sun;
+                  return (
+                    <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg text-center flex flex-col items-center">
+                      <div className="flex items-center justify-center mb-4" style={{ height: 36 }}>
+                        <Icon className="text-primary" size={36} />
+                      </div>
+                      <h3 className="font-semibold text-primary mb-2">{benefit.heading}</h3>
+                      <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           {/* Location Info */}
