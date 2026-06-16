@@ -43,7 +43,7 @@ const InfoCards = () => {
           {/* Ratings Card */}
           <div className="contact-card h-full flex flex-col">
             <div className="contact-card-header">{section.ratingsCard?.heading}</div>
-            <div className="p-6 space-y-4 flex flex-col">
+            <div className="p-6 space-y-4 flex flex-col flex-1">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => {
                   const rating = section.ratingsCard?.rating || 4.4;
