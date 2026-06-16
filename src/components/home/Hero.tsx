@@ -4,6 +4,7 @@ import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
 import { BOOKING_URL } from "@/lib/booking";
+import heroVideo from "@/assets/hero-drone.mp4.asset.json";
 
 const Hero = () => {
   const { content } = useSanityContent("homePage", HOME_PAGE_QUERY, defaultHomePage);
@@ -13,10 +14,15 @@ const Hero = () => {
   const reviewCount = ratings?.reviewCount ?? "360+";
 
   return (
-    <section
-      className="relative min-h-[80vh] bg-cover bg-center"
-      style={{ backgroundImage: `url(${hero.backgroundImage})` }}
-    >
+    <section className="relative min-h-[80vh] overflow-hidden">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        src={heroVideo.url}
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
       <div
         className="absolute inset-x-0 bottom-0 h-1/2 pointer-events-none"
