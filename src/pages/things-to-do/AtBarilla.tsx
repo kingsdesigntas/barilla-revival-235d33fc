@@ -5,7 +5,6 @@ import { Flag, Trees } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACTIVITY_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultAtBarillaPage } from "@/lib/default-content";
-import swingIcon from "@/assets/swing.png.asset.json";
 
 const BbqGrillIcon = ({ size = 24, ...props }: any) => (
   <svg {...props} width={size} height={size} viewBox="0 0 294.26 383.24" fill="currentColor">
