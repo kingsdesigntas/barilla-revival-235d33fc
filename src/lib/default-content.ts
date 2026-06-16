@@ -5,7 +5,7 @@ import ensuiteCabinImage from "@/assets/Barillapark-31.jpg.asset.json";
 import twoBedroomCabinImage from "@/assets/Barillapark-6.jpg.asset.json";
 import caravanImage from "@/assets/barillapark-powered-site.jpg";
 import caravanHomeImage from "@/assets/barillapark-caravan-home.jpg";
-import caravanAltImage from "@/assets/barillapark-caravan-1.jpg";
+
 import premiumPoweredSiteImage from "@/assets/Barillapark-55-2.jpg.asset.json";
 import poweredSiteImage from "@/assets/Barillapark-65-2.jpg.asset.json";
 import driveThroughImage from "@/assets/Barillapark-40.jpg.asset.json";
@@ -298,7 +298,7 @@ export const defaultAirportPage = {
     {
       name: "Caravan/Motorhome Site",
       description: "Powered site for your caravan or motorhome. Easy access and secure overnight parking near the airport.",
-      image: caravanAltImage,
+      image: caravanSlide1.url,
       buttonText: "Book Site",
       buttonLink: "/contact",
     },
