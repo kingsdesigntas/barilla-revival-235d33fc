@@ -298,7 +298,7 @@ export const defaultAirportPage = {
     {
       name: "Caravan/Motorhome Site",
       description: "Powered site for your caravan or motorhome. Easy access and secure overnight parking near the airport.",
-      image: caravanAltImage,
+      image: caravanSlide1.url,
       buttonText: "Book Site",
       buttonLink: "/contact",
     },
