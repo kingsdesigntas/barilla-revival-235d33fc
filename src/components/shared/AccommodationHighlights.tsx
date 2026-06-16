@@ -15,8 +15,8 @@ const highlights = [
   },
   {
     icon: Award,
-    title: "4 Star Tripadvisor Rating",
-    description: "Barilla Holiday Park has a 4 star rating and a certificate of excellence.",
+    title: "4.4 Star Google Reviews Rating",
+    description: "Barilla Holiday Park has a 4.4 star rating on Google Reviews from over 360 happy guests.",
     bg: "bg-barilla-red",
   },
 ];

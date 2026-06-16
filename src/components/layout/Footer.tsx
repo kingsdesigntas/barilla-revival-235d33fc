@@ -89,12 +89,19 @@ const Footer = () => {
               ))}
               <div>
                 <div className="flex items-center gap-1 mb-1">
-                  {[...Array(4)].map((_, i) => (
-                    <Star key={i} size={16} className="fill-accent text-accent" />
-                  ))}
-                  <Star size={16} className="text-accent" />
+                  {[...Array(5)].map((_, i) => {
+                    const fillPercent = Math.max(0, Math.min(1, 4.4 - i)) * 100;
+                    return (
+                      <span key={i} className="relative inline-block" style={{ width: 16, height: 16 }}>
+                        <Star size={16} className="absolute inset-0 text-accent" />
+                        <span className="absolute inset-0 overflow-hidden block" style={{ width: `${fillPercent}%` }}>
+                          <Star size={16} className="text-accent fill-accent" />
+                        </span>
+                      </span>
+                    );
+                  })}
                 </div>
-                <p className="text-sm text-white/70">4.6/5 from 160+ reviews</p>
+                <p className="text-sm text-white/70">4.4/5 from 360+ Google reviews</p>
               </div>
             </div>
           </div>

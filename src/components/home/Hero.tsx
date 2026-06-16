@@ -10,7 +10,7 @@ const Hero = () => {
   const hero = content.hero;
   const ratings = content.infoSection?.ratingsCard;
   const rating = ratings?.rating ?? 4.4;
-  const reviewCount = ratings?.reviewCount ?? 369;
+  const reviewCount = ratings?.reviewCount ?? "360+";
 
   return (
     <section
@@ -78,7 +78,7 @@ const Hero = () => {
           {/* Bottom-right: Reviews card (larger) */}
           <div className="md:col-span-5 lg:col-span-4">
             <a
-              href={ratings?.tripadvisorLink || "#"}
+              href={ratings?.googleReviewsLink || "#"}
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-white/10 backdrop-blur-md border border-white/20 p-6 text-white hover:bg-white/20 transition-colors"
@@ -98,7 +98,7 @@ const Hero = () => {
                 })}
               </div>
               <div className="text-2xl font-semibold">{rating}/5</div>
-              <div className="text-sm text-white/80 mt-1">Based on {reviewCount} reviews</div>
+              <div className="text-sm text-white/80 mt-1">From {reviewCount} Google reviews</div>
             </a>
           </div>
         </div>
