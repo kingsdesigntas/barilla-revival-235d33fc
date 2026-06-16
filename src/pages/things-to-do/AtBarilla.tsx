@@ -5,6 +5,7 @@ import { Flag, Trees } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACTIVITY_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultAtBarillaPage } from "@/lib/default-content";
+import swingIcon from "@/assets/swing.png.asset.json";
 
 const BbqGrillIcon = ({ size = 24, ...props }: any) => (
   <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -19,17 +20,7 @@ const BbqGrillIcon = ({ size = 24, ...props }: any) => (
   </svg>
 );
 
-const SlideIcon = ({ size = 24, ...props }: any) => (
-  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M5 20V10" />
-    <path d="M5 10h14l-5 10H5z" />
-    <path d="M3 20h18" />
-    <path d="M5 10l-2-3" />
-    <path d="M7 7l-2 3" />
-  </svg>
-);
-
-const iconMap: Record<string, any> = { Flag, Trees, BbqGrillIcon, SlideIcon };
+const iconMap: Record<string, any> = { Flag, Trees, BbqGrillIcon, SwingIcon: null };
 
 const AtBarilla = () => {
   const { content } = useSanityContent("at-barilla-page", ACTIVITY_PAGE_QUERY, defaultAtBarillaPage, { slug: "at-barilla" });
@@ -45,11 +36,16 @@ const AtBarilla = () => {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {content.activities?.map((activity) => {
-              const Icon = iconMap[activity.icon] || SlideIcon;
+              const isSwing = activity.icon === "SwingIcon";
+              const Icon = iconMap[activity.icon];
               return (
                 <div key={activity.title} className="bg-[hsl(155,35%,93%)] rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex flex-col items-center justify-center text-center">
                   <div className="flex items-center justify-center mb-4" style={{ height: 36 }}>
-                    <Icon className="text-primary" size={36} />
+                    {isSwing ? (
+                      <img src={swingIcon.url} alt="Playground" className="h-9 w-9 object-contain" />
+                    ) : (
+                      Icon && <Icon className="text-primary" size={36} />
+                    )}
                   </div>
                   <h3 className="font-semibold text-primary mb-2">{activity.title}</h3>
                   <p className="text-sm text-muted-foreground">{activity.description}</p>
