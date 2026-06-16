@@ -48,7 +48,7 @@ const TouristAttractions = () => {
           </div>
 
           {/* Filters */}
-          <div className="mt-10 flex flex-wrap justify-center gap-2">
+          <div className="mt-10 flex flex-wrap justify-start gap-2">
             <Button
               variant={active === "All" ? "default" : "outline"}
               size="sm"
