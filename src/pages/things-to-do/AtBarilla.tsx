@@ -8,24 +8,24 @@ import { defaultAtBarillaPage } from "@/lib/default-content";
 
 const BbqGrillIcon = (props: any) => (
   <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M6 14c0 3.31 2.69 6 6 6s6-2.69 6-6" />
-    <path d="M4 14h16" />
-    <path d="M8 20l-2 3" />
-    <path d="M16 20l2 3" />
-    <path d="M9 8c0-1.66 1.34-3 3-3s3 1.34 3 3" />
-    <path d="M12 5V3" />
-    <path d="M9 8c-1 .5-1.5 1.5-1.5 2.5" />
-    <path d="M15 8c1 .5 1.5 1.5 1.5 2.5" />
+    <path d="M7 8c0-2.76 2.24-5 5-5s5 2.24 5 5" />
+    <path d="M7 8c-1.5 1-2 2.5-2 4" />
+    <path d="M17 8c1.5 1 2 2.5 2 4" />
+    <path d="M5 12h14" />
+    <path d="M6 12c0 3.31 2.69 6 6 6s6-2.69 6-6" />
+    <path d="M8 18l-2 4" />
+    <path d="M16 18l2 4" />
+    <path d="M9 22h6" />
   </svg>
 );
 
 const SlideIcon = (props: any) => (
   <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M6 20V10" />
-    <path d="M6 10h12l-4 10H6z" />
-    <path d="M6 10l-2-2" />
-    <path d="M8 8l-2 2" />
-    <path d="M4 20h16" />
+    <path d="M5 20V10" />
+    <path d="M5 10h14l-5 10H5z" />
+    <path d="M3 20h18" />
+    <path d="M5 10l-2-3" />
+    <path d="M7 7l-2 3" />
   </svg>
 );
 
