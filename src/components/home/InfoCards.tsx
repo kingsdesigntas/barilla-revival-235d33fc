@@ -19,7 +19,7 @@ const InfoCards = () => {
           {/* Contact Card */}
           <div className="contact-card">
             <div className="contact-card-header">{section.contactCard?.heading}</div>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 flex flex-col">
               <div className="flex items-start gap-3 text-sm">
                 <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
                 <span>{section.contactCard?.address}</span>
@@ -36,7 +36,7 @@ const InfoCards = () => {
               >
                 <Map size={16} /> Get Directions on Google Maps
               </a>
-              <Link to="/contact" className="btn-cta block text-center text-sm mt-4">Contact Us</Link>
+              <Link to="/contact" className="btn-cta block text-center text-sm mt-auto">Contact Us</Link>
             </div>
           </div>
 
