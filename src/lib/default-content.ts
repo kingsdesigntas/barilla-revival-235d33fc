@@ -318,7 +318,7 @@ export const defaultAtBarillaPage = {
   activities: [
     { icon: "Flag", title: "Putt & Play Mini Golf", description: "Our 18-hole mini golf course is fun for the whole family. Challenge your friends and family!" },
     { icon: "Trees", title: "Nature Walks", description: "Enjoy peaceful walks through our gardens and the surrounding natural bushland." },
-    { icon: "Users", title: "BBQ Areas", description: "Gather the family for a classic Aussie BBQ at our communal cooking facilities." },
+    { icon: "Flame", title: "BBQ Areas", description: "Gather the family for a classic Aussie BBQ at our communal cooking facilities." },
     { icon: "Sun", title: "Playground", description: "The kids will love our playground - a safe space for them to run and play." },
   ],
   featureSection: {
