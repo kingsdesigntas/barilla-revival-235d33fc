@@ -73,7 +73,7 @@ export const HOME_PAGE_QUERY = `*[_type == "homePage"][0]{
     ratingsCard{
       heading,
       description,
-      tripadvisorLink,
+      googleReviewsLink,
       rating,
       reviewCount
     },

@@ -132,10 +132,10 @@ export const defaultHomePage = {
     },
     ratingsCard: {
       heading: "Ratings",
-      description: "Barilla Holiday Park has a 4 star rating on Tripadvisor and a certificate of excellence.",
-      tripadvisorLink: "https://tripadvisor.com",
+      description: "Barilla Holiday Park has a 4.4 star rating on Google Reviews from over 360 happy guests.",
+      googleReviewsLink: "https://www.google.com/maps/place/Barilla+Holiday+Park/@-42.8311,147.4736,17z",
       rating: 4.4,
-      reviewCount: 369,
+      reviewCount: "360+",
     },
     socialCard: {
       heading: "Like Us on Facebook",

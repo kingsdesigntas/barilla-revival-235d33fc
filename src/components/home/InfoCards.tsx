@@ -43,13 +43,32 @@ const InfoCards = () => {
           {/* Ratings Card */}
           <div className="contact-card">
             <div className="contact-card-header">{section.ratingsCard?.heading}</div>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 flex flex-col">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => {
+                  const rating = section.ratingsCard?.rating || 4.4;
+                  const fillPercent = Math.max(0, Math.min(1, rating - i)) * 100;
+                  return (
+                    <div key={i} className="relative" style={{ width: 24, height: 24 }}>
+                      <Star size={24} className="absolute inset-0 text-accent" />
+                      <div className="absolute inset-0 overflow-hidden" style={{ width: `${fillPercent}%` }}>
+                        <Star size={24} className="text-accent fill-accent" />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <p className="text-sm font-semibold text-foreground">
+                {section.ratingsCard?.rating}/5 from {section.ratingsCard?.reviewCount} Google reviews
+              </p>
               <p className="text-sm text-muted-foreground">{section.ratingsCard?.description}</p>
-              <a href={section.ratingsCard?.tripadvisorLink} target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:underline flex items-center gap-1">
-                View our Rating on Tripadvisor <ExternalLink size={14} />
-              </a>
-              <a href="#" className="text-sm text-accent hover:underline flex items-center gap-1">
-                View our Take A Star Rating <ExternalLink size={14} />
+              <a
+                href={section.ratingsCard?.googleReviewsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-cta block text-center text-sm mt-auto"
+              >
+                See All Reviews on Google
               </a>
             </div>
           </div>
@@ -57,34 +76,18 @@ const InfoCards = () => {
           {/* Social Card */}
           <div className="contact-card">
             <div className="contact-card-header">{section.socialCard?.heading}</div>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 flex flex-col">
               <p className="text-sm text-muted-foreground">{section.socialCard?.description}</p>
-              <a href={section.socialCard?.facebookLink} target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:underline flex items-center gap-1">
-                <Facebook size={16} /> Like us Today
+              <a
+                href={section.socialCard?.facebookLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-cta inline-flex items-center justify-center gap-2 text-center text-sm mt-auto"
+              >
+                <Facebook size={16} /> Like us on Facebook
               </a>
             </div>
           </div>
-        </div>
-
-        {/* Rating Stars */}
-        <div className="mt-12 text-center">
-          <div className="flex items-center justify-center gap-1 mb-2">
-            {[...Array(5)].map((_, i) => {
-              const rating = section.ratingsCard?.rating || 4.5;
-              const fillPercent = Math.max(0, Math.min(1, rating - i)) * 100;
-              return (
-                <div key={i} className="relative" style={{ width: 28, height: 28 }}>
-                  <Star size={28} className="absolute inset-0 text-accent" />
-                  <div className="absolute inset-0 overflow-hidden" style={{ width: `${fillPercent}%` }}>
-                    <Star size={28} className="text-accent fill-accent" />
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <a href="#" className="text-accent hover:underline text-sm">
-            {section.ratingsCard?.rating}/5 from {section.ratingsCard?.reviewCount} reviews
-          </a>
         </div>
       </div>
     </section>
