@@ -76,7 +76,7 @@ const InfoCards = () => {
           {/* Social Card */}
           <div className="contact-card h-full flex flex-col">
             <div className="contact-card-header">{section.socialCard?.heading}</div>
-            <div className="p-6 space-y-4 flex flex-col">
+            <div className="p-6 space-y-4 flex flex-col flex-1">
               <p className="text-sm text-muted-foreground">{section.socialCard?.description}</p>
               <a
                 href={section.socialCard?.facebookLink}
