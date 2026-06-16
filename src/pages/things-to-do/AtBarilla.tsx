@@ -5,6 +5,7 @@ import { Flag, Trees } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACTIVITY_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultAtBarillaPage } from "@/lib/default-content";
+import swingIcon from "@/assets/swing.png.asset.json";
 
 const BbqGrillIcon = ({ size = 24, ...props }: any) => (
   <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -19,17 +20,7 @@ const BbqGrillIcon = ({ size = 24, ...props }: any) => (
   </svg>
 );
 
-const SlideIcon = ({ size = 24, ...props }: any) => (
-  <svg {...props} width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M5 20V10" />
-    <path d="M5 10h14l-5 10H5z" />
-    <path d="M3 20h18" />
-    <path d="M5 10l-2-3" />
-    <path d="M7 7l-2 3" />
-  </svg>
-);
-
-const iconMap: Record<string, any> = { Flag, Trees, BbqGrillIcon, SlideIcon };
+const iconMap: Record<string, any> = { Flag, Trees, BbqGrillIcon };
 
 const AtBarilla = () => {
   const { content } = useSanityContent("at-barilla-page", ACTIVITY_PAGE_QUERY, defaultAtBarillaPage, { slug: "at-barilla" });
