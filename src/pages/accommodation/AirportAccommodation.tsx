@@ -19,7 +19,7 @@ const AirportAccommodation = () => {
       <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} />
       <AccommodationHighlights />
       <section className="py-16 md:py-24 bg-background">
-        <div className="container max-w-4xl">
+        <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
           <div className="section-underline" />
           <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
