@@ -57,11 +57,11 @@ const AirportAccommodation = () => {
 
             {/* Benefits - stacked vertically as third column */}
             {(content as any).benefits && (
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-8 h-full">
                 {(content as any).benefits.map((benefit: any) => {
                   const Icon = iconMap[benefit.icon] || Sun;
                   return (
-                    <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg text-center flex flex-col items-center">
+                    <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg text-center flex flex-col items-center flex-1 justify-center">
                       <div className="flex items-center justify-center mb-4" style={{ height: 36 }}>
                         <Icon className="text-primary" size={36} />
                       </div>
