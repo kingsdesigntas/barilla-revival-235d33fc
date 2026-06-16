@@ -371,7 +371,7 @@ export const defaultTouristAttractionsPage = {
     
     { name: "Wrest Point Casino", image: "/__l5e/assets-v1/53110b8c-7eab-4c1b-b2aa-98bc71c5a0b6/wrest-point.jpg", description: "Entertainment complex with restaurants, shows, and gaming.", address: "410 Sandy Bay Rd, Sandy Bay TAS 7005", phone: "+61 3 6221 1700", website: "https://wrestpoint.com.au", categories: ["Entertainment", "Food & Wine"] },
     { name: "Hobart Waterfront & Constitution Dock", image: "/__l5e/assets-v1/2feb568f-be3b-4b3e-9a49-91f3fc22f35a/hobart-waterfront.jpg", description: "Harbour precinct with restaurants, boats, and walking areas.", address: "Hobart TAS 7000", phone: "", website: "https://hobartcity.com.au", categories: ["Scenic & Outdoors", "Food & Wine"] },
-    { name: "Tasmania Golf Club", image: "/__l5e/assets-v1/54b66801-67f0-40da-bbd2-2bb8c019cfc5/tasmania-golf-club.jpg", description: "Coastal golf course with scenic ocean views near Cambridge.", address: "1420 Tasman Hwy, Cambridge TAS 7170", phone: "+61 3 6248 5098", website: "https://tasmaniangolfclub.com.au", categories: ["Entertainment", "Scenic & Outdoors"] },
+    { name: "Tasmania Golf Club", image: "/__l5e/assets-v1/54b66801-67f0-40da-bbd2-2bb8c019cfc5/tasmania-golf-club.jpg", description: "Coastal golf course with scenic ocean views near Cambridge.", address: "1420 Tasman Hwy, Cambridge TAS 7170", phone: "+61 3 6248 5098", website: "https://www.tasmaniagolfclub.com.au/", categories: ["Entertainment", "Scenic & Outdoors"] },
   ],
   seo: { title: "Tourist Attractions Near Hobart | Barilla Holiday Park", description: "Explore the best tourist attractions near Hobart, Tasmania from Barilla Holiday Park.", keywords: "hobart attractions, tasmania, tourism, salamanca, mona, port arthur" },
 };
