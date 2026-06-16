@@ -99,7 +99,7 @@ export const defaultHomePage = {
         title: "Cabin Accommodation",
         description: "Our cabins feature open plan design and are fully self-contained. We have accommodation options for up to 8 people.",
         image: cabinImage,
-        images: [cabinSlide1.url, cabinSlide2.url, cabinSlide3.url, cabinSlide4.url],
+        images: [cabinSlideNew.url, cabinSlide1.url, cabinSlide2.url, cabinSlide3.url, cabinSlide4.url],
         link: "/accommodation/cabins",
         buttonText: "View All Cabins",
       },
