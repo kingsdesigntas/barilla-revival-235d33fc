@@ -67,6 +67,12 @@
 		--sidebar-ring: 217.2 91.2% 59.8%;
 	}
 
+	@media (max-width: 767px) {
+		:root {
+			--radius: 1rem;
+		}
+	}
+
 	.dark {
 		--background: 210 29% 24%;
 		--foreground: 0 0% 98%;
