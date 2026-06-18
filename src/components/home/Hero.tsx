@@ -71,7 +71,7 @@ const Hero = () => {
                         {first}
                       </span>
                       <span
-                        className="font-['Outfit'] uppercase text-[10px] md:text-xs"
+                        className="font-['Outfit'] uppercase text-[10px] md:text-xs hidden md:block"
                         style={{ letterSpacing: "0.2em", lineHeight: 1 }}
                       >
                         {second}
