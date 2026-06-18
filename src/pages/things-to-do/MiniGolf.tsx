@@ -34,9 +34,9 @@ const MiniGolf = () => {
           <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
 
           {/* Top Slider + Info Cards */}
-          <div className="grid md:grid-cols-3 gap-6 mt-12 mb-12">
-            {/* Top Slider — 2/3 width */}
-            <div className="md:col-span-2">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-12 mb-12">
+            {/* Top Slider — 2/3 width on desktop */}
+            <div className="lg:col-span-2">
               <Carousel opts={{ align: "start", loop: true }}>
                 <CarouselContent>
                   {topSliderImages.map((img) => (
@@ -52,9 +52,9 @@ const MiniGolf = () => {
               </Carousel>
             </div>
 
-            {/* Info Cards — stacked in one column */}
+            {/* Info Cards — horizontal row on tablet, stacked column on desktop */}
             {content.infoCards && (
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col md:flex-row lg:flex-col gap-6 lg:col-span-1">
                 {content.infoCards.map((card) => {
                   const Icon = iconMap[card.icon] || Clock;
                   return (
