@@ -38,7 +38,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl">
               {hero.subheading}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="grid grid-cols-3 gap-3 md:flex md:flex-wrap">
               {hero.ctaButtons?.map((btn, i) => {
                 const icons = [CabinIcon, CaravanIcon, CampingIcon];
                 const iconSizes = [38, 64, 47]; // sized so each renders at 36px tall
@@ -54,7 +54,7 @@ const Hero = () => {
                     href={btn.href || BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 md:gap-3 px-4 py-2 md:px-6 md:py-3 rounded-md transition-all duration-200 ${
+                    className={`flex flex-col items-center justify-center md:flex-row md:justify-start gap-1 md:gap-3 px-3 py-2 md:px-6 md:py-3 rounded-md transition-all duration-200 ${
                       isGreen
                         ? "bg-success text-success-foreground hover:opacity-90"
                         : "bg-accent text-accent-foreground hover:bg-[hsl(var(--barilla-orange-hover))]"
@@ -63,9 +63,9 @@ const Hero = () => {
                     <span className="scale-75 md:scale-100 origin-center inline-block">
                       <Icon size={iconSize} className="text-current shrink-0" />
                     </span>
-                    <div className="flex flex-col text-left">
+                    <div className="flex flex-col items-center md:items-start text-center md:text-left">
                       <span
-                        className="font-['Kanit'] font-bold uppercase text-base md:text-xl"
+                        className="font-['Kanit'] font-bold uppercase text-sm md:text-xl"
                         style={{ letterSpacing: "0.02em", lineHeight: 1 }}
                       >
                         {first}
