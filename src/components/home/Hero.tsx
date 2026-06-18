@@ -54,7 +54,7 @@ const Hero = () => {
                     href={btn.href || BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex flex-col items-center justify-center md:flex-row md:justify-start gap-1 md:gap-3 px-3 py-2 md:px-6 md:py-3 rounded-md transition-all duration-200 ${
+                    className={`flex flex-col items-center justify-center md:flex-row md:justify-start gap-1 md:gap-3 px-3 py-2 md:px-6 md:py-3 rounded-[1rem] md:rounded-md transition-all duration-200 ${
                       isGreen
                         ? "bg-success text-success-foreground hover:opacity-90"
                         : "bg-accent text-accent-foreground hover:bg-[hsl(var(--barilla-orange-hover))]"
