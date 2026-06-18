@@ -43,7 +43,18 @@ const Header = () => {
 			{/* Top bar with location + translate */}
 			<div className="bg-primary text-primary-foreground py-2">
 				<div className="container flex justify-between items-center text-sm">
-					<div className="flex items-center gap-2">
+					<div className="flex items-center gap-2 md:hidden">
+						<a
+							href={BOOKING_URL}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center gap-2 bg-accent text-accent-foreground px-3 py-1 rounded-full font-semibold text-xs hover:bg-accent/90 transition-colors"
+						>
+							<Calendar size={12} />
+							Book your Holiday
+						</a>
+					</div>
+					<div className="items-center gap-2 hidden md:flex">
 						<MapPin size={14} />
 						<span>Barilla Holiday Park - Hobart, Tasmania</span>
 					</div>
@@ -87,7 +98,7 @@ const Header = () => {
 						href={BOOKING_URL}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex items-center gap-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-semibold hover:bg-accent/90 transition-colors order-1"
+						className="hidden md:flex items-center gap-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-semibold hover:bg-accent/90 transition-colors order-1"
 					>
 						<Calendar size={14} />
 						Book your Holiday
