@@ -19,7 +19,7 @@ const PageHero = ({ title, subtitle, backgroundImage, backgroundPosition = "bg-c
         }}
       />
       <div className="relative z-10 container flex flex-col justify-end pb-8 text-left text-white w-full">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-4 drop-shadow-lg">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-lg">
           {title}
         </h1>
         {subtitle && (
