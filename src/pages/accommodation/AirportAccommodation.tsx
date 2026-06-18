@@ -25,8 +25,8 @@ const AirportAccommodation = () => {
           <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
 
           {/* Accommodation Options + Benefits */}
-          <div className="mt-12 grid md:grid-cols-3 gap-8">
-            <div className="md:col-span-2 grid md:grid-cols-2 gap-8">
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:col-span-2">
               {content.items?.map((item) => {
                 const ItemIcon = iconForAccommodationTitle(item.name);
                 return (
@@ -55,9 +55,9 @@ const AirportAccommodation = () => {
               })}
             </div>
 
-            {/* Benefits - stacked vertically as third column */}
+            {/* Benefits */}
             {(content as any).benefits && (
-              <div className="flex flex-col gap-8 h-full">
+              <div className="flex flex-col md:flex-row lg:flex-col gap-8 lg:col-span-1">
                 {(content as any).benefits.map((benefit: any) => {
                   const Icon = iconMap[benefit.icon] || Sun;
                   return (
