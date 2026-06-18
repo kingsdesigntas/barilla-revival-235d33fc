@@ -98,7 +98,7 @@ const Header = () => {
 						href={BOOKING_URL}
 						target="_blank"
 						rel="noopener noreferrer"
-						className="flex items-center gap-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-semibold hover:bg-accent/90 transition-colors order-1"
+						className="hidden md:flex items-center gap-2 bg-accent text-accent-foreground px-4 py-1.5 rounded-full font-semibold hover:bg-accent/90 transition-colors order-1"
 					>
 						<Calendar size={14} />
 						Book your Holiday
