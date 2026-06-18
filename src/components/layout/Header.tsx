@@ -109,7 +109,8 @@ const Header = () => {
 						className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
 					>
 						<Phone size={14} />
-						<span className="hidden md:inline">Freecall: {settings.freeCallPhone}</span>
+						<span className="hidden md:inline">Freecall: </span>
+						<span>{settings.freeCallPhone}</span>
 					</a>
 					<span className="hidden sm:inline text-muted-foreground">|</span>
 					<a
@@ -117,7 +118,8 @@ const Header = () => {
 						className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
 					>
 						<Mail size={14} />
-						<span className="hidden md:inline">Mail Us: {settings.email}</span>
+						<span className="hidden md:inline">Mail Us: </span>
+						<span>{settings.email}</span>
 					</a>
 					</div>
 				</div>
