@@ -8,7 +8,7 @@ interface PageHeroProps {
 const PageHero = ({ title, subtitle, backgroundImage, backgroundPosition = "bg-center" }: PageHeroProps) => {
   return (
     <section
-      className={`relative bg-cover ${backgroundPosition} min-h-[25vh] md:min-h-[30vh] flex`}
+      className={`relative bg-cover ${backgroundPosition} min-h-[35vh] md:min-h-[30vh] flex`}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div
