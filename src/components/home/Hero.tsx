@@ -84,7 +84,7 @@ const Hero = () => {
           </div>
 
           {/* Bottom-right: Reviews card (larger) */}
-          <div className="md:col-span-5 lg:col-span-4">
+          <div className="md:col-span-5 lg:col-span-4 hidden md:block">
             <a
               href={ratings?.googleReviewsLink || "#"}
               target="_blank"
