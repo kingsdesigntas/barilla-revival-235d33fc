@@ -38,7 +38,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl">
               {hero.subheading}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 md:gap-4">
               {hero.ctaButtons?.map((btn, i) => {
                 const icons = [CabinIcon, CaravanIcon, CampingIcon];
                 const iconSizes = [38, 64, 47]; // sized so each renders at 36px tall
