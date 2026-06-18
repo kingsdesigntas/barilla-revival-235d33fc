@@ -38,7 +38,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-white/90 mb-6 max-w-2xl">
               {hero.subheading}
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2 md:gap-4">
               {hero.ctaButtons?.map((btn, i) => {
                 const icons = [CabinIcon, CaravanIcon, CampingIcon];
                 const iconSizes = [38, 64, 47]; // sized so each renders at 36px tall
@@ -54,7 +54,7 @@ const Hero = () => {
                     href={btn.href || BOOKING_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 md:gap-3 px-4 py-2 md:px-6 md:py-3 rounded-md transition-all duration-200 ${
+                    className={`inline-flex items-center gap-2 md:gap-3 px-3 py-2 md:px-6 md:py-3 rounded-md transition-all duration-200 ${
                       isGreen
                         ? "bg-success text-success-foreground hover:opacity-90"
                         : "bg-accent text-accent-foreground hover:bg-[hsl(var(--barilla-orange-hover))]"
@@ -71,7 +71,7 @@ const Hero = () => {
                         {first}
                       </span>
                       <span
-                        className="font-['Outfit'] uppercase text-[10px] md:text-xs"
+                        className="hidden md:block font-['Outfit'] uppercase text-[10px] md:text-xs"
                         style={{ letterSpacing: "0.2em", lineHeight: 1 }}
                       >
                         {second}
