@@ -65,9 +65,6 @@ const Footer = () => {
                   <Link to={link.href} className="footer-link">{link.label}</Link>
                 </li>
               ))}
-              <li>
-                <Link to="/contact" className="footer-link">Find Us on Map</Link>
-              </li>
             </ul>
           </div>
 
