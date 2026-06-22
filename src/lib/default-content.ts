@@ -10,6 +10,7 @@ import premiumPoweredSiteImage from "@/assets/Barillapark-55-2.jpg.asset.json";
 import poweredSiteImage from "@/assets/Barillapark-65-2.jpg.asset.json";
 import driveThroughImage from "@/assets/Barillapark-40.jpg.asset.json";
 import campingImage from "@/assets/Barillapark-67.jpg.asset.json";
+import airportCampingImage from "@/assets/camping-couple-tent.jpg.asset.json";
 import campingAltImage from "@/assets/barillapark-camping-2.jpg";
 import miniGolfImage from "@/assets/barillapark-mini-golf.jpg";
 import miniGolfAerialImage from "@/assets/barillapark-aerial-mini-golf.jpg";
@@ -305,7 +306,7 @@ export const defaultAirportPage = {
     {
       name: "CAMPING GROUNDS",
       description: "Set up your tent or camper trailer in our sheltered camping grounds, offering a peaceful and affordable option close to Hobart Airport.",
-      image: campingImage.url,
+      image: airportCampingImage.url,
       buttonText: "Book Campsite",
       buttonLink: "/contact",
     },
