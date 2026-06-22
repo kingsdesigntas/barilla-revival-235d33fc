@@ -81,7 +81,7 @@ export const defaultSiteSettings = {
 export const defaultHomePage = {
   hero: {
     heading: "Barilla Holiday Park Tasmania",
-    subheading: "Your caravan park makes your perfect holiday base",
+    subheading: "Our caravan park makes your perfect holiday base",
     backgroundImage: heroImage,
     ctaButtons: [
       { label: "Cabin Accommodation", href: "/accommodation/cabins", variant: "primary" },
