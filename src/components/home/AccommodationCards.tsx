@@ -22,7 +22,7 @@ const AccommodationCard = ({ title, description, image, images, link, buttonText
   const slides = images && images.length > 0 ? images : [image];
 
   return (
-    <div className="card-accommodation flex flex-col">
+    <div className="card-accommodation flex flex-col h-full">
       <div className="card-header">{title}</div>
       <div className="relative aspect-[4/3] overflow-hidden">
         <Carousel opts={{ align: "start", loop: true }} className="w-full h-full">
