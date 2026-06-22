@@ -304,7 +304,7 @@ export const defaultAirportPage = {
     },
   ],
   benefits: [
-    { icon: "Plane", heading: "5 Minutes to Airport", description: "We're located just a short drive from Hobart Airport terminal." },
+    { icon: "Plane", heading: "Just 5 Minutes from Hobart Airport", description: "We're located just a short drive from Hobart Airport terminal." },
     { icon: "Clock", heading: "Flexible Check-in", description: "We understand travel schedules - ask about our flexible options." },
     { icon: "Car", heading: "Free Parking", description: "Leave your car with us while you travel, or park overnight before your flight." },
   ],
