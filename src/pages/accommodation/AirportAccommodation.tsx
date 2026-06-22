@@ -28,6 +28,8 @@ const AirportAccommodation = () => {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             {content.items?.map((item) => {
               const ItemIcon = iconForAccommodationTitle(item.name);
+              const t = item.name.toLowerCase();
+              const iconSize = t.includes("caravan") ? 64 : t.includes("camp") ? 47 : 38;
               return (
                 <div key={item.name} className="card-accommodation bg-[#f1f6f3] flex flex-col">
                   <div className="card-header">{item.name}</div>
@@ -42,7 +44,7 @@ const AirportAccommodation = () => {
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
-                      <ItemIcon className="text-accent" size={36} />
+                      <ItemIcon className="text-accent" size={iconSize} />
                     </div>
                     <p className="text-muted-foreground text-sm mb-4 text-center">{item.description}</p>
                     <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm mt-auto">
