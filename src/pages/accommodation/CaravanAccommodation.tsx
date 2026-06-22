@@ -40,7 +40,7 @@ const CaravanAccommodation = () => {
                   <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
                     <SiteIcon className="text-accent" size={36} />
                   </div>
-                  <p className="text-muted-foreground text-sm mb-6 text-left">{site.description}</p>
+                  <p className="text-muted-foreground text-sm mb-6 text-center">{site.description}</p>
                   <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm mt-auto">
                     {site.buttonText || "Book Now"}
                   </a>
