@@ -70,7 +70,7 @@ export const defaultSiteSettings = {
     { label: "Contact", href: "/contact" },
   ],
   footerColumns: [],
-  socialLinks: [{ platform: "facebook", url: "https://facebook.com" }],
+  socialLinks: [{ platform: "facebook", url: "https://www.facebook.com/BarillaHolidayPark" }],
   seo: {
     title: "Barilla Holiday Park | Caravan Park Hobart Tasmania",
     description: "Family-friendly caravan park near Hobart, Tasmania. Cabins, caravan sites, and camping grounds.",
