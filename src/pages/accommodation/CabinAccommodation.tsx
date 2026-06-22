@@ -74,7 +74,7 @@ const CabinAccommodation = () => {
                       <span className="text-sm font-medium">{cabin.sleeps}</span>
                     </div>
                   )}
-                  <p className="text-muted-foreground text-sm mb-5">{cabin.description}</p>
+                  <p className="text-muted-foreground text-sm mb-5 text-center">{cabin.description}</p>
                   {cabin.features && (
                     <ul className="space-y-2 mb-6">
                       {cabin.features.map((feature: string) => (
