@@ -141,7 +141,7 @@ export const defaultHomePage = {
     ratingsCard: {
       heading: "Ratings",
       description: "Barilla Holiday Park has a 4.4 star rating on Google Reviews from over 360 happy guests.",
-      googleReviewsLink: "https://www.google.com/maps/place/Barilla+Holiday+Park/@-42.8311,147.4736,17z",
+      googleReviewsLink: "https://www.google.com/travel/search?q=barilla%20holiday%20park&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73064764%2C73249150%2C121529349&hl=en-AU&gl=au&cs=1&ssta=1&ts=CAEaRwopEicyJTB4YWE2ZGUxYjRjYTVjYTRjZjoweGJjNGY4OTY5NWUzOTEyMWQSGhIUCgcI6g8QBxgGEgcI6g8QBxgHGAEyAhAA&qs=CAEyFENnc0luYVRrOFpXdDRxZThBUkFCOAJCCQkdEjleaYlPvEIJCR0SOV5piU-8&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwi4-IW2nJqVAxUAAAAAHQAAAAAQAw",
       rating: 4.4,
       reviewCount: "360+",
     },
