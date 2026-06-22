@@ -69,7 +69,7 @@ const AccommodationCards = () => {
         <p className="text-left text-muted-foreground max-w-2xl mb-4">{section.description}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {section.cards?.map((acc, i) => (
-            <div key={acc.title} className={i === 0 ? "md:col-span-2 lg:col-span-1" : ""}>
+            <div key={acc.title} className={cn(i === 0 ? "md:col-span-2 lg:col-span-1" : "", "h-full")}>
               <AccommodationCard {...acc} />
             </div>
           ))}
