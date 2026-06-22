@@ -44,7 +44,7 @@ const AirportAccommodation = () => {
                     <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
                       <ItemIcon className="text-accent" size={36} />
                     </div>
-                    <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
+                    <p className="text-muted-foreground text-sm mb-4 text-center">{item.description}</p>
                     <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm mt-auto">
                       {item.buttonText || "Book"}
                     </a>
