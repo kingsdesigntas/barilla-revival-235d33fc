@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
@@ -21,7 +22,7 @@ const AccommodationCard = ({ title, description, image, images, link, buttonText
   const slides = images && images.length > 0 ? images : [image];
 
   return (
-    <div className="card-accommodation flex flex-col">
+    <div className="card-accommodation flex flex-col h-full">
       <div className="card-header">{title}</div>
       <div className="relative aspect-[4/3] overflow-hidden">
         <Carousel opts={{ align: "start", loop: true }} className="w-full h-full">
@@ -69,7 +70,7 @@ const AccommodationCards = () => {
         <p className="text-left text-muted-foreground max-w-2xl mb-4">{section.description}</p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {section.cards?.map((acc, i) => (
-            <div key={acc.title} className={i === 0 ? "md:col-span-2 lg:col-span-1" : ""}>
+            <div key={acc.title} className={cn(i === 0 ? "md:col-span-2 lg:col-span-1" : "", "h-full")}>
               <AccommodationCard {...acc} />
             </div>
           ))}
