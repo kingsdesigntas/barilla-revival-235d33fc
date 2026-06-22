@@ -286,7 +286,7 @@ export const defaultAirportPage = {
   subtitle: "Convenient overnight stays just minutes from Hobart Airport",
   heroImage: heroImage,
   sectionHeading: "Airport Stays",
-  sectionDescription: "Just a stone's throw from Hobart Airport, we're the perfect base for early flights or late arrivals.",
+  sectionDescription: "Whether you’re arriving in Tasmania or preparing for your journey home, Barilla Holiday Park offers comfortable cabin and caravan accommodation just five minutes from Hobart Airport and fifteen minutes from Hobart city. Surrounded by peaceful natural surroundings, you can enjoy a relaxing stay close to the airport without the disturbance of overhead aeroplanes, making Barilla Holiday Park an ideal place to begin or end your Tasmanian adventure.",
   items: [
     {
       name: "Cabin Stay",

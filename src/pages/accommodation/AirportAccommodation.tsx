@@ -22,7 +22,7 @@ const AirportAccommodation = () => {
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
           <div className="section-underline" />
-          <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
+          <p className="text-muted-foreground mb-4 text-left">{content.sectionDescription}</p>
 
           {/* Accommodation Options + Benefits */}
           <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
