@@ -24,44 +24,44 @@ const AirportAccommodation = () => {
           <div className="section-underline" />
           <p className="text-muted-foreground mb-4 text-left">{content.sectionDescription}</p>
 
-          {/* Accommodation Options + Benefits */}
-          <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:col-span-2">
-              {content.items?.map((item) => {
-                const ItemIcon = iconForAccommodationTitle(item.name);
-                return (
-                  <div key={item.name} className="card-accommodation bg-[#f1f6f3] flex flex-col">
-                    <div className="card-header">{item.name}</div>
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      {item.image ? (
-                        <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-                      ) : (
-                        <div className="w-full h-full bg-barilla-cream flex items-center justify-center">
-                          <ItemIcon className="text-primary" size={64} />
-                        </div>
-                      )}
-                    </div>
-                    <div className="p-6 flex flex-col flex-1">
-                      <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
-                        <ItemIcon className="text-accent" size={36} />
+          {/* Accommodation Options */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {content.items?.map((item) => {
+              const ItemIcon = iconForAccommodationTitle(item.name);
+              return (
+                <div key={item.name} className="card-accommodation bg-[#f1f6f3] flex flex-col">
+                  <div className="card-header">{item.name}</div>
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    {item.image ? (
+                      <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full bg-barilla-cream flex items-center justify-center">
+                        <ItemIcon className="text-primary" size={64} />
                       </div>
-                      <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
-                      <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm mt-auto">
-                        {item.buttonText || "Book"}
-                      </a>
-                    </div>
+                    )}
                   </div>
-                );
-              })}
-            </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
+                      <ItemIcon className="text-accent" size={36} />
+                    </div>
+                    <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
+                    <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn-cta block text-center text-sm mt-auto">
+                      {item.buttonText || "Book"}
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
 
-            {/* Benefits */}
-            {(content as any).benefits && (
-              <div className="flex flex-col md:flex-row lg:flex-col gap-8 lg:col-span-1">
+          {/* Benefits */}
+          {(content as any).benefits && (
+            <div className="mt-8 bg-barilla-cream rounded-lg p-6 md:p-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {(content as any).benefits.map((benefit: any) => {
                   const Icon = iconMap[benefit.icon] || Sun;
                   return (
-                    <div key={benefit.heading} className="p-6 bg-barilla-cream rounded-lg text-center flex flex-col items-center flex-1 justify-center">
+                    <div key={benefit.heading} className="text-center flex flex-col items-center justify-center">
                       <div className="flex items-center justify-center mb-4" style={{ height: 36 }}>
                         <Icon className="text-primary" size={36} />
                       </div>
@@ -71,8 +71,8 @@ const AirportAccommodation = () => {
                   );
                 })}
               </div>
-            )}
-          </div>
+            </div>
+          )}
 
           {/* Location Info */}
           {(content as any).locationInfo && (
