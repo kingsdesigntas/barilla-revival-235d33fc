@@ -148,7 +148,7 @@ export const defaultHomePage = {
     socialCard: {
       heading: "Like Us on Facebook",
       description: "Like us on Facebook to get access to exclusive specials and promotions.",
-      facebookLink: "https://facebook.com",
+      facebookLink: "https://www.facebook.com/BarillaHolidayPark",
     },
   },
   seo: {
