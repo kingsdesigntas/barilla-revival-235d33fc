@@ -289,24 +289,24 @@ export const defaultAirportPage = {
   sectionDescription: "Whether you’re arriving in Tasmania or preparing for your journey home, Barilla Holiday Park offers comfortable cabin and caravan accommodation just five minutes from Hobart Airport and fifteen minutes from Hobart city. Surrounded by peaceful natural surroundings, you can enjoy a relaxing stay close to the airport without the disturbance of overhead aeroplanes, making Barilla Holiday Park an ideal place to begin or end your Tasmanian adventure.",
   items: [
     {
-      name: "Cabin Stay",
-      description: "Comfortable self-contained cabin accommodation, perfect for a good night's rest before or after your flight.",
+      name: "CABIN STAYS",
+      description: " Enjoy comfortable, self-contained accommodation with everything you need for a relaxing stay. Ideal for a convenient overnight stop before or after your flight.",
       image: cabinStayAirportImage.url,
       buttonText: "Book Cabin",
       buttonLink: "/contact",
     },
     {
-      name: "Caravan/Motorhome Site",
-      description: "Powered site for your caravan or motorhome. Easy access and secure overnight parking near the airport.",
+      name: "CARAVAN SITES",
+      description: "Spacious and sheltered caravan sites with easy access to park amenities, offering a flexible and comfortable option for caravans, campervans and motorhomes.",
       image: caravanSlide1.url,
       buttonText: "Book Site",
       buttonLink: "/contact",
     },
   ],
   benefits: [
-    { icon: "Plane", heading: "Just 5 Minutes from Hobart Airport", description: "We're located just a short drive from Hobart Airport terminal." },
-    { icon: "Clock", heading: "Flexible Check-in", description: "We understand travel schedules - ask about our flexible options." },
-    { icon: "Car", heading: "Free Parking", description: "Leave your car with us while you travel, or park overnight before your flight." },
+    { icon: "Plane", heading: "Just 5 Minutes from Hobart Airport", description: "Enjoy a quick and convenient drive to and from the airport terminal." },
+    { icon: "Clock", heading: "Flexible Check-In Options", description: "We’re happy to work around your travel schedule wherever possible." },
+    { icon: "Car", heading: "Close to Caravan Hire Drop-Off Locations", description: "Conveniently located near major caravan and motorhome hire depots for an easy start or finish to your trip." },
   ],
   locationInfo: {
     address: "75 Richmond Road, Cambridge, Tasmania 7170",
