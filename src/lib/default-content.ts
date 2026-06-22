@@ -305,7 +305,7 @@ export const defaultAirportPage = {
     },
     {
       name: "CAMPING GROUNDS",
-      description: "Set up your tent or camper trailer in our sheltered camping grounds, offering a peaceful and affordable option close to Hobart Airport.",
+      description: "Sheltered and well-maintained camping grounds allowing you to enjoy a more relaxed and quieter stay. ",
       image: airportCampingImage.url,
       buttonText: "Book Campsite",
       buttonLink: "/contact",
