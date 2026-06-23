@@ -33,7 +33,7 @@ const AtBarilla = () => {
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
           <div className="section-underline" />
-          <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
+          <div className="text-muted-foreground max-w-2xl mb-4 text-left whitespace-pre-line">{content.sectionDescription}</div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {content.activities?.map((activity) => {
