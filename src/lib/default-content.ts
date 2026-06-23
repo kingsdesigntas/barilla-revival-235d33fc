@@ -238,7 +238,7 @@ export const defaultCaravanPage = {
   subtitle: "Spacious sites with power and modern amenities for your caravan or motorhome",
   heroImage: heroCaravan,
   sectionHeading: "Our Caravan Sites",
-  sectionDescription: "All of our caravan sites are spacious with sheltered and friendly surroundings. A perfect site for your Caravan or Motorhome!",
+  sectionDescription: "Nestled amongst peaceful, sheltered surrounds, Barilla Holiday Park offers the perfect balance of convenience and relaxation. Enjoy easy access to Hobart and nearby attractions while unwinding in the laid-back atmosphere of a true holiday park escape. With a range of powered and unpowered caravan and camping sites available, we make it simple to find great value accommodation and book your stay with ease.",
   items: [
     { name: "Powered Site", description: "Spacious powered sites with easy access to amenities. Suitable for caravans and motorhomes of all sizes.", image: poweredSiteImage.url, buttonText: "Book Now", buttonLink: "/contact" },
     { name: "Premium Powered Site", description: "Our premium sites offer extra space, better views, and are located in the quietest areas of the park.", image: premiumPoweredSiteImage.url, buttonText: "Book Now", buttonLink: "/contact" },
