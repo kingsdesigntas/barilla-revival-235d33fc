@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import { Link } from "react-router-dom";
-import { Flag, Trees } from "lucide-react";
+import { Flag } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACTIVITY_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultAtBarillaPage } from "@/lib/default-content";
@@ -21,7 +21,7 @@ const PlaygroundIcon = ({ size = 24, ...props }: any) => (
   </svg>
 );
 
-const iconMap: Record<string, any> = { Flag, Trees, BbqGrillIcon, PlaygroundIcon };
+const iconMap: Record<string, any> = { Flag, BbqGrillIcon, PlaygroundIcon };
 
 const AtBarilla = () => {
   const { content } = useSanityContent("at-barilla-page", ACTIVITY_PAGE_QUERY, defaultAtBarillaPage, { slug: "at-barilla" });
@@ -33,7 +33,7 @@ const AtBarilla = () => {
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
           <div className="section-underline" />
-          <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
+          <div className="text-muted-foreground max-w-2xl mb-4 text-left whitespace-pre-line">{content.sectionDescription}</div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {content.activities?.map((activity) => {

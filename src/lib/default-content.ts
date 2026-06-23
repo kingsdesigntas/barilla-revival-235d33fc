@@ -333,10 +333,9 @@ export const defaultAtBarillaPage = {
   subtitle: "Fun activities and facilities right here at the park",
   heroImage: atBarillaHero.url,
   sectionHeading: "Activities at the Park",
-  sectionDescription: "There's never a dull moment at Barilla Holiday Park. We've designed our park to provide fun for all ages.",
+  sectionDescription: "From Putt and Play mini golf to our playground and other family-friendly activities, there's no shortage of fun when you visit Barilla Holiday Park.\n\nIdeally located just a short drive from Hobart and close to Hobart Airport, Barilla Holiday Park is the perfect base for your holiday. Explore the attractions of Cambridge, Hobart, and the rest of Tasmania, then return to the comfort and convenience of our park.\n\nNot only is our location unbeatable, but we also offer plenty to do right here onsite, from outdoor games to relaxing family spaces, making Barilla Holiday Park one of the most beloved Hobart caravan parks and holiday destinations.",
   activities: [
     { icon: "Flag", title: "Putt & Play Mini Golf", description: "Our 18-hole mini golf course is fun for the whole family. Challenge your friends and family!" },
-    { icon: "Trees", title: "Nature Walks", description: "Enjoy peaceful walks through our gardens and the surrounding natural bushland." },
     { icon: "BbqGrillIcon", title: "BBQ Areas", description: "Gather the family for a classic Aussie BBQ at our communal cooking facilities." },
     { icon: "PlaygroundIcon", title: "Playground", description: "The kids will love our playground - a safe space for them to run and play." },
   ],
