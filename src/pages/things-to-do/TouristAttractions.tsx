@@ -110,7 +110,7 @@ const TouristAttractions = () => {
                     {a.phone && (
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Phone size={14} className="shrink-0 text-accent" />
-                        <a href={`tel:${a.phone.replace(/\s/g, "")}`} className="hover:text-primary">
+                        <a href={`tel:${a.phone.replace(/\s/g, "")}`} className="text-muted-foreground hover:text-accent transition-colors">
                           {a.phone}
                         </a>
                       </div>

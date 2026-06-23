@@ -24,7 +24,7 @@ const InfoCards = () => {
                 <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
                 <span>{section.contactCard?.address}</span>
               </div>
-              <a href="tel:1800465453" className="flex items-center gap-3 text-sm text-primary hover:text-accent transition-colors">
+              <a href="tel:1800465453" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-accent transition-colors">
                 <Phone size={18} />
                 <span>{section.contactCard?.phone}</span>
               </a>
