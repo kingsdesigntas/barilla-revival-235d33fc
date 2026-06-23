@@ -81,8 +81,8 @@ const CampingGrounds = () => {
                   </a>
                 </div>
               </div>
-
-            ))}
+              );
+            })}
           </div>
 
 
