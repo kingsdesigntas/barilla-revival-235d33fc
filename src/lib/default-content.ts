@@ -2,7 +2,7 @@
 import cabinImage from "@/assets/barillapark-cabin.jpg";
 import studioCabinImage from "@/assets/barillapark-studio-cabin.jpg";
 import ensuiteCabinImage from "@/assets/Barillapark-31.jpg.asset.json";
-import twoBedroomCabinImage from "@/assets/Barillapark-6.jpg.asset.json";
+import twoBedroomCabinImage from "@/assets/new-cabin-1-1024x681.jpg.asset.json";
 import caravanImage from "@/assets/barillapark-powered-site.jpg";
 import caravanHomeImage from "@/assets/barillapark-caravan-home.jpg";
 
