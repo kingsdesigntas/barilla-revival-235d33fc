@@ -7,9 +7,9 @@ import caravanImage from "@/assets/barillapark-powered-site.jpg";
 import caravanHomeImage from "@/assets/barillapark-caravan-home.jpg";
 
 import premiumPoweredSiteImage from "@/assets/Barillapark-55-2.jpg.asset.json";
-import poweredSiteImage from "@/assets/Barillapark-65-2.jpg.asset.json";
+import poweredSiteImage from "@/assets/Barillapark-56.jpg.asset.json";
 import driveThroughImage from "@/assets/Barillapark-40.jpg.asset.json";
-import campingImage from "@/assets/Barillapark-67.jpg.asset.json";
+import campingImage from "@/assets/Barillapark-63.jpg.asset.json";
 import campingSiteImage1 from "@/assets/Barillapark-40.jpg.asset.json";
 import campingSiteImage2 from "@/assets/Barillapark-85.jpg.asset.json";
 import airportCampingImage from "@/assets/camping-couple-tent.jpg.asset.json";
