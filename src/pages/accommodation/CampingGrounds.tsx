@@ -35,11 +35,29 @@ const CampingGrounds = () => {
           <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
 
           <div className="mt-12 space-y-12">
-            {content.items?.map((item) => (
+            {content.items?.map((item) => {
+              const slides = item.images && item.images.length > 0 ? item.images : item.image ? [item.image] : [];
+              return (
               <div key={item.name} className="grid md:grid-cols-2 gap-8 items-stretch">
-                {item.image && (
+                {slides.length > 0 && (
                   <div className="relative overflow-hidden rounded-lg min-h-[300px]">
-                    <img src={item.image} alt={item.name} className="absolute inset-0 w-full h-full object-cover" />
+                    {slides.length === 1 ? (
+                      <img src={slides[0]} alt={item.name} className="absolute inset-0 w-full h-full object-cover" />
+                    ) : (
+                      <Carousel opts={{ align: "start", loop: true }} className="w-full h-full">
+                        <CarouselContent className="h-full ml-0">
+                          {slides.map((src, i) => (
+                            <CarouselItem key={`${src}-${i}`} className="h-full pl-0">
+                              <div className="relative w-full h-full min-h-[300px]">
+                                <img src={src} alt={`${item.name} ${i + 1}`} className="absolute inset-0 w-full h-full object-cover rounded-lg" />
+                              </div>
+                            </CarouselItem>
+                          ))}
+                        </CarouselContent>
+                        <CarouselPrevious className="left-3 right-auto" />
+                        <CarouselNext className="right-3 left-auto" />
+                      </Carousel>
+                    )}
                   </div>
                 )}
                 <div>
