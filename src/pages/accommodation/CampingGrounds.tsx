@@ -6,6 +6,7 @@ import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultCampingPage } from "@/lib/default-content";
 import { BOOKING_URL } from "@/lib/booking";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const iconMap: Record<string, any> = { Tent, ShowerHead, Wifi, Flame, Trees, Sun };
 
