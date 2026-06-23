@@ -67,7 +67,7 @@ const AirportAccommodation = () => {
                       <div className="flex items-center justify-center mb-4" style={{ height: 36 }}>
                         <Icon className="text-primary" size={36} />
                       </div>
-                      <h3 className="font-semibold text-primary mb-2">{benefit.heading}</h3>
+                      <h3 className="font-semibold text-primary mb-2 text-center">{benefit.heading}</h3>
                       <p className="text-sm text-muted-foreground">{benefit.description}</p>
                     </div>
                   );
