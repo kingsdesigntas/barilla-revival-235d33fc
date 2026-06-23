@@ -178,7 +178,7 @@ export const defaultCabinPage = {
   items: [
     {
       name: "Two Bedroom Cabins",
-      sleeps: "Sleeps up to 6 · 4 cabins available",
+      sleeps: "Sleeps up to 6 - 4 cabins available",
       tagline: "Most popular",
       description: "Our most popular option, these Two Bedroom Cabins sleep up to six guests and offer practical, affordable accommodation with flexible bedding, a shared kitchen, and cosy living area. Perfect for families, workers, or small groups exploring Tasmania comfortably together.",
       features: [
