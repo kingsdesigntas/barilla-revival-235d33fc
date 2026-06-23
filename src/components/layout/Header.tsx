@@ -106,7 +106,7 @@ const Header = () => {
 					<div className="flex flex-wrap items-center gap-4 sm:gap-8 order-2 ml-auto">
 					<a
 						href={`tel:${settings.freeCallPhone?.replace(/\s/g, "")}`}
-						className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
+						className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
 					>
 						<Phone size={14} />
 						<span className="hidden md:inline">Freecall: </span>

@@ -137,7 +137,7 @@ const MiniGolf = () => {
                 </p>
                 <p className="text-muted-foreground mb-6">Or get in touch with us:</p>
                 <div className="space-y-3">
-                  <a href="tel:0362484447" className="flex items-center gap-3 text-foreground hover:text-primary">
+                  <a href="tel:0362484447" className="flex items-center gap-3 text-muted-foreground hover:text-accent transition-colors">
                     <Phone size={20} className="text-primary" />
                     <span>0362 484 447</span>
                   </a>
