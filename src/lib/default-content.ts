@@ -266,7 +266,8 @@ export const defaultCampingPage = {
     {
       name: "Camping Site",
       description: "Experience the great Tasmanian outdoors at our well-maintained camping grounds. Set up your tent among the eucalyptus trees and enjoy the peaceful surroundings. Our camping sites offer easy access to modern amenity blocks, BBQ areas, and all the park facilities.",
-      image: campingImage.url,
+      image: campingSiteImage1.url,
+      images: [campingSiteImage1.url, campingSiteImage2.url, campingImage.url],
       features: ["Spacious flat camping sites", "Sheltered and shaded areas", "Clean modern amenity blocks", "BBQ and campfire areas", "Free WiFi access"],
       buttonText: "Book Your Campsite",
       buttonLink: "/contact",
