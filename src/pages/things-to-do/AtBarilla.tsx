@@ -21,7 +21,7 @@ const PlaygroundIcon = ({ size = 24, ...props }: any) => (
   </svg>
 );
 
-const iconMap: Record<string, any> = { Flag, Trees, BbqGrillIcon, PlaygroundIcon };
+const iconMap: Record<string, any> = { Flag, BbqGrillIcon, PlaygroundIcon };
 
 const AtBarilla = () => {
   const { content } = useSanityContent("at-barilla-page", ACTIVITY_PAGE_QUERY, defaultAtBarillaPage, { slug: "at-barilla" });
