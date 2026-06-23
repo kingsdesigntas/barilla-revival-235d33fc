@@ -10,8 +10,8 @@ import { BOOKING_URL } from "@/lib/booking";
 const iconMap: Record<string, any> = { Zap, ShowerHead, Wifi, Car, Trees, Sun, Caravan };
 
 const siteIconMap: Record<string, any> = {
-  "Premium Powered Site": Zap,
-  "Drive-Through Site": Caravan,
+  "Powered Site": Zap,
+  "Unpowered Site": Tent,
 };
 
 const CaravanAccommodation = () => {
@@ -27,7 +27,7 @@ const CaravanAccommodation = () => {
           <div className="section-underline" />
           <p className="text-muted-foreground max-w-2xl mb-4 text-left">{content.sectionDescription}</p>
 
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
             {content.items?.map((site) => {
               const SiteIcon = siteIconMap[site.name] || Sun;
               return (
