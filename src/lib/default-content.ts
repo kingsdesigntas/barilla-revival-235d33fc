@@ -10,6 +10,8 @@ import premiumPoweredSiteImage from "@/assets/Barillapark-55-2.jpg.asset.json";
 import poweredSiteImage from "@/assets/Barillapark-65-2.jpg.asset.json";
 import driveThroughImage from "@/assets/Barillapark-40.jpg.asset.json";
 import campingImage from "@/assets/Barillapark-67.jpg.asset.json";
+import campingSiteImage1 from "@/assets/Barillapark-40.jpg.asset.json";
+import campingSiteImage2 from "@/assets/Barillapark-85.jpg.asset.json";
 import airportCampingImage from "@/assets/camping-couple-tent.jpg.asset.json";
 import campingAltImage from "@/assets/barillapark-camping-2.jpg";
 import miniGolfImage from "@/assets/barillapark-mini-golf.jpg";
@@ -264,7 +266,8 @@ export const defaultCampingPage = {
     {
       name: "Camping Site",
       description: "Experience the great Tasmanian outdoors at our well-maintained camping grounds. Set up your tent among the eucalyptus trees and enjoy the peaceful surroundings. Our camping sites offer easy access to modern amenity blocks, BBQ areas, and all the park facilities.",
-      image: campingImage.url,
+      image: campingSiteImage1.url,
+      images: [campingSiteImage1.url, campingSiteImage2.url, campingImage.url],
       features: ["Spacious flat camping sites", "Sheltered and shaded areas", "Clean modern amenity blocks", "BBQ and campfire areas", "Free WiFi access"],
       buttonText: "Book Your Campsite",
       buttonLink: "/contact",
