@@ -1,30 +1,16 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
-import { Phone, Mail, MapPin, Clock, Send, Map } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { Phone, Mail, MapPin, Clock, Map } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { CONTACT_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultContactPage } from "@/lib/default-content";
 
 const Contact = () => {
-  const { toast } = useToast();
   const { content } = useSanityContent("contact-page", CONTACT_PAGE_QUERY, defaultContactPage);
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({ title: "Message Sent!", description: "Thank you for contacting us. We'll get back to you soon." });
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
-  };
 
   return (
     <Layout>
-      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} />
+      <PageHero title={content.title} subtitle={content.subtitle} />
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
@@ -79,31 +65,18 @@ const Contact = () => {
 
             </div>
 
-            {/* Contact Form */}
+            {/* Google Map */}
             <div>
-              <h2 className="text-2xl font-serif text-primary mb-6">{content.formHeading}</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Your Name *</label>
-                  <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-3 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors" placeholder="John Smith" />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">Email Address *</label>
-                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors" placeholder="john@example.com" />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-3 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors" placeholder="0400 000 000" />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Your Message *</label>
-                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="w-full px-4 py-3 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none" placeholder="Tell us about your booking enquiry..." />
-                </div>
-                <button type="submit" className="btn-cta w-full flex items-center justify-center gap-2">
-                  <Send size={18} />
-                  Send Message
-                </button>
-              </form>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5025.0839847890775!2d147.44218217613377!3d-42.832685871152954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa6de1b4ca5ca4cf%3A0xbc4f89695e39121d!2sBarilla%20Holiday%20Park!5e1!3m2!1sen!2sau!4v1782262159347!5m2!1sen!2sau"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                className="rounded-md"
+              />
             </div>
           </div>
         </div>

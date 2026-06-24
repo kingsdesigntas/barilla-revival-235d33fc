@@ -1,7 +1,7 @@
 interface PageHeroProps {
   title: string;
   subtitle?: string;
-  backgroundImage: string;
+  backgroundImage?: string;
   backgroundPosition?: string;
   children?: React.ReactNode;
 }
@@ -9,16 +9,18 @@ interface PageHeroProps {
 const PageHero = ({ title, subtitle, backgroundImage, backgroundPosition = "bg-center", children }: PageHeroProps) => {
   return (
     <section
-      className={`relative bg-cover ${backgroundPosition} min-h-[40vh] md:min-h-[35vh] flex`}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      className={`relative bg-cover ${backgroundPosition} min-h-[40vh] md:min-h-[35vh] flex ${!backgroundImage ? 'bg-[#0A3029]' : ''}`}
+      style={backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : undefined}
     >
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to top, #0A3029 0%, rgba(10,48,41,0.7) 30%, rgba(10,48,41,0) 60%)",
-        }}
-      />
+      {backgroundImage && (
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(to top, #0A3029 0%, rgba(10,48,41,0.7) 30%, rgba(10,48,41,0) 60%)",
+          }}
+        />
+      )}
       <div className="relative z-10 container flex flex-col justify-end pb-8 text-left text-white w-full">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif drop-shadow-lg">
           {title}
