@@ -99,7 +99,10 @@ const Footer = () => {
                     );
                   })}
                 </div>
-                <p className="text-sm text-white/70">4.4/5 from 360+ Google reviews</p>
+                <div className="flex items-center gap-2 mt-1">
+                  <p className="text-sm text-white/70">4.4/5 from 360+ Google reviews</p>
+                  <img src={googleLogo.url} alt="Google" className="w-4 h-4 object-contain" />
+                </div>
               </div>
             </div>
           </div>
