@@ -83,7 +83,7 @@ export const defaultSiteSettings = {
 
 export const defaultHomePage = {
   hero: {
-    heading: "Your Relaxing Base for Exploring Hobart and Southern Tasmania",
+    heading: "Barilla Holiday Park Tasmania",
     subheading: "Our caravan park makes your perfect holiday base",
     backgroundImage: heroImage,
     ctaButtons: [
