@@ -105,7 +105,7 @@ export const defaultHomePage = {
   },
   accommodationSection: {
     heading: "Our Accommodation",
-    description: "Experience the best of family-friendly accommodation at our Hobart caravan park, Barilla. We've ensured the serenity of the natural landscape meets the conveniences of modern amenities.",
+    description: "Barilla Holiday Park offers a range of practical, affordable accommodation options to suit every kind of traveller. Whether you're after the comfort of a self-contained cabin, travelling with a caravan or motorhome, or setting up camp, you'll find a relaxed, well-positioned base close to Hobart, the airport, and Southern Tasmania's top attractions.",
     cards: [
       {
         title: "Cabin Accommodation",
