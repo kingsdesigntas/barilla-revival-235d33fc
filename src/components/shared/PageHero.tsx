@@ -3,12 +3,13 @@ interface PageHeroProps {
   subtitle?: string;
   backgroundImage: string;
   backgroundPosition?: string;
+  children?: React.ReactNode;
 }
 
-const PageHero = ({ title, subtitle, backgroundImage, backgroundPosition = "bg-center" }: PageHeroProps) => {
+const PageHero = ({ title, subtitle, backgroundImage, backgroundPosition = "bg-center", children }: PageHeroProps) => {
   return (
     <section
-      className={`relative bg-cover ${backgroundPosition} min-h-[35vh] md:min-h-[30vh] flex`}
+      className={`relative bg-cover ${backgroundPosition} min-h-[40vh] md:min-h-[35vh] flex`}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div
@@ -27,6 +28,7 @@ const PageHero = ({ title, subtitle, backgroundImage, backgroundPosition = "bg-c
             {subtitle}
           </p>
         )}
+        {children && <div className="mt-4">{children}</div>}
       </div>
     </section>
   );
