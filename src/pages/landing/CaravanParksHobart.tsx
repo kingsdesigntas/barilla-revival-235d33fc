@@ -70,6 +70,7 @@ const CaravanParksHobart = () => {
           </div>
         </div>
       </section>
+      <PromoBlock />
     </Layout>
   );
 };

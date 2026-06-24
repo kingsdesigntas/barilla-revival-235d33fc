@@ -75,6 +75,7 @@ const FamilyFriendlyHolidayPark = () => {
           </div>
         </div>
       </section>
+      <PromoBlock />
     </Layout>
   );
 };
