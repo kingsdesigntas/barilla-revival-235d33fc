@@ -436,8 +436,8 @@ export const defaultMiniGolfPage = {
 };
 
 export const defaultContactPage = {
-  title: "Contact Us",
-  subtitle: "We'd love to hear from you",
+  title: "Contact us.",
+  subtitle: "Our friendly team is always here to help with local advice, travel tips and any questions you may have during your stay at Barilla Holiday Park.",
   heroImage: receptionImage,
   contactHeading: "Get in Touch",
   contactDescription: "Have a question or ready to book? Contact us by phone, email, or fill out the form and we'll get back to you as soon as possible.",
