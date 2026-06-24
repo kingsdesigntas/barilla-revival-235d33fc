@@ -26,7 +26,18 @@ const MiniGolf = () => {
 
   return (
     <Layout>
-      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} backgroundPosition="bg-bottom" />
+      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} backgroundPosition="bg-bottom">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-white/90">
+          <a href="tel:0362484447" className="flex items-center gap-2 hover:text-white transition-colors">
+            <Phone size={18} />
+            <span>0362 484 447</span>
+          </a>
+          <a href="mailto:stay@barilla.com.au" className="flex items-center gap-2 hover:text-white transition-colors">
+            <Mail size={18} />
+            <span>stay@barilla.com.au</span>
+          </a>
+        </div>
+      </PageHero>
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
