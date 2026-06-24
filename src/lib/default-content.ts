@@ -356,8 +356,7 @@ export const defaultTouristAttractionsPage = {
   heroImage: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Mount_Wellington_Tasmania.jpg",
   sectionHeading: "Top Attractions Around Hobart",
   introParagraphs: [
-    "Barilla Holiday Park is ideally located for exploring the best tourist attractions near Hobart, Tasmania. From vibrant markets and heritage towns to world-class art museums, beaches, wildlife experiences and scenic drives, there's something to suit every taste and itinerary during your Hobart holiday. Our friendly team at Barilla Holiday Park can help you plan your visits to these top activities and sightseeing destinations.",
-    "Our friendly and knowledgeable staff are here to help you plan your Hobart caravan holiday and can provide expert advice on the best things to do in Hobart and across Tasmania.",
+    "Barilla Holiday Park is the perfect base for discovering the very best of Hobart and Southern Tasmania. From bustling local markets and charming heritage towns to world-class museums, beautiful beaches, wildlife encounters and scenic coastal drives, there's something for every family, couple and traveller to enjoy. Whether you're planning a day of adventure or a relaxed afternoon exploring at your own pace, our friendly team is always here to help you make the most of your Tasmanian holiday.",
   ],
   categories: [
     "Markets & Shopping",
