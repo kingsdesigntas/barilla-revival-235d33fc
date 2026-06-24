@@ -95,6 +95,7 @@ const CabinAccommodation = () => {
           </div>
         </div>
       </section>
+      <PromoBlock />
     </Layout>
   );
 };
