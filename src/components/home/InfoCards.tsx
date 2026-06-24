@@ -59,6 +59,8 @@ const InfoCards = () => {
                     </div>
                   );
                 })}
+                </div>
+                <img src={googleLogo.url} alt="Google" className="w-5 h-5 object-contain" />
               </div>
               <p className="text-sm text-muted-foreground">{section.ratingsCard?.description}</p>
               <a
