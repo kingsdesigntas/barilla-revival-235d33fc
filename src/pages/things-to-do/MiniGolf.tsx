@@ -26,7 +26,7 @@ const MiniGolf = () => {
 
   return (
     <Layout>
-      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} />
+      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} backgroundPosition="bg-bottom" />
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>
