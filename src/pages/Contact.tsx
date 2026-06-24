@@ -34,7 +34,7 @@ const Contact = () => {
                   <div className="bg-barilla-cream rounded-full p-3 shrink-0"><Mail className="text-primary" size={24} /></div>
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Email</h3>
-                    <a href={`mailto:${content.email}`} className="text-muted-foreground hover:text-accent transition-colors">{content.email}</a>
+                    <a href={`mailto:${content.email}`} className="text-accent hover:underline transition-colors">{content.email}</a>
                   </div>
                 </div>
 
