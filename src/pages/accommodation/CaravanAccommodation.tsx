@@ -69,6 +69,7 @@ const CaravanAccommodation = () => {
           )}
         </div>
       </section>
+      <PromoBlock />
     </Layout>
   );
 };
