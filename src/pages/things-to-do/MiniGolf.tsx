@@ -27,12 +27,12 @@ const MiniGolf = () => {
   return (
     <Layout>
       <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} backgroundPosition="bg-bottom">
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-white/90">
-          <a href="tel:0362484447" className="flex items-center gap-2 hover:text-white transition-colors">
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+          <a href="tel:0362484447" className="btn-cta flex items-center gap-2">
             <Phone size={18} />
             <span>0362 484 447</span>
           </a>
-          <a href="mailto:stay@barilla.com.au" className="flex items-center gap-2 hover:text-white transition-colors">
+          <a href="mailto:stay@barilla.com.au" className="btn-cta flex items-center gap-2">
             <Mail size={18} />
             <span>stay@barilla.com.au</span>
           </a>
