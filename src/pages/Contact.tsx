@@ -9,7 +9,6 @@ const Contact = () => {
 
   return (
     <Layout>
-      <PageHero title={content.title} subtitle={content.subtitle} />
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
