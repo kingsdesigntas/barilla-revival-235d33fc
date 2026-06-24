@@ -1,4 +1,23 @@
-import { Wifi, ShowerHead, Flame, Baby, Tv, Fuel } from "lucide-react";
+import { Wifi, ShowerHead, Flame, Baby, Tv } from "lucide-react";
+
+const GasBottle = ({ size = 24, className }: { size?: number; className?: string }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M10 2h4" />
+    <path d="M9 2v4" />
+    <path d="M15 2v4" />
+    <rect x="6" y="6" width="12" height="14" rx="2" />
+  </svg>
+);
 import aerial from "@/assets/barillapark-aerial-1.jpg";
 import reception from "@/assets/barillapark-reception.jpg";
 import camping from "@/assets/barillapark-camping-2.jpg";
@@ -9,7 +28,7 @@ const facilities = [
   { icon: Flame, label: "Sheltered BBQ area" },
   { icon: Tv, label: "Campers kitchen with TV" },
   { icon: Wifi, label: "Free Wi-Fi" },
-  { icon: Fuel, label: "Gas refills" },
+  { icon: GasBottle, label: "Gas refills" },
 ];
 
 const ParkFacilities = () => {
