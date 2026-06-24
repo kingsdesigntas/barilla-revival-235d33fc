@@ -67,6 +67,7 @@ const CabinAccommodationHobart = () => {
           </div>
         </div>
       </section>
+      <PromoBlock />
     </Layout>
   );
 };
