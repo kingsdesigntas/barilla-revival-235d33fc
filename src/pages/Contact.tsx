@@ -1,5 +1,4 @@
 import Layout from "@/components/layout/Layout";
-import PageHero from "@/components/shared/PageHero";
 import { Phone, Mail, MapPin, Clock, Map } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { CONTACT_PAGE_QUERY } from "@/lib/sanity-queries";
