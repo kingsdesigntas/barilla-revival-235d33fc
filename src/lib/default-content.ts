@@ -394,7 +394,7 @@ export const defaultTouristAttractionsPage = {
 
 export const defaultDayTripsPage = {
   title: "Day Trips from Barilla Holiday Park",
-  subtitle: "Custom-built itineraries to help you explore Hobart, Port Arthur and Tasmania's south",
+  subtitle: "Explore Hobart and Southern Tasmania with ease from the convenient base of Barilla Holiday Park.",
   heroImage: "/__l5e/assets-v1/2cb566bb-9fdb-4f2b-8d05-80284ec8d250/day-trips-hero.jpg",
   sectionHeading: "Curated Day Trips for Our Guests",
   introParagraphs: [
