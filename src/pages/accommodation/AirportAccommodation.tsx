@@ -93,6 +93,7 @@ const AirportAccommodation = () => {
           )}
         </div>
       </section>
+      <PromoBlock />
     </Layout>
   );
 };

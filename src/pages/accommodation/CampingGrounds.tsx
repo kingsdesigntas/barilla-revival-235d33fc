@@ -105,6 +105,7 @@ const CampingGrounds = () => {
           )}
         </div>
       </section>
+      <PromoBlock />
     </Layout>
   );
 };
