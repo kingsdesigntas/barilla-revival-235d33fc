@@ -104,23 +104,32 @@ const Header = () => {
 						Book your Holiday
 					</a>
 					<div className="flex flex-wrap items-center gap-4 sm:gap-8 order-2 ml-auto">
-					<a
-						href={`tel:${settings.freeCallPhone?.replace(/\s/g, "")}`}
-						className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
-					>
-						<Phone size={14} />
-						<span className="hidden md:inline">Freecall: </span>
-						<span>{settings.freeCallPhone}</span>
-					</a>
-					<span className="hidden sm:inline text-muted-foreground">|</span>
-					<a
-						href={`mailto:${settings.email}`}
-						className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
-					>
-						<Mail size={14} />
-						<span className="hidden md:inline">Mail Us: </span>
-						<span>{settings.email}</span>
-					</a>
+						<a
+							href={`tel:${settings.phone?.replace(/\s/g, "") || "0362484447"}`}
+							className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
+						>
+							<Phone size={14} />
+							<span className="hidden md:inline">Book Now: </span>
+							<span>{settings.phone || "0362 484 447"}</span>
+						</a>
+						<span className="hidden sm:inline text-muted-foreground">|</span>
+						<a
+							href={`tel:${settings.freeCallPhone?.replace(/\s/g, "")}`}
+							className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
+						>
+							<Phone size={14} />
+							<span className="hidden md:inline">Freecall: </span>
+							<span>{settings.freeCallPhone}</span>
+						</a>
+						<span className="hidden sm:inline text-muted-foreground">|</span>
+						<a
+							href={`mailto:${settings.email}`}
+							className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
+						>
+							<Mail size={14} />
+							<span className="hidden md:inline">Mail Us: </span>
+							<span>{settings.email}</span>
+						</a>
 					</div>
 				</div>
 			</div>
