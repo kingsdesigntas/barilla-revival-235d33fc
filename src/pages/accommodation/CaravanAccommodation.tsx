@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
+import PromoBlock from "@/components/shared/PromoBlock";
 import { Zap, ShowerHead, Wifi, Car, Trees, Sun, Caravan, Tent } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
@@ -68,6 +69,7 @@ const CaravanAccommodation = () => {
           )}
         </div>
       </section>
+      <PromoBlock />
     </Layout>
   );
 };

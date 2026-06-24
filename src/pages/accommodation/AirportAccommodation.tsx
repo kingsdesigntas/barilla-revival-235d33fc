@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
+import PromoBlock from "@/components/shared/PromoBlock";
 import { Link } from "react-router-dom";
 import { BOOKING_URL } from "@/lib/booking";
 import { Plane, Clock, Car, Bed, MapPin, Sun } from "lucide-react";
@@ -92,6 +93,7 @@ const AirportAccommodation = () => {
           )}
         </div>
       </section>
+      <PromoBlock />
     </Layout>
   );
 };

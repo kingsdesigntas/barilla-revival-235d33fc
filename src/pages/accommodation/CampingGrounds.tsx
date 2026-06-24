@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
+import PromoBlock from "@/components/shared/PromoBlock";
 import { Tent, ShowerHead, Wifi, Flame, Trees, Sun, LandPlot, CheckCircle2 } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
@@ -104,6 +105,7 @@ const CampingGrounds = () => {
           )}
         </div>
       </section>
+      <PromoBlock />
     </Layout>
   );
 };
