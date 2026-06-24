@@ -428,8 +428,7 @@ export const defaultMiniGolfPage = {
   ],
   infoCards: [
     { icon: "Clock", heading: "Opening Hours", content: "Daily: 9am - 5pm\n(Weather permitting)" },
-    { icon: "DollarSign", heading: "Pricing", content: "Adults: $12\nChildren (5-15): $8\nFamily (2+2): $35" },
-    { icon: "Users", heading: "Open to All", content: "Park guests & day visitors welcome!" },
+    { icon: "DollarSign", heading: "Pricing", content: "Adults: $18 - Members $16\nChildren (up to 16yrs): $12 - Members $10\nConcession: $15 - Members $12\nFamily (2 Adults and 2 Children): $45 – Members $40\nExtra Child: $10 – Members $8" },
   ],
   featureImage: miniGolfImage,
   ctaButton: { label: "Book Your Game", href: "/contact" },
