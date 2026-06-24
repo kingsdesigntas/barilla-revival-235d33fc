@@ -77,14 +77,44 @@ const ReviewSlider = () => {
   // Duplicate the list to create a seamless infinite loop
   const loop = [...reviews, ...reviews];
 
+  const rating = 4.4;
+  const reviewCount = "360+";
+  const googleReviewsLink = "https://www.google.com/travel/search?q=barilla%20holiday%20park&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73064764%2C73249150%2C121529349&hl=en-AU&gl=au&cs=1&ssta=1&ts=CAEaRwopEicyJTB4YWE2ZGUxYjRjYTVjYTRjZjoweGJjNGY4OTY5NWUzOTEyMWQSGhIUCgcI6g8QBxgGEgcI6g8QBxgHGAEyAhAA&qs=CAEyFENnc0luYVRrOFpXdDRxZThBUkFCOAJCCQkdEjleaYlPvEIJCR0SOV5piU-8&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwi4-IW2nJqVAxUAAAAAHQAAAAAQAw";
+
   return (
     <section className="py-16 bg-secondary border-t border-border overflow-hidden">
       <div className="container mb-8">
-        <h2 className="section-heading">What Our Guests Are Saying</h2>
-        <div className="section-underline" />
-        <p className="text-muted-foreground max-w-2xl">
-          Real feedback from happy guests who have stayed at Barilla Holiday Park.
-        </p>
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+          <div>
+            <h2 className="section-heading">What Our Guests Are Saying</h2>
+            <div className="section-underline" />
+            <p className="text-muted-foreground max-w-2xl">
+              Real feedback from happy guests who have stayed at Barilla Holiday Park.
+            </p>
+          </div>
+          <a
+            href={googleReviewsLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 bg-background border border-border rounded-xl p-4 md:p-5 hover:shadow-md transition-shadow"
+          >
+            <div className="flex items-center gap-1 mb-2">
+              {[...Array(5)].map((_, i) => {
+                const fillPercent = Math.max(0, Math.min(1, rating - i)) * 100;
+                return (
+                  <span key={i} className="relative inline-block" style={{ width: 22, height: 22 }}>
+                    <Star size={22} className="absolute inset-0 text-accent" />
+                    <span className="absolute inset-0 overflow-hidden block" style={{ width: `${fillPercent}%` }}>
+                      <Star size={22} className="text-accent fill-accent" />
+                    </span>
+                  </span>
+                );
+              })}
+            </div>
+            <div className="text-xl font-semibold text-foreground">{rating}/5</div>
+            <div className="text-sm text-muted-foreground mt-1">From {reviewCount} Google reviews</div>
+          </a>
+        </div>
       </div>
 
       <div
