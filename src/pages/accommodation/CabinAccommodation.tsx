@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
+import PromoBlock from "@/components/shared/PromoBlock";
 import { Link } from "react-router-dom";
 import { Bed, Users, Wifi, Tv, UtensilsCrossed, Car, Sun, Check } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
