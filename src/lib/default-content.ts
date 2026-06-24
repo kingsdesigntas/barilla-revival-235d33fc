@@ -108,16 +108,16 @@ export const defaultHomePage = {
     description: "Barilla Holiday Park offers a range of practical, affordable accommodation options to suit every kind of traveller. Whether you're after the comfort of a self-contained cabin, travelling with a caravan or motorhome, or setting up camp, you'll find a relaxed, well-positioned base close to Hobart, the airport, and Southern Tasmania's top attractions.",
     cards: [
       {
-        title: "Cabin Accommodation",
-        description: "Our cabins feature open plan design and are fully self-contained. We have accommodation options for up to 8 people.",
+        title: "Cabins",
+        description: "Our self-contained cabins are designed for comfort and convenience, with open-plan living and everything you need to settle in. Suitable for couples, families, and small groups, with options accommodating up to six guests.",
         image: cabinImage,
         images: [cabinSlideNew.url, cabinSlide1.url, cabinSlide2.url, cabinSlide3.url, cabinSlide4.url],
         link: "/accommodation/cabins",
         buttonText: "View All Cabins",
       },
       {
-        title: "Caravan Accommodation",
-        description: "All of our caravan sites are spacious with sheltered and friendly surroundings. A perfect site for your Caravan or Motorhome!",
+        title: "Caravan & Motorhome Sites",
+        description: "Spacious and easy to access, our caravan sites offer a comfortable and friendly setting for your stay. Whether you're stopping over or staying a while, it's a practical base with everything you need close by.",
         image: caravanHomeImage,
         images: [caravanSlideNew.url, caravanSlide1.url, caravanSlide2.url, caravanSlide3.url, caravanSlide4.url],
         link: "/accommodation/caravans",
@@ -125,7 +125,7 @@ export const defaultHomePage = {
       },
       {
         title: "Camping Grounds",
-        description: "Barilla Holiday Park offers sheltered and friendly camping grounds with lots of things to do for all the family.",
+        description: "Our sheltered camping grounds provide a relaxed, family-friendly space to unwind. Simple, welcoming, and well-equipped, it's an easy place to set up, recharge, and enjoy your surroundings.",
         image: campingImage.url,
         images: [campingSlide1.url, campingSlide2.url, campingSlide3.url, campingSlide4.url],
         link: "/accommodation/camping",
