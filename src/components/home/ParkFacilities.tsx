@@ -28,7 +28,7 @@ const facilities = [
   { icon: Flame, label: "Sheltered BBQ area" },
   { icon: Tv, label: "Campers kitchen with TV" },
   { icon: Wifi, label: "Free Wi-Fi" },
-  { icon: Fuel, label: "Gas refills" },
+  { icon: GasBottle, label: "Gas refills" },
 ];
 
 const ParkFacilities = () => {
