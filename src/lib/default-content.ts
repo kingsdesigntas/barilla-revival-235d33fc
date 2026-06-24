@@ -439,7 +439,7 @@ export const defaultContactPage = {
   title: "Contact us.",
   subtitle: "Our friendly team is always here to help with local advice, travel tips and any questions you may have during your stay at Barilla Holiday Park.",
   heroImage: receptionImage,
-  contactHeading: "Get in Touch",
+  contactHeading: "Contact us.",
   contactDescription: "Our friendly team is always here to help with local advice, travel tips and any questions you may have during your stay at Barilla Holiday Park.",
   phone: "1800 465 453",
   email: "stay@barilla.com.au",
