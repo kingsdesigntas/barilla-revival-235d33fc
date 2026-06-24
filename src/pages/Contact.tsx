@@ -24,7 +24,7 @@ const Contact = () => {
                   <div className="bg-barilla-cream rounded-full p-3 shrink-0"><Phone className="text-primary" size={24} /></div>
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Phone</h3>
-                    <a href={`tel:${content.phone?.replace(/\s/g, "")}`} className="text-muted-foreground hover:text-accent transition-colors">
+                    <a href={`tel:${content.phone?.replace(/\s/g, "")}`} className="text-accent hover:underline transition-colors">
                       Freecall: {content.phone}
                     </a>
                   </div>
