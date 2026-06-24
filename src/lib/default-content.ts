@@ -44,8 +44,9 @@ const heroImage = aerialImage;
 export const defaultSiteSettings = {
   siteName: "BARILLA",
   tagline: "Holiday Park",
-  phone: "1800 465 453",
+  phone: "0362 484 447",
   freeCallPhone: "1800 465 453",
+  bookNowPhone: "0362 484 447",
   email: "stay@barilla.com.au",
   address: "75 Richmond Road, Cambridge 7170, Tasmania, Australia",
   navigationItems: [
