@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import googleLogo from "@/assets/google-logo.webp.asset.json";
 import { CabinIcon, CaravanIcon, CampingIcon } from "@/components/icons/AccommodationIcons";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";

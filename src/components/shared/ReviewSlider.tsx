@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import googleLogo from "@/assets/google-logo.webp.asset.json";
 
 type Review = {
   name: string;

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Star, Map } from "lucide-react";
+import googleLogo from "@/assets/google-logo.webp.asset.json";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { SITE_SETTINGS_QUERY } from "@/lib/sanity-queries";
 import { defaultSiteSettings } from "@/lib/default-content";
