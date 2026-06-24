@@ -1,30 +1,16 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
-import { Phone, Mail, MapPin, Clock, Send, Map } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { Phone, Mail, MapPin, Clock, Map } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { CONTACT_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultContactPage } from "@/lib/default-content";
 
 const Contact = () => {
-  const { toast } = useToast();
   const { content } = useSanityContent("contact-page", CONTACT_PAGE_QUERY, defaultContactPage);
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({ title: "Message Sent!", description: "Thank you for contacting us. We'll get back to you soon." });
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
-  };
 
   return (
     <Layout>
-      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} />
+      <PageHero title={content.title} subtitle={content.subtitle} />
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
