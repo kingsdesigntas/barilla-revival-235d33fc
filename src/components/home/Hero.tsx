@@ -107,7 +107,10 @@ const Hero = () => {
                   );
                 })}
               </div>
-              <div className="text-2xl font-semibold">{rating}/5</div>
+              <div className="flex items-center gap-2">
+                <div className="text-2xl font-semibold">{rating}/5</div>
+                <img src={googleLogo.url} alt="Google" className="w-5 h-5 object-contain" />
+              </div>
               <div className="text-sm text-white/80 mt-1">From {reviewCount} Google reviews</div>
             </a>
           </div>

@@ -45,8 +45,9 @@ const InfoCards = () => {
           <div className="contact-card h-full flex flex-col">
             <div className="contact-card-header">{section.ratingsCard?.heading}</div>
             <div className="p-6 gap-4 flex flex-col flex-1">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => {
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => {
                   const rating = section.ratingsCard?.rating || 4.4;
                   const fillPercent = Math.max(0, Math.min(1, rating - i)) * 100;
                   return (
