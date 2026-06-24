@@ -72,7 +72,7 @@ const Contact = () => {
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
-                allowFullScreen=""
+                allowFullScreen
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
                 className="rounded-md"
