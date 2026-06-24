@@ -93,7 +93,7 @@ export const defaultHomePage = {
     ],
   },
   introduction: {
-    heading: "A Stone's Throw from Hobart",
+    heading: "Your Local, Family-Friendly Holiday Park",
     subheading: "Our caravan park is close to everything that makes a perfect holiday",
     paragraphs: [
       "Barilla Holiday Park, your family-friendly caravan park in Hobart, Tasmania, nestles in the charming locale of Cambridge. Just a 15-minute drive from Hobart's vibrant centre, we're perfectly positioned for an unforgettable Tasmanian holiday. We're also just a stone's throw from the Hobart Airport, providing stress-free transit for both local and international visitors.",
