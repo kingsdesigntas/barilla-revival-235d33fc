@@ -105,15 +105,6 @@ const Header = () => {
 					</a>
 					<div className="flex flex-wrap items-center gap-4 sm:gap-8 order-2 ml-auto">
 						<a
-							href={`tel:${settings.phone?.replace(/\s/g, "") || "0362484447"}`}
-							className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
-						>
-							<Phone size={14} />
-							<span className="hidden md:inline">Book Now: </span>
-							<span>{settings.phone || "0362 484 447"}</span>
-						</a>
-						<span className="hidden sm:inline text-muted-foreground">|</span>
-						<a
 							href={`tel:${settings.freeCallPhone?.replace(/\s/g, "")}`}
 							className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors"
 						>
