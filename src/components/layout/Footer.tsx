@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Star, Map } from "lucide-react";
-import googleLogo from "@/assets/google-logo.webp.asset.json";
+import googleLogo from "@/assets/google-logo.webp";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { SITE_SETTINGS_QUERY } from "@/lib/sanity-queries";
 import { defaultSiteSettings } from "@/lib/default-content";
@@ -101,7 +101,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-2 mt-1">
                   <p className="text-sm text-white/70">4.4/5 from 360+ Google reviews</p>
-                  <img src={googleLogo.url} alt="Google" className="w-4 h-4 object-contain" />
+                  <img src={googleLogo} alt="Google" className="w-4 h-4 object-contain" />
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { TOURIST_ATTRACTIONS_QUERY } from "@/lib/sanity-queries";
 import { defaultTouristAttractionsPage } from "@/lib/default-content";
-import heroImage from "@/assets/hobart-attractions-hero.jpg.asset.json";
+import heroImage from "@/assets/hobart-attractions-hero.jpg";
 
 interface Attraction {
   name: string;
@@ -36,7 +36,7 @@ const TouristAttractions = () => {
 
   return (
     <Layout>
-      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={heroImage.url} />
+      <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={heroImage} />
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
           <h2 className="section-heading">{content.sectionHeading}</h2>

@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import googleLogo from "@/assets/google-logo.webp.asset.json";
+import googleLogo from "@/assets/google-logo.webp";
 
 type Review = {
   name: string;
@@ -63,7 +63,7 @@ const reviews: Review[] = [
 const ReviewCard = ({ review }: { review: Review }) => (
   <article className="shrink-0 w-[340px] md:w-[380px] bg-background border border-border rounded-lg p-6 shadow-sm flex flex-col mx-3 relative">
     <img
-      src={googleLogo.url}
+      src={googleLogo}
       alt="Google"
       className="absolute top-4 right-4 w-5 h-5 object-contain"
     />
@@ -119,7 +119,7 @@ const ReviewSlider = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="text-xl font-semibold text-foreground">{rating}/5</div>
-              <img src={googleLogo.url} alt="Google" className="w-5 h-5 object-contain" />
+              <img src={googleLogo} alt="Google" className="w-5 h-5 object-contain" />
             </div>
             <div className="text-sm text-muted-foreground mt-1">From {reviewCount} Google reviews</div>
           </a>

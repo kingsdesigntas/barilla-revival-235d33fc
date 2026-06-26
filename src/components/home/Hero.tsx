@@ -1,11 +1,11 @@
 import { Star } from "lucide-react";
-import googleLogo from "@/assets/google-logo.webp.asset.json";
+import googleLogo from "@/assets/google-logo.webp";
 import { CabinIcon, CaravanIcon, CampingIcon } from "@/components/icons/AccommodationIcons";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
 import { BOOKING_URL } from "@/lib/booking";
-import heroVideo from "@/assets/hero-drone.mp4.asset.json";
+import heroVideo from "@/assets/hero-drone.mp4";
 
 const Hero = () => {
   const { content } = useSanityContent("homePage", HOME_PAGE_QUERY, defaultHomePage);
@@ -22,7 +22,7 @@ const Hero = () => {
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
-        src={heroVideo.url}
+        src={heroVideo}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
       <div
@@ -109,7 +109,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="text-2xl font-semibold">{rating}/5</div>
-                <img src={googleLogo.url} alt="Google" className="w-5 h-5 object-contain" />
+                <img src={googleLogo} alt="Google" className="w-5 h-5 object-contain" />
               </div>
               <div className="text-sm text-white/80 mt-1">From {reviewCount} Google reviews</div>
             </a>

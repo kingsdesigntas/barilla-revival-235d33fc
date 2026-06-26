@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Star, Facebook, ExternalLink, Map } from "lucide-react";
-import googleLogo from "@/assets/google-logo.webp.asset.json";
+import googleLogo from "@/assets/google-logo.webp";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
@@ -60,7 +60,7 @@ const InfoCards = () => {
                   );
                 })}
                 </div>
-                <img src={googleLogo.url} alt="Google" className="w-5 h-5 object-contain" />
+                <img src={googleLogo} alt="Google" className="w-5 h-5 object-contain" />
               </div>
               <p className="text-sm text-muted-foreground">{section.ratingsCard?.description}</p>
               <a
