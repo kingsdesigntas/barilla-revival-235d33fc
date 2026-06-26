@@ -5,7 +5,7 @@ import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
 import { BOOKING_URL } from "@/lib/booking";
-import heroVideo from "@/assets/hero-drone.mp4";
+import heroVideo from "@/assets/hero-drone.mp4.asset.json";
 
 const Hero = () => {
   const { content } = useSanityContent("homePage", HOME_PAGE_QUERY, defaultHomePage);
@@ -22,7 +22,7 @@ const Hero = () => {
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
-        src={heroVideo}
+        src={heroVideo.url}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
       <div
