@@ -1,18 +1,18 @@
 // Default/fallback content for all pages when Sanity is not configured
 import cabinImage from "@/assets/barillapark-cabin.jpg";
 import studioCabinImage from "@/assets/barillapark-studio-cabin.jpg";
-import ensuiteCabinImage from "@/assets/Barillapark-31.jpg.asset.json";
-import twoBedroomCabinImage from "@/assets/new-cabin-1-1024x681.jpg.asset.json";
+import ensuiteCabinImage from "@/assets/Barillapark-31.jpg";
+import twoBedroomCabinImage from "@/assets/new-cabin-1-1024x681.jpg";
 import caravanImage from "@/assets/barillapark-powered-site.jpg";
 import caravanHomeImage from "@/assets/barillapark-caravan-home.jpg";
 
-import premiumPoweredSiteImage from "@/assets/Barillapark-55-2.jpg.asset.json";
-import poweredSiteImage from "@/assets/Barillapark-56.jpg.asset.json";
-import driveThroughImage from "@/assets/Barillapark-40.jpg.asset.json";
-import campingImage from "@/assets/Barillapark-63.jpg.asset.json";
-import campingSiteImage1 from "@/assets/Barillapark-40.jpg.asset.json";
-import campingSiteImage2 from "@/assets/Barillapark-85.jpg.asset.json";
-import airportCampingImage from "@/assets/camping-couple-tent.jpg.asset.json";
+import premiumPoweredSiteImage from "@/assets/Barillapark-55-2.jpg";
+import poweredSiteImage from "@/assets/Barillapark-56.jpg";
+import driveThroughImage from "@/assets/Barillapark-40.jpg";
+import campingImage from "@/assets/Barillapark-63.jpg";
+import campingSiteImage1 from "@/assets/Barillapark-40.jpg";
+import campingSiteImage2 from "@/assets/Barillapark-85.jpg";
+import airportCampingImage from "@/assets/camping-couple-tent.jpg";
 import campingAltImage from "@/assets/barillapark-camping-2.jpg";
 import miniGolfImage from "@/assets/barillapark-mini-golf.jpg";
 import miniGolfAerialImage from "@/assets/barillapark-aerial-mini-golf.jpg";
@@ -21,23 +21,23 @@ import aerialImage2 from "@/assets/barillapark-aerial-2.jpg";
 import receptionImage from "@/assets/barillapark-reception.jpg";
 import heroCaravan from "@/assets/hero-caravan.jpg";
 import heroCamping from "@/assets/hero-camping.jpg";
-import campingHeroRotated from "@/assets/camping-hero-rotated.jpg.asset.json";
-import cabinSlideNew from "@/assets/cabin-exterior.png.asset.json";
-import cabinStayAirportImage from "@/assets/airport-cabin-stay.jpg.asset.json";
-import cabinSlide1 from "@/assets/Barillapark-1.jpg.asset.json";
-import cabinSlide2 from "@/assets/Barillapark-19.jpg.asset.json";
-import cabinSlide3 from "@/assets/Barillapark-28.jpg.asset.json";
-import cabinSlide4 from "@/assets/Barillapark-36.jpg.asset.json";
-import caravanSlideNew from "@/assets/roadpass-9R4ghJq0Fe8-unsplash.jpg.asset.json";
-import caravanSlide1 from "@/assets/Barillapark-55.jpg.asset.json";
-import caravanSlide2 from "@/assets/Barillapark-59-2.jpg.asset.json";
-import caravanSlide3 from "@/assets/Barillapark-65.jpg.asset.json";
-import caravanSlide4 from "@/assets/Barillapark-90.jpg.asset.json";
-import campingSlide1 from "@/assets/camping-couple-tent.jpg.asset.json";
-import campingSlide2 from "@/assets/Barillapark-66.jpg.asset.json";
-import campingSlide3 from "@/assets/Barillapark-68.jpg.asset.json";
-import campingSlide4 from "@/assets/Barillapark-62.jpg.asset.json";
-import atBarillaHero from "@/assets/Barillapark-68-2.jpg.asset.json";
+import campingHeroRotated from "@/assets/camping-hero-rotated.jpg";
+import cabinSlideNew from "@/assets/cabin-exterior.png";
+import cabinStayAirportImage from "@/assets/airport-cabin-stay.jpg";
+import cabinSlide1 from "@/assets/Barillapark-1.jpg";
+import cabinSlide2 from "@/assets/Barillapark-19.jpg";
+import cabinSlide3 from "@/assets/Barillapark-28.jpg";
+import cabinSlide4 from "@/assets/Barillapark-36.jpg";
+import caravanSlideNew from "@/assets/roadpass-9R4ghJq0Fe8-unsplash.jpg";
+import caravanSlide1 from "@/assets/Barillapark-55.jpg";
+import caravanSlide2 from "@/assets/Barillapark-59-2.jpg";
+import caravanSlide3 from "@/assets/Barillapark-65.jpg";
+import caravanSlide4 from "@/assets/Barillapark-90.jpg";
+import campingSlide1 from "@/assets/camping-couple-tent.jpg";
+import campingSlide2 from "@/assets/Barillapark-66.jpg";
+import campingSlide3 from "@/assets/Barillapark-68.jpg";
+import campingSlide4 from "@/assets/Barillapark-62.jpg";
+import atBarillaHero from "@/assets/Barillapark-68-2.jpg";
 
 const heroImage = aerialImage;
 
@@ -111,7 +111,7 @@ export const defaultHomePage = {
         title: "Cabins",
         description: "Our self-contained cabins are designed for comfort and convenience, with open-plan living and everything you need to settle in. Suitable for couples, families, and small groups, with options accommodating up to six guests.",
         image: cabinImage,
-        images: [cabinSlideNew.url, cabinSlide1.url, cabinSlide2.url, cabinSlide3.url, cabinSlide4.url],
+        images: [cabinSlideNew, cabinSlide1, cabinSlide2, cabinSlide3, cabinSlide4],
         link: "/accommodation/cabins",
         buttonText: "View All Cabins",
       },
@@ -119,15 +119,15 @@ export const defaultHomePage = {
         title: "Caravan & Motorhome Sites",
         description: "Spacious and easy to access, our caravan sites offer a comfortable and friendly setting for your stay. Whether you're stopping over or staying a while, it's a practical base with everything you need close by.",
         image: caravanHomeImage,
-        images: [caravanSlideNew.url, caravanSlide1.url, caravanSlide2.url, caravanSlide3.url, caravanSlide4.url],
+        images: [caravanSlideNew, caravanSlide1, caravanSlide2, caravanSlide3, caravanSlide4],
         link: "/accommodation/caravans",
         buttonText: "View All Sites",
       },
       {
         title: "Camping Grounds",
         description: "Our sheltered camping grounds provide a relaxed, family-friendly space to unwind. Simple, welcoming, and well-equipped, it's an easy place to set up, recharge, and enjoy your surroundings.",
-        image: campingImage.url,
-        images: [campingSlide1.url, campingSlide2.url, campingSlide3.url, campingSlide4.url],
+        image: campingImage,
+        images: [campingSlide1, campingSlide2, campingSlide3, campingSlide4],
         link: "/accommodation/camping",
         buttonText: "View All Sites",
       },
@@ -191,7 +191,7 @@ export const defaultCabinPage = {
         "All linen and crockery provided",
         "Fully self-contained",
       ],
-      image: twoBedroomCabinImage.url,
+      image: twoBedroomCabinImage,
       buttonText: "Book Now",
       buttonLink: "/contact",
     },
@@ -207,7 +207,7 @@ export const defaultCabinPage = {
         "Couch, TV & breakfast bar",
         "Split-system air conditioning",
       ],
-      image: ensuiteCabinImage.url,
+      image: ensuiteCabinImage,
       buttonText: "Book Now",
       buttonLink: "/contact",
     },
@@ -241,8 +241,8 @@ export const defaultCaravanPage = {
   sectionHeading: "Our Caravan Sites",
   sectionDescription: "Nestled amongst peaceful, sheltered surrounds, Barilla Holiday Park offers the perfect balance of convenience and relaxation. Enjoy easy access to Hobart and nearby attractions while unwinding in the laid-back atmosphere of a true holiday park escape. With a range of powered and unpowered caravan and camping sites available, we make it simple to find great value accommodation and book your stay with ease.",
   items: [
-    { name: "Powered Site", description: "Spacious powered sites with convenient access to park amenities, suitable for caravans, campervans and motorhomes of all sizes.", image: poweredSiteImage.url, buttonText: "Book Now", buttonLink: "/contact" },
-    { name: "Unpowered Site", description: "Offering great value for money, our spacious unpowered sites provide a simple and comfortable camping option with convenient access to all park amenities and plenty of room to relax during your stay.", image: campingImage.url, buttonText: "Book Now", buttonLink: "/contact" },
+    { name: "Powered Site", description: "Spacious powered sites with convenient access to park amenities, suitable for caravans, campervans and motorhomes of all sizes.", image: poweredSiteImage, buttonText: "Book Now", buttonLink: "/contact" },
+    { name: "Unpowered Site", description: "Offering great value for money, our spacious unpowered sites provide a simple and comfortable camping option with convenient access to all park amenities and plenty of room to relax during your stay.", image: campingImage, buttonText: "Book Now", buttonLink: "/contact" },
   ],
   amenitiesHeading: "Site Amenities",
   amenities: [
@@ -259,15 +259,15 @@ export const defaultCaravanPage = {
 export const defaultCampingPage = {
   title: "Camping Grounds",
   subtitle: "Sheltered, family-friendly camping in beautiful Tasmania",
-  heroImage: campingHeroRotated.url,
+  heroImage: campingHeroRotated,
   sectionHeading: "Camp at Barilla",
   sectionDescription: "Barilla Holiday Park offers sheltered and friendly camping grounds with lots of things to do for all the family.",
   items: [
     {
       name: "Camping Site",
       description: "Experience the great Tasmanian outdoors at our well-maintained camping grounds. Set up your tent among the eucalyptus trees and enjoy the peaceful surroundings. Our camping sites offer easy access to modern amenity blocks, BBQ areas, and all the park facilities.",
-      image: campingSiteImage1.url,
-      images: [campingSiteImage1.url, campingSiteImage2.url, campingImage.url],
+      image: campingSiteImage1,
+      images: [campingSiteImage1, campingSiteImage2, campingImage],
       features: ["Spacious flat camping sites", "Sheltered and shaded areas", "Clean modern amenity blocks", "BBQ and campfire areas", "Free WiFi access"],
       buttonText: "Book Your Campsite",
       buttonLink: "/contact",
@@ -295,21 +295,21 @@ export const defaultAirportPage = {
     {
       name: "CABIN STAYS",
       description: " Enjoy comfortable, self-contained accommodation with everything you need for a relaxing stay. Ideal for a convenient overnight stop before or after your flight.",
-      image: cabinStayAirportImage.url,
+      image: cabinStayAirportImage,
       buttonText: "Book Cabin",
       buttonLink: "/contact",
     },
     {
       name: "CARAVAN SITES",
       description: "Spacious and sheltered caravan sites with easy access to park amenities, offering a flexible and comfortable option for caravans, campervans and motorhomes.",
-      image: caravanSlide1.url,
+      image: caravanSlide1,
       buttonText: "Book Site",
       buttonLink: "/contact",
     },
     {
       name: "CAMPING GROUNDS",
       description: "Sheltered and well-maintained camping grounds allowing you to enjoy a more relaxed and quieter stay. ",
-      image: airportCampingImage.url,
+      image: airportCampingImage,
       buttonText: "Book Campsite",
       buttonLink: "/contact",
     },
@@ -331,7 +331,7 @@ export const defaultAirportPage = {
 export const defaultAtBarillaPage = {
   title: "Things to Do at Barilla",
   subtitle: "There's plenty for the whole family to enjoy at Barilla Holiday Park. Our park is the perfect place to relax, explore and spend quality time together. Along with our peaceful surroundings and convenient location, guests can enjoy a range of family-friendly activities and open spaces designed for both fun and relaxation during your Tasmanian holiday.",
-  heroImage: atBarillaHero.url,
+  heroImage: atBarillaHero,
   sectionHeading: "Activities at the Park",
   sectionDescription: "From Putt and Play mini golf to our playground and other family-friendly activities, there's no shortage of fun when you visit Barilla Holiday Park.\n\nIdeally located just a short drive from Hobart and close to Hobart Airport, Barilla Holiday Park is the perfect base for your holiday. Explore the attractions of Cambridge, Hobart, and the rest of Tasmania, then return to the comfort and convenience of our park.\n\nNot only is our location unbeatable, but we also offer plenty to do right here onsite, from outdoor games to relaxing family spaces, making Barilla Holiday Park one of the most beloved Hobart caravan parks and holiday destinations.",
   activities: [

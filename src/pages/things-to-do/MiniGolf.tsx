@@ -8,14 +8,14 @@ import gallery1 from "@/assets/mini-golf-gallery-1.jpg";
 import gallery2 from "@/assets/mini-golf-gallery-2.jpg";
 import gallery3 from "@/assets/mini-golf-gallery-3.jpg";
 import gallery5 from "@/assets/mini-golf-gallery-5.jpg";
-import miniGolfPricesImg from "@/assets/Barillapark-77.jpg.asset.json";
-import sliderImg from "@/assets/Barillapark-78.jpg.asset.json";
+import miniGolfPricesImg from "@/assets/Barillapark-77.jpg";
+import sliderImg from "@/assets/Barillapark-78.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const iconMap: Record<string, any> = { Clock, DollarSign, Users };
 
 const topSliderImages = [
-  { src: sliderImg.url, alt: "Mini golf course hole 11 surrounded by trees and rocks" },
+  { src: sliderImg, alt: "Mini golf course hole 11 surrounded by trees and rocks" },
   { src: gallery2, alt: "Entrance to Barilla Holiday Park Putt & Play with shop and landscaped rocks" },
   { src: gallery3, alt: "Mini golf fairway lined with cypress trees and rocks" },
   { src: gallery5, alt: "Landscaped mini golf hole with rules sign" },
@@ -100,7 +100,7 @@ const MiniGolf = () => {
           <div className="grid md:grid-cols-2 gap-10 mt-12 items-start">
             <div className="overflow-hidden rounded-lg shadow-lg aspect-[4/3]">
               <img
-                src={miniGolfPricesImg.url}
+                src={miniGolfPricesImg}
                 alt="Putt & Play mini golf course hole 2 sign"
                 className="w-full h-full object-cover"
                 loading="lazy"

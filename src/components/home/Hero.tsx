@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import googleLogo from "@/assets/google-logo.webp.asset.json";
+import googleLogo from "@/assets/google-logo.webp";
 import { CabinIcon, CaravanIcon, CampingIcon } from "@/components/icons/AccommodationIcons";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
@@ -109,7 +109,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="text-2xl font-semibold">{rating}/5</div>
-                <img src={googleLogo.url} alt="Google" className="w-5 h-5 object-contain" />
+                <img src={googleLogo} alt="Google" className="w-5 h-5 object-contain" />
               </div>
               <div className="text-sm text-white/80 mt-1">From {reviewCount} Google reviews</div>
             </a>
