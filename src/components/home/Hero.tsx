@@ -5,7 +5,12 @@ import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
 import { BOOKING_URL } from "@/lib/booking";
-import heroVideo from "@/assets/hero-drone.mp4.asset.json";
+import { useEffect, useState } from "react";
+import heroImg1 from "@/assets/barilla-hero-1.jpg.asset.json";
+import heroImg2 from "@/assets/barilla-hero-2.jpg.asset.json";
+import heroImg3 from "@/assets/barilla-hero-3.jpg.asset.json";
+
+const heroImages = [heroImg1.url, heroImg2.url, heroImg3.url];
 
 const Hero = () => {
   const { content } = useSanityContent("homePage", HOME_PAGE_QUERY, defaultHomePage);
@@ -14,16 +19,30 @@ const Hero = () => {
   const rating = ratings?.rating ?? 4.4;
   const reviewCount = ratings?.reviewCount ?? "360+";
 
+  const [activeIndex, setActiveIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActiveIndex((i) => (i + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section className="relative min-h-[80vh] overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-        src={heroVideo.url}
-      />
+      {heroImages.map((src, i) => (
+        <div
+          key={src}
+          className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out"
+          style={{ opacity: i === activeIndex ? 1 : 0 }}
+          aria-hidden={i !== activeIndex}
+        >
+          <img
+            src={src}
+            alt=""
+            className="w-full h-full object-cover animate-hero-kenburns"
+          />
+        </div>
+      ))}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
       <div
         className="absolute inset-x-0 bottom-0 h-1/2 pointer-events-none"
