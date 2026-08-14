@@ -3,13 +3,13 @@ import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
 import PromoBlock from "@/components/shared/PromoBlock";
 import { Link } from "react-router-dom";
-import { Bed, Users, Wifi, Tv, UtensilsCrossed, Car, Sun, Check } from "lucide-react";
+import { Bed, Users, Wifi, Tv, UtensilsCrossed, Car, Sun, CookingPot, Check } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultCabinPage } from "@/lib/default-content";
 import { BOOKING_URL } from "@/lib/booking";
 
-const iconMap: Record<string, any> = { Bed, Users, Wifi, Tv, UtensilsCrossed, Car, Sun };
+const iconMap: Record<string, any> = { Bed, Users, Wifi, Tv, UtensilsCrossed, Car, Sun, CookingPot };
 
 const CabinAccommodation = () => {
   const { content } = useSanityContent("cabin-page", ACCOMMODATION_PAGE_QUERY, defaultCabinPage, { slug: "cabins" });
