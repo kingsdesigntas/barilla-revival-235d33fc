@@ -10,7 +10,7 @@ import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultAirportPage } from "@/lib/default-content";
 
-const iconMap: Record<string, any> = { Plane, Clock, Car, Bed, MapPin, Sun };
+const iconMap: Record<string, any> = { Plane, Clock, Van, Bed, MapPin, Sun };
 
 const AirportAccommodation = () => {
   const { content } = useSanityContent("airport-page", ACCOMMODATION_PAGE_QUERY, defaultAirportPage, { slug: "airport" });
