@@ -317,7 +317,7 @@ export const defaultAirportPage = {
   benefits: [
     { icon: "Plane", heading: "Just 5 Minutes from Hobart Airport", description: "Enjoy a quick and convenient drive to and from the airport terminal." },
     { icon: "Clock", heading: "Flexible Check-In Options", description: "We’re happy to work around your travel schedule wherever possible." },
-    { icon: "Car", heading: "Close to Caravan Hire Drop-Off Locations", description: "Conveniently located near major caravan and motorhome hire depots for an easy start or finish to your trip." },
+    { icon: "Caravan", heading: "Close to Caravan Hire Drop-Off Locations", description: "Conveniently located near major caravan and motorhome hire depots for an easy start or finish to your trip." },
   ],
   locationInfo: {
     address: "75 Richmond Road, Cambridge, Tasmania 7170",
