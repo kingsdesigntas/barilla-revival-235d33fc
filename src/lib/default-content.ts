@@ -444,7 +444,7 @@ export const defaultContactPage = {
   phone: "1800 465 453",
   email: "stay@barilla.com.au",
   address: "75 Richmond Road\nCambridge, Tasmania 7170\nAustralia",
-  receptionHours: "Daily: 8:00am - 8:00pm\nLate arrivals by arrangement",
+  receptionHours: "Daily: 9:00am - 5:00pm\nLate arrivals by arrangement",
   mapLink: "https://maps.google.com/?q=75+Richmond+Road+Cambridge+Tasmania+7170",
   formHeading: "Send a Message",
   seo: { title: "Contact Us | Barilla Holiday Park", description: "Contact Barilla Holiday Park. Phone, email or send us a message.", keywords: "" },
