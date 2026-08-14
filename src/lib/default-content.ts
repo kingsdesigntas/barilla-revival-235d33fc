@@ -312,6 +312,7 @@ export const defaultAirportPage = {
       name: "CAMPING GROUNDS",
       description: "Sheltered and well-maintained camping grounds allowing you to enjoy a more relaxed and quieter stay. ",
       image: airportCampingImage,
+      images: [airportCampingImage, campingSiteImage2, campingSlide2],
       buttonText: "Book Campsite",
       buttonLink: "/contact",
     },
