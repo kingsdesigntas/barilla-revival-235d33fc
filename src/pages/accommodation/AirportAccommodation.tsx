@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
 import PromoBlock from "@/components/shared/PromoBlock";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import { BOOKING_URL } from "@/lib/booking";
 import { Plane, Clock, Bus, Bed, MapPin, Sun } from "lucide-react";
