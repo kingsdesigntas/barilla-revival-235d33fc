@@ -4,7 +4,7 @@ import AccommodationHighlights from "@/components/shared/AccommodationHighlights
 import PromoBlock from "@/components/shared/PromoBlock";
 import { Link } from "react-router-dom";
 import { BOOKING_URL } from "@/lib/booking";
-import { Plane, Clock, Caravan, Bed, MapPin, Sun } from "lucide-react";
+import { Plane, Clock, Bus, Bed, MapPin, Sun } from "lucide-react";
 import { CabinIcon, CaravanIcon, iconForAccommodationTitle } from "@/components/icons/AccommodationIcons";
 import { useSanityContent } from "@/hooks/useSanityContent";
 import { ACCOMMODATION_PAGE_QUERY } from "@/lib/sanity-queries";
