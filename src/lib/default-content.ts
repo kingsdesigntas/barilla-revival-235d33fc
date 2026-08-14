@@ -296,6 +296,7 @@ export const defaultAirportPage = {
       name: "CABIN STAYS",
       description: " Enjoy comfortable, self-contained accommodation with everything you need for a relaxing stay. Ideal for a convenient overnight stop before or after your flight.",
       image: cabinStayAirportImage,
+      images: [cabinStayAirportImage, cabinImage, studioCabinImage],
       buttonText: "Book Cabin",
       buttonLink: "/contact",
     },
