@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
 import PromoBlock from "@/components/shared/PromoBlock";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";
 import { BOOKING_URL } from "@/lib/booking";
 import { Plane, Clock, Bus, Bed, MapPin, Sun } from "lucide-react";
@@ -31,17 +32,32 @@ const AirportAccommodation = () => {
               const ItemIcon = iconForAccommodationTitle(item.name);
               const t = item.name.toLowerCase();
               const iconSize = t.includes("caravan") ? 64 : t.includes("camp") ? 47 : 38;
+              const slides = (item.images?.length ?? 0) > 0 ? item.images : [item.image];
               return (
                 <div key={item.name} className="card-accommodation bg-[#f1f6f3] flex flex-col">
                   <div className="card-header">{item.name}</div>
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    {item.image ? (
-                      <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
-                    ) : (
-                      <div className="w-full h-full bg-barilla-cream flex items-center justify-center">
-                        <ItemIcon className="text-primary" size={64} />
-                      </div>
-                    )}
+                    <Carousel opts={{ align: "start", loop: true }} className="w-full h-full">
+                      <CarouselContent className="h-full">
+                        {slides.map((src: any, i: number) => (
+                          <CarouselItem key={`${src}-${i}`} className="h-full">
+                            <div className="relative w-full aspect-[4/3] overflow-hidden">
+                              <img
+                                src={src}
+                                alt={`${item.name} ${i + 1}`}
+                                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
+                      </CarouselContent>
+                      {slides.length > 1 && (
+                        <>
+                          <CarouselPrevious className="left-3 right-auto" />
+                          <CarouselNext className="right-3 left-auto" />
+                        </>
+                      )}
+                    </Carousel>
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex justify-center items-center mb-4" style={{ height: 36 }}>
