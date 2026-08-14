@@ -304,6 +304,7 @@ export const defaultAirportPage = {
       name: "CARAVAN SITES",
       description: "Spacious and sheltered caravan sites with easy access to park amenities, offering a flexible and comfortable option for caravans, campervans and motorhomes.",
       image: caravanSlide1,
+      images: [caravanSlide1, caravanSlide2, caravanSlide3, caravanSlide4],
       buttonText: "Book Site",
       buttonLink: "/contact",
     },
