@@ -175,7 +175,7 @@ export const defaultCabinPage = {
     { icon: "UtensilsCrossed", label: "Crockery & cutlery" },
     { icon: "Sun", label: "Reverse cycle heating & A/C" },
     { icon: "Tv", label: "TV in living area" },
-    { icon: "Wifi", label: "Self-contained kitchen" },
+    { icon: "CookingPot", label: "Self-contained kitchen" },
     { icon: "Car", label: "Off-street parking" },
   ],
   items: [
