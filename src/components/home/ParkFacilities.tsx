@@ -1,4 +1,4 @@
-import { Wifi, ShowerHead, Flame, Baby, Tv } from "lucide-react";
+import { Wifi, ShowerHead, Flame, Baby, CookingPot } from "lucide-react";
 
 const GasBottle = ({ size = 24, className }: { size?: number; className?: string }) => (
   <svg
@@ -26,7 +26,7 @@ const facilities = [
   { icon: ShowerHead, label: "Laundry and bathroom facilities" },
   { icon: Baby, label: "Children's play area" },
   { icon: Flame, label: "Sheltered BBQ area" },
-  { icon: Tv, label: "Campers kitchen with TV" },
+  { icon: CookingPot, label: "Campers kitchen with TV" },
   { icon: Wifi, label: "Free Wi-Fi" },
   { icon: GasBottle, label: "Gas refills" },
 ];
