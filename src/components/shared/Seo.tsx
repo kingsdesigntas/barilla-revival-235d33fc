@@ -63,6 +63,7 @@ const ROUTE_META: Record<string, Meta> = {
 		title: "Customer Feedback & Guest Reviews | Barilla Holiday Park",
 		description:
 			"Read genuine guest reviews of Barilla Holiday Park in Cambridge, Tasmania — clean facilities, friendly staff and a handy location near Hobart Airport.",
+	},
 	"/cabin-accommodation-hobart": {
 		title: "Cabin Accommodation in Hobart | Barilla Holiday Park",
 		description:
