@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
 import PromoBlock from "@/components/shared/PromoBlock";
+import AccommodationBookingFooter from "@/components/shared/AccommodationBookingFooter";
 import { Check } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import heroCaravan from "@/assets/hero-caravan.jpg";
