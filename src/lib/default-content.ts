@@ -262,7 +262,7 @@ export const defaultCaravanPage = {
 export const defaultCampingPage = {
   title: "Camping Grounds",
   subtitle: "Sheltered, family-friendly camping in beautiful Tasmania",
-  heroImage: campingHeroRotated,
+  heroImage: aerialImage,
   sectionHeading: "Camp at Barilla",
   sectionDescription: "Barilla Holiday Park offers sheltered and friendly camping grounds with lots of things to do for all the family.",
   items: [
