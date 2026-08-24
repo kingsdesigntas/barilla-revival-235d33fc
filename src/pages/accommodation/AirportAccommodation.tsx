@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
+import AccommodationBookingFooter from "@/components/shared/AccommodationBookingFooter";
 import PromoBlock from "@/components/shared/PromoBlock";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Link } from "react-router-dom";

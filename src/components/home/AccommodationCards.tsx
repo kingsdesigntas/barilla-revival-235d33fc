@@ -76,6 +76,7 @@ const AccommodationCards = () => {
             </div>
           ))}
         </div>
+        <AccommodationBookingFooter />
       </div>
     </section>
   );

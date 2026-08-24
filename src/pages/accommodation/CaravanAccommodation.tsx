@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
+import AccommodationBookingFooter from "@/components/shared/AccommodationBookingFooter";
 import PromoBlock from "@/components/shared/PromoBlock";
 import { Zap, ShowerHead, Wifi, Car, Trees, Sun, Caravan, Tent } from "lucide-react";
 import { useSanityContent } from "@/hooks/useSanityContent";
