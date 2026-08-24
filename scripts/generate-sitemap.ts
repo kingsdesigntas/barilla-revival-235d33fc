@@ -1,7 +1,7 @@
 import { writeFileSync } from "fs";
 import { resolve } from "path";
 
-const BASE_URL = "https://barilla-reimagined.lovable.app";
+const BASE_URL = "https://www.barilla.com.au";
 
 interface SitemapEntry {
   path: string;

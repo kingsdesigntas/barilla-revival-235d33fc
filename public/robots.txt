@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://barilla-reimagined.lovable.app/sitemap.xml
+Sitemap: https://www.barilla.com.au/sitemap.xml
