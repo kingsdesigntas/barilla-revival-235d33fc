@@ -114,6 +114,7 @@ export const defaultHomePage = {
         images: [cabinSlideNew, cabinSlide1, cabinSlide2, cabinSlide3, cabinSlide4],
         link: "/accommodation/cabins",
         buttonText: "View All Cabins",
+        headerColor: "orange",
       },
       {
         title: "Caravan & Motorhome Sites",
@@ -122,6 +123,7 @@ export const defaultHomePage = {
         images: [caravanSlideNew, caravanSlide1, caravanSlide2, caravanSlide3, caravanSlide4],
         link: "/accommodation/caravans",
         buttonText: "View All Sites",
+        headerColor: "orange",
       },
       {
         title: "Camping Grounds",
@@ -130,6 +132,7 @@ export const defaultHomePage = {
         images: [campingSlide1, campingSlide2, campingSlide3, campingSlide4],
         link: "/accommodation/camping",
         buttonText: "View All Sites",
+        headerColor: "green",
       },
     ],
   },
