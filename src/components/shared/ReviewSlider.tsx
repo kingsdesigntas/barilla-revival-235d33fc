@@ -1,13 +1,13 @@
 import { Star } from "lucide-react";
 import googleLogo from "@/assets/google-logo.webp";
 
-type Review = {
+export type Review = {
   name: string;
   rating: number;
   text: string;
 };
 
-const reviews: Review[] = [
+export const reviews: Review[] = [
   {
     name: "Pete Eddo",
     rating: 5,
@@ -60,7 +60,7 @@ const reviews: Review[] = [
   },
 ];
 
-const ReviewCard = ({ review }: { review: Review }) => (
+export const ReviewCard = ({ review }: { review: Review }) => (
   <article className="shrink-0 w-[340px] md:w-[380px] bg-background border border-border rounded-lg p-6 shadow-sm flex flex-col mx-3 relative">
     <img
       src={googleLogo}
@@ -79,13 +79,18 @@ const ReviewCard = ({ review }: { review: Review }) => (
   </article>
 );
 
+export const GOOGLE_RATING = 4.4;
+export const GOOGLE_REVIEW_COUNT = "360+";
+export const GOOGLE_REVIEWS_LINK =
+  "https://www.google.com/travel/search?q=barilla%20holiday%20park&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73064764%2C73249150%2C121529349&hl=en-AU&gl=au&cs=1&ssta=1&ts=CAEaRwopEicyJTB4YWE2ZGUxYjRjYTVjYTRjZjoweGJjNGY4OTY5NWUzOTEyMWQSGhIUCgcI6g8QBxgGEgcI6g8QBxgHGAEyAhAA&qs=CAEyFENnc0luYVRrOFpXdDRxZThBUkFCOAJCCQkdEjleaYlPvEIJCR0SOV5piU-8&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwi4-IW2nJqVAxUAAAAAHQAAAAAQAw";
+
 const ReviewSlider = () => {
   // Duplicate the list to create a seamless infinite loop
   const loop = [...reviews, ...reviews];
 
-  const rating = 4.4;
-  const reviewCount = "360+";
-  const googleReviewsLink = "https://www.google.com/travel/search?q=barilla%20holiday%20park&g2lb=4965990%2C72471280%2C72560029%2C72573224%2C72647020%2C72686036%2C72803964%2C72882230%2C73064764%2C73249150%2C121529349&hl=en-AU&gl=au&cs=1&ssta=1&ts=CAEaRwopEicyJTB4YWE2ZGUxYjRjYTVjYTRjZjoweGJjNGY4OTY5NWUzOTEyMWQSGhIUCgcI6g8QBxgGEgcI6g8QBxgHGAEyAhAA&qs=CAEyFENnc0luYVRrOFpXdDRxZThBUkFCOAJCCQkdEjleaYlPvEIJCR0SOV5piU-8&ap=ugEHcmV2aWV3cw&ictx=111&ved=0CAAQ5JsGahcKEwi4-IW2nJqVAxUAAAAAHQAAAAAQAw";
+  const rating = GOOGLE_RATING;
+  const reviewCount = GOOGLE_REVIEW_COUNT;
+  const googleReviewsLink = GOOGLE_REVIEWS_LINK;
 
   return (
     <section className="py-16 bg-secondary border-t border-border overflow-hidden">
