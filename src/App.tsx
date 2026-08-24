@@ -16,6 +16,7 @@ import MiniGolf from "./pages/things-to-do/MiniGolf";
 import DayTrips from "./pages/things-to-do/DayTrips";
 import Contact from "./pages/Contact";
 import CustomerFeedback from "./pages/CustomerFeedback";
+import BookingPolicy from "./pages/BookingPolicy";
 import CabinAccommodationHobart from "./pages/landing/CabinAccommodationHobart";
 import CaravanParksHobart from "./pages/landing/CaravanParksHobart";
 import FamilyFriendlyHolidayPark from "./pages/landing/FamilyFriendlyHolidayPark";
@@ -52,6 +53,7 @@ const App = () => (
 					{/* Contact */}
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/customer-feedback" element={<CustomerFeedback />} />
+					<Route path="/booking-policy" element={<BookingPolicy />} />
 
 					{/* Landing pages (not in main nav) */}
 					<Route path="/cabin-accommodation-hobart" element={<CabinAccommodationHobart />} />
@@ -68,7 +70,6 @@ const App = () => (
 					<Route path="/tours" element={<Navigate to="/things-to-do/day-trips" replace />} />
 					<Route path="/caravan-park-richmond" element={<Navigate to="/caravan-parks-hobart" replace />} />
 					<Route path="/family-friendly-holiday-park-accomodation-in-hobart" element={<Navigate to="/family-friendly-holiday-park-accommodation-in-hobart" replace />} />
-					<Route path="/booking-policy" element={<Navigate to="/contact" replace />} />
 					<Route path="/credits" element={<Navigate to="/" replace />} />
 
 					{/* Catch-all */}
