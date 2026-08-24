@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import Accommodation from "./pages/Accommodation";
 import NotFound from "./pages/NotFound";
@@ -57,6 +57,19 @@ const App = () => (
 					<Route path="/cabin-accommodation-hobart" element={<CabinAccommodationHobart />} />
 					<Route path="/caravan-parks-hobart" element={<CaravanParksHobart />} />
 					<Route path="/family-friendly-holiday-park-accommodation-in-hobart" element={<FamilyFriendlyHolidayPark />} />
+
+					{/* Legacy URL redirects (preserve SEO equity from barilla.com.au) */}
+					<Route path="/accommodation/cabin-accommodation" element={<Navigate to="/accommodation/cabins" replace />} />
+					<Route path="/accommodation/caravan-park-hobart" element={<Navigate to="/accommodation/caravans" replace />} />
+					<Route path="/accommodation/camping-grounds" element={<Navigate to="/accommodation/camping" replace />} />
+					<Route path="/accommodation/accommodation-hobart-airport" element={<Navigate to="/accommodation/airport" replace />} />
+					<Route path="/things-to-do/tourist-attractions" element={<Navigate to="/things-to-do/attractions" replace />} />
+					<Route path="/mini-golf" element={<Navigate to="/things-to-do/mini-golf" replace />} />
+					<Route path="/tours" element={<Navigate to="/things-to-do/day-trips" replace />} />
+					<Route path="/caravan-park-richmond" element={<Navigate to="/caravan-parks-hobart" replace />} />
+					<Route path="/family-friendly-holiday-park-accomodation-in-hobart" element={<Navigate to="/family-friendly-holiday-park-accommodation-in-hobart" replace />} />
+					<Route path="/booking-policy" element={<Navigate to="/contact" replace />} />
+					<Route path="/credits" element={<Navigate to="/" replace />} />
 
 					{/* Catch-all */}
 					<Route path="*" element={<NotFound />} />

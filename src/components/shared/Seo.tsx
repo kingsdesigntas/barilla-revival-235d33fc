@@ -7,75 +7,80 @@ const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 type Meta = { title: string; description: string };
 
 const DEFAULT_META: Meta = {
-	title: "Barilla Holiday Park Tasmania | Caravan Park & Cabins Hobart",
+	title: "Barilla Holiday Park | Hobart Caravan Park & Accommodation",
 	description:
-		"Family-friendly caravan park in Cambridge, Tasmania. Cabins, caravan sites & camping near Hobart Airport. Mini golf, BBQ areas & close to Richmond attractions.",
+		"Experience Barilla Holiday Park. Powered sites, self-contained cabins, and campsites just 15 minutes from Hobart's CBD. Book online now!",
 };
 
 const ROUTE_META: Record<string, Meta> = {
 	"/": DEFAULT_META,
+	"/accommodation": {
+		title: "Accommodation Hobart | Barilla Holiday Park",
+		description:
+			"Barilla Holiday Park is a family holiday park with lots to see and do — a family friendly caravan park near Hobart with accommodation for everyone.",
+	},
 	"/accommodation/cabins": {
 		title: "Cabin Accommodation Hobart | Barilla Holiday Park",
 		description:
-			"Self-contained cabins near Hobart Airport with kitchens, ensuites and family layouts. Comfortable, affordable cabin accommodation in Cambridge, Tasmania.",
+			"Book your Hobart accommodation at Barilla Holiday Park. Self-contained cabins for up to 6 guests, 15 minutes from Hobart CBD. Secure your cabin today!",
 	},
 	"/accommodation/caravans": {
-		title: "Powered Caravan Sites near Hobart | Barilla Holiday Park",
+		title: "Local Caravan Parks Hobart | Barilla Holiday Park",
 		description:
-			"Spacious powered and drive-through caravan sites with modern amenities, five minutes from Hobart Airport and fifteen from Hobart city.",
+			"Plan your next family-friendly caravan getaway with Barilla Holiday Park. Powered, drive-through sites just 15 minutes from Hobart's CBD. Book online today!",
 	},
 	"/accommodation/camping": {
-		title: "Camping Grounds near Hobart | Barilla Holiday Park",
+		title: "Family-Friendly Camping Near Hobart | Barilla Holiday Park",
 		description:
-			"Sheltered, well-maintained camping grounds for tents and camper trailers, with camp kitchen, BBQs and amenities close to Hobart Airport.",
+			"Enjoy family-friendly camping near Hobart at Barilla Holiday Park. Powered sites, tents and caravan options. Book your campsite today!",
 	},
 	"/accommodation/airport": {
-		title: "Hobart Airport Accommodation | Barilla Holiday Park",
+		title: "Accommodation Hobart Airport | Barilla Holiday Park",
 		description:
-			"Cabins, caravan sites and camping just five minutes from Hobart Airport. Ideal for early flights, late arrivals and campervan hire drop-offs.",
+			"Whether arriving or departing Hobart, stay at Barilla Holiday Park. Comfortable cabins and camping grounds just minutes from Hobart Airport.",
 	},
 	"/things-to-do/at-barilla": {
-		title: "Things to Do at Barilla Holiday Park | Family Activities",
+		title: "Things to do at Barilla | Barilla Holiday Park Hobart",
 		description:
-			"Mini golf, playgrounds, BBQ areas and open green spaces — family-friendly activities and relaxation right here at Barilla Holiday Park.",
+			"Putt and Play mini golf, wood-fired pizza, hot pool, playground — so many things to do when you visit Barilla Holiday Park in Hobart, Tasmania.",
 	},
 	"/things-to-do/attractions": {
-		title: "Hobart & Southern Tasmania Attractions | Barilla Holiday Park",
+		title: "Tourist Attractions Near Hobart | Barilla Holiday Park",
 		description:
-			"Markets, museums, beaches, wildlife and heritage towns — discover the best attractions around Hobart from your base at Barilla Holiday Park.",
+			"Explore the best things to do in Hobart from Barilla Holiday Park. Perfect for families and visitors planning a Tasmanian getaway.",
 	},
 	"/things-to-do/mini-golf": {
-		title: "Mini Golf in Cambridge, Tasmania | Barilla Holiday Park",
+		title: "Family-Friendly Putt & Play | Barilla Holiday Park Hobart",
 		description:
-			"Play a round on our on-site mini golf course — fun for the whole family, open to guests and visitors at Barilla Holiday Park.",
+			"Enjoy family-friendly mini golf at Barilla Holiday Park Hobart. A fun, affordable Putt & Play course just minutes from Hobart's CBD.",
 	},
 	"/things-to-do/day-trips": {
-		title: "Day Trips from Hobart | Barilla Holiday Park Itineraries",
+		title: "Day Trips from Hobart | Barilla Holiday Park Tasmania",
 		description:
-			"Easy-to-follow day trip itineraries from Cambridge — Port Arthur, the Tasman Peninsula, wineries, wildlife parks and Hobart's cultural highlights.",
+			"Easy day trip itineraries from Barilla Holiday Park — Port Arthur, the Tasman Peninsula, wineries, wildlife parks and Hobart's cultural highlights.",
 	},
 	"/contact": {
-		title: "Contact Barilla Holiday Park | Cambridge, Tasmania",
+		title: "Contact Barilla Holiday Park Hobart, Tasmania",
 		description:
-			"Get in touch with our friendly team for bookings, local advice and travel tips. Freecall 1800 465 453 or visit us at 75 Richmond Road, Cambridge.",
+			"To find out more about the accommodation and attractions at Barilla Holiday Park in Hobart, Tasmania, contact us via phone, email or in person.",
 	},
 	"/customer-feedback": {
-		title: "Customer Feedback & Guest Reviews | Barilla Holiday Park",
+		title: "Customer Feedback | Barilla Holiday Park",
 		description:
-			"Read genuine guest reviews of Barilla Holiday Park in Cambridge, Tasmania — clean facilities, friendly staff and a handy location near Hobart Airport.",
+			"Read genuine guest reviews of Barilla Holiday Park in Hobart, Tasmania — clean facilities, friendly staff and a handy location near Hobart Airport.",
 	},
 	"/cabin-accommodation-hobart": {
-		title: "Cabin Accommodation in Hobart | Barilla Holiday Park",
+		title: "Cabin Accommodation Hobart | Barilla Holiday Park",
 		description:
-			"Affordable, self-contained cabin accommodation minutes from Hobart Airport and the city. Perfect for families, couples and business travellers.",
+			"Barilla Holiday Park's comfortable cabins are a great place to stay when you want quality cabin accommodation. We are located close to Hobart Airport.",
 	},
 	"/caravan-parks-hobart": {
-		title: "Caravan Parks Hobart | Barilla Holiday Park Cambridge",
+		title: "Caravan Parks Hobart | Barilla Holiday Park",
 		description:
-			"One of Hobart's most convenient caravan parks — powered sites, modern amenities and a peaceful setting close to the airport and city.",
+			"Book Hobart accommodation at Barilla Holiday Park. Self contained cabins, caravan sites and campsites near Hobart. Easy online booking available.",
 	},
 	"/family-friendly-holiday-park-accommodation-in-hobart": {
-		title: "Family Friendly Holiday Park Accommodation in Hobart",
+		title: "Family-Friendly Holiday Park Accommodation in Hobart",
 		description:
 			"Family-friendly holiday park accommodation near Hobart with cabins, caravan sites, camping, mini golf and plenty of space for kids to play.",
 	},
