@@ -73,6 +73,7 @@ const AirportAccommodation = () => {
               );
             })}
           </div>
+          <AccommodationBookingFooter />
 
           {/* Benefits */}
           {(content as any).benefits && (

@@ -94,6 +94,7 @@ const CabinAccommodation = () => {
               </div>
             ))}
           </div>
+          <AccommodationBookingFooter />
         </div>
       </section>
       <PromoBlock />
