@@ -4,6 +4,7 @@ import { useSanityContent } from "@/hooks/useSanityContent";
 import { HOME_PAGE_QUERY } from "@/lib/sanity-queries";
 import { defaultHomePage } from "@/lib/default-content";
 import { iconForAccommodationTitle } from "@/components/icons/AccommodationIcons";
+import AccommodationBookingFooter from "@/components/shared/AccommodationBookingFooter";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 interface AccommodationCardProps {
