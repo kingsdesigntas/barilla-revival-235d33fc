@@ -22,6 +22,7 @@ const entries: SitemapEntry[] = [
   { path: "/things-to-do/day-trips", changefreq: "weekly", priority: "0.8" },
   { path: "/contact", changefreq: "monthly", priority: "0.7" },
   { path: "/customer-feedback", changefreq: "monthly", priority: "0.6" },
+  { path: "/booking-policy", changefreq: "yearly", priority: "0.4" },
   { path: "/cabin-accommodation-hobart", changefreq: "monthly", priority: "0.7" },
   { path: "/caravan-parks-hobart", changefreq: "monthly", priority: "0.7" },
   { path: "/family-friendly-holiday-park-accommodation-in-hobart", changefreq: "monthly", priority: "0.7" },
