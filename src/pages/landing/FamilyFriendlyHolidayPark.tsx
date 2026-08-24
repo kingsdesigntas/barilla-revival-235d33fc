@@ -3,10 +3,22 @@ import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
 import PromoBlock from "@/components/shared/PromoBlock";
 import AccommodationBookingFooter from "@/components/shared/AccommodationBookingFooter";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import { Check } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import aerialImage from "@/assets/barillapark-aerial-1.jpg";
+import caravanImage from "@/assets/barillapark-powered-site.jpg";
+import caravanParkImage from "@/assets/barillapark-caravan-1.jpg";
+import cabinImage from "@/assets/barillapark-cabin.jpg";
+import studioCabinImage from "@/assets/barillapark-studio-cabin.jpg";
+
+const galleryImages = [
+  { src: caravanImage, alt: "Powered caravan sites at Barilla Holiday Park" },
+  { src: cabinImage, alt: "Self-contained cabin accommodation at Barilla Holiday Park" },
+  { src: caravanParkImage, alt: "Drive-through caravan sites at Barilla Holiday Park" },
+  { src: studioCabinImage, alt: "Studio cabin accommodation at Barilla Holiday Park" },
+];
 
 
 const reasons = [
@@ -33,11 +45,23 @@ const FamilyFriendlyHolidayPark = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-stretch">
             <div className="md:w-1/2 flex">
-              <img
-                src={aerialImage}
-                alt="Aerial view of Barilla Holiday Park, a family-friendly holiday park near Hobart"
-                className="w-full h-full object-cover rounded-lg"
-              />
+              <Carousel opts={{ align: "start", loop: true }} className="w-full h-full rounded-lg overflow-hidden">
+                <CarouselContent className="h-full">
+                  {galleryImages.map((image, i) => (
+                    <CarouselItem key={i} className="h-full">
+                      <div className="relative w-full h-full min-h-[300px] md:min-h-full overflow-hidden">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover rounded-lg"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-3 right-auto" />
+                <CarouselNext className="right-3 left-auto" />
+              </Carousel>
             </div>
             <div className="md:w-1/2 flex flex-col">
               <h2 className="section-heading">A Holiday Park Designed for Families</h2>
