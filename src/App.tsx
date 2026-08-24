@@ -51,6 +51,7 @@ const App = () => (
 
 					{/* Contact */}
 					<Route path="/contact" element={<Contact />} />
+					<Route path="/customer-feedback" element={<CustomerFeedback />} />
 
 					{/* Landing pages (not in main nav) */}
 					<Route path="/cabin-accommodation-hobart" element={<CabinAccommodationHobart />} />
