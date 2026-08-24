@@ -45,11 +45,23 @@ const FamilyFriendlyHolidayPark = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-stretch">
             <div className="md:w-1/2 flex">
-              <img
-                src={aerialImage}
-                alt="Aerial view of Barilla Holiday Park, a family-friendly holiday park near Hobart"
-                className="w-full h-full object-cover rounded-lg"
-              />
+              <Carousel opts={{ align: "start", loop: true }} className="w-full h-full rounded-lg overflow-hidden">
+                <CarouselContent className="h-full">
+                  {galleryImages.map((image, i) => (
+                    <CarouselItem key={i} className="h-full">
+                      <div className="relative w-full h-full min-h-[300px] md:min-h-full overflow-hidden">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover rounded-lg"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-3 right-auto" />
+                <CarouselNext className="right-3 left-auto" />
+              </Carousel>
             </div>
             <div className="md:w-1/2 flex flex-col">
               <h2 className="section-heading">A Holiday Park Designed for Families</h2>
