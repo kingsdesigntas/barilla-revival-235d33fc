@@ -19,6 +19,7 @@ import CaravanParksHobart from "./pages/landing/CaravanParksHobart";
 import FamilyFriendlyHolidayPark from "./pages/landing/FamilyFriendlyHolidayPark";
 import { isSanityConfigured, isVisualEditingEnabled } from "@/lib/sanity";
 import SanityVisualEditing from "@/components/shared/SanityVisualEditing";
+import Seo from "@/components/shared/Seo";
 
 const queryClient = new QueryClient();
 const visualEditingEnabled = isSanityConfigured() && isVisualEditingEnabled();
@@ -29,6 +30,7 @@ const App = () => (
 			<Toaster />
 			<Sonner />
 			<BrowserRouter>
+				<Seo />
 				<Routes>
 					<Route path="/" element={<Index />} />
 
