@@ -149,12 +149,12 @@ const Header = () => {
 								Accommodation <ChevronDown size={16} />
 							</button>
 							<div className={`absolute top-full left-0 pt-2 ${openDropdown === "accommodation" ? "block" : "hidden"}`}>
-								<div className="bg-background shadow-lg py-2 min-w-[220px] border">
+								<div className="bg-background shadow-lg py-2 min-w-max border">
 									{accommodationLinks.map((link) => (
 										<Link
 											key={link.href}
 											to={link.href}
-											className="block px-4 py-2 hover:bg-secondary transition-colors text-foreground hover:text-accent"
+											className="block px-4 py-2 hover:bg-secondary transition-colors text-foreground hover:text-accent whitespace-nowrap"
 										>
 											{link.label}
 										</Link>
@@ -173,12 +173,12 @@ const Header = () => {
 								Things to Do <ChevronDown size={16} />
 							</button>
 							<div className={`absolute top-full left-0 pt-2 ${openDropdown === "things" ? "block" : "hidden"}`}>
-								<div className="bg-background shadow-lg py-2 min-w-[200px] border">
+								<div className="bg-background shadow-lg py-2 min-w-max border">
 									{thingsToDoLinks.map((link) => (
 										<Link
 											key={link.href}
 											to={link.href}
-											className="block px-4 py-2 hover:bg-secondary transition-colors text-foreground hover:text-accent"
+											className="block px-4 py-2 hover:bg-secondary transition-colors text-foreground hover:text-accent whitespace-nowrap"
 										>
 											{link.label}
 										</Link>
