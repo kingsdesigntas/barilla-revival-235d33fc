@@ -3,10 +3,22 @@ import PageHero from "@/components/shared/PageHero";
 import AccommodationHighlights from "@/components/shared/AccommodationHighlights";
 import PromoBlock from "@/components/shared/PromoBlock";
 import AccommodationBookingFooter from "@/components/shared/AccommodationBookingFooter";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 import { Check } from "lucide-react";
 import { BOOKING_URL } from "@/lib/booking";
 import aerialImage from "@/assets/barillapark-aerial-1.jpg";
+import caravanImage from "@/assets/barillapark-powered-site.jpg";
+import caravanParkImage from "@/assets/barillapark-caravan-1.jpg";
+import cabinImage from "@/assets/barillapark-cabin.jpg";
+import studioCabinImage from "@/assets/barillapark-studio-cabin.jpg";
+
+const galleryImages = [
+  { src: caravanImage, alt: "Powered caravan sites at Barilla Holiday Park" },
+  { src: cabinImage, alt: "Self-contained cabin accommodation at Barilla Holiday Park" },
+  { src: caravanParkImage, alt: "Drive-through caravan sites at Barilla Holiday Park" },
+  { src: studioCabinImage, alt: "Studio cabin accommodation at Barilla Holiday Park" },
+];
 
 
 const reasons = [
