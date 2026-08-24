@@ -86,6 +86,7 @@ const CampingGrounds = () => {
               );
             })}
           </div>
+          <AccommodationBookingFooter />
 
 
           {content.amenities?.length > 0 && (

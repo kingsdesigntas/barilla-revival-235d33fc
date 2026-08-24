@@ -51,6 +51,7 @@ const CaravanAccommodation = () => {
               );
             })}
           </div>
+          <AccommodationBookingFooter />
 
           {content.amenities?.length > 0 && (
             <div className="mt-16 bg-barilla-cream rounded-lg p-8 md:p-12">
