@@ -15,6 +15,7 @@ import TouristAttractions from "./pages/things-to-do/TouristAttractions";
 import MiniGolf from "./pages/things-to-do/MiniGolf";
 import DayTrips from "./pages/things-to-do/DayTrips";
 import Contact from "./pages/Contact";
+import CustomerFeedback from "./pages/CustomerFeedback";
 import CabinAccommodationHobart from "./pages/landing/CabinAccommodationHobart";
 import CaravanParksHobart from "./pages/landing/CaravanParksHobart";
 import FamilyFriendlyHolidayPark from "./pages/landing/FamilyFriendlyHolidayPark";
