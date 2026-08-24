@@ -58,7 +58,8 @@ export const HOME_PAGE_QUERY = `*[_type == "homePage"][0]{
       description,
       "image": image.asset->url,
       link,
-      buttonText
+      buttonText,
+      headerColor
     }
   },
   infoSection{

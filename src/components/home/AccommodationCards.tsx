@@ -14,17 +14,19 @@ interface AccommodationCardProps {
   images?: string[];
   link: string;
   buttonText: string;
+  headerColor?: string;
 }
 
-const AccommodationCard = ({ title, description, image, images, link, buttonText }: AccommodationCardProps) => {
+const AccommodationCard = ({ title, description, image, images, link, buttonText, headerColor = "green" }: AccommodationCardProps) => {
   const Icon = iconForAccommodationTitle(title);
   const t = title.toLowerCase();
   const iconWidth = t.includes("caravan") ? 64 : t.includes("camp") ? 47 : 38;
   const slides = images && images.length > 0 ? images : [image];
+  const headerClass = headerColor?.toLowerCase() === "orange" ? "!bg-accent" : "!bg-primary";
 
   return (
     <div className="card-accommodation flex flex-col h-full">
-      <div className="card-header">{title}</div>
+      <div className={cn("card-header", headerClass)}>{title}</div>
       <div className="relative aspect-[4/3] overflow-hidden">
         <Carousel opts={{ align: "start", loop: true }} className="w-full h-full">
           <CarouselContent className="h-full">
