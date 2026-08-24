@@ -69,7 +69,7 @@ const ROUTE_META: Record<string, Meta> = {
 		description:
 			"Read genuine guest reviews of Barilla Holiday Park in Hobart, Tasmania — clean facilities, friendly staff and a handy location near Hobart Airport.",
 	},
-	"/booking-policy": {
+	"/accommodation/booking-policy": {
 		title: "Booking Policy | Barilla Holiday Park",
 		description:
 			"Booking policy, terms and conditions for Barilla Holiday Park — deposits, payments, check-in and check-out times, cancellations and club discounts.",
@@ -79,12 +79,12 @@ const ROUTE_META: Record<string, Meta> = {
 		description:
 			"Barilla Holiday Park's comfortable cabins are a great place to stay when you want quality cabin accommodation. We are located close to Hobart Airport.",
 	},
-	"/caravan-parks-hobart": {
+	"/accommodation/caravan-parks-hobart": {
 		title: "Caravan Parks Hobart | Barilla Holiday Park",
 		description:
 			"Book Hobart accommodation at Barilla Holiday Park. Self contained cabins, caravan sites and campsites near Hobart. Easy online booking available.",
 	},
-	"/family-friendly-holiday-park-accommodation-in-hobart": {
+	"/accommodation/family-friendly-holiday-park-accommodation-in-hobart": {
 		title: "Family-Friendly Holiday Park Accommodation in Hobart",
 		description:
 			"Family-friendly holiday park accommodation near Hobart with cabins, caravan sites, camping, mini golf and plenty of space for kids to play.",

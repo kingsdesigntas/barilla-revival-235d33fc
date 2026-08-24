@@ -55,14 +55,23 @@ const App = () => (
 					{/* Contact */}
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/customer-feedback" element={<CustomerFeedback />} />
-					<Route path="/booking-policy" element={<BookingPolicy />} />
+					<Route path="/accommodation/booking-policy" element={<BookingPolicy />} />
 
 					{/* Landing pages (not in main nav) */}
 					<Route path="/cabin-accommodation-hobart" element={<CabinAccommodationHobart />} />
-					<Route path="/caravan-parks-hobart" element={<CaravanParksHobart />} />
-					<Route path="/family-friendly-holiday-park-accommodation-in-hobart" element={<FamilyFriendlyHolidayPark />} />
+					<Route path="/accommodation/caravan-parks-hobart" element={<CaravanParksHobart />} />
+					<Route
+						path="/accommodation/family-friendly-holiday-park-accommodation-in-hobart"
+						element={<FamilyFriendlyHolidayPark />}
+					/>
 
 					{/* Legacy URL redirects (preserve SEO equity from barilla.com.au) */}
+					<Route path="/booking-policy" element={<Navigate to="/accommodation/booking-policy" replace />} />
+					<Route path="/caravan-parks-hobart" element={<Navigate to="/accommodation/caravan-parks-hobart" replace />} />
+					<Route
+						path="/family-friendly-holiday-park-accommodation-in-hobart"
+						element={<Navigate to="/accommodation/family-friendly-holiday-park-accommodation-in-hobart" replace />}
+					/>
 					<Route path="/accommodation/cabin-accommodation" element={<Navigate to="/accommodation/cabins" replace />} />
 					<Route path="/accommodation/caravan-park-hobart" element={<Navigate to="/accommodation/caravans" replace />} />
 					<Route path="/accommodation/camping-grounds" element={<Navigate to="/accommodation/camping" replace />} />
@@ -70,9 +79,13 @@ const App = () => (
 					<Route path="/things-to-do/tourist-attractions" element={<Navigate to="/things-to-do/attractions" replace />} />
 					<Route path="/mini-golf" element={<Navigate to="/things-to-do/mini-golf" replace />} />
 					<Route path="/tours" element={<Navigate to="/things-to-do/day-trips" replace />} />
-					<Route path="/caravan-park-richmond" element={<Navigate to="/caravan-parks-hobart" replace />} />
-					<Route path="/family-friendly-holiday-park-accomodation-in-hobart" element={<Navigate to="/family-friendly-holiday-park-accommodation-in-hobart" replace />} />
+					<Route path="/caravan-park-richmond" element={<Navigate to="/accommodation/caravan-parks-hobart" replace />} />
+					<Route
+						path="/family-friendly-holiday-park-accomodation-in-hobart"
+						element={<Navigate to="/accommodation/family-friendly-holiday-park-accommodation-in-hobart" replace />}
+					/>
 					<Route path="/credits" element={<Navigate to="/" replace />} />
+
 
 					{/* Catch-all */}
 					<Route path="*" element={<NotFound />} />

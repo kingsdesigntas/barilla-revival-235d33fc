@@ -3,6 +3,10 @@
     {
       "source": "/__l5e/:path*",
       "destination": "https://id-preview--a658202f-b6b7-423c-91b3-acf37368d476.lovable.app/__l5e/:path*"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
     }
   ]
 }
