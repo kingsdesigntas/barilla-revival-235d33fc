@@ -68,8 +68,10 @@ const CaravanParksHobart = () => {
               </a>
             </div>
           </div>
+          <AccommodationBookingFooter />
         </div>
       </section>
+
       <PromoBlock />
     </Layout>
   );
