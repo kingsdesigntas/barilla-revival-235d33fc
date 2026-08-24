@@ -22,7 +22,7 @@ const AccommodationCard = ({ title, description, image, images, link, buttonText
   const t = title.toLowerCase();
   const iconWidth = t.includes("caravan") ? 64 : t.includes("camp") ? 47 : 38;
   const slides = images && images.length > 0 ? images : [image];
-  const headerClass = headerColor === "orange" ? "bg-accent" : "bg-primary";
+  const headerClass = headerColor === "orange" ? "!bg-accent" : "!bg-primary";
 
   return (
     <div className="card-accommodation flex flex-col h-full">
