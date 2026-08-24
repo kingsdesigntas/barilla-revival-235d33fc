@@ -59,6 +59,10 @@ const ROUTE_META: Record<string, Meta> = {
 		description:
 			"Get in touch with our friendly team for bookings, local advice and travel tips. Freecall 1800 465 453 or visit us at 75 Richmond Road, Cambridge.",
 	},
+	"/customer-feedback": {
+		title: "Customer Feedback & Guest Reviews | Barilla Holiday Park",
+		description:
+			"Read genuine guest reviews of Barilla Holiday Park in Cambridge, Tasmania — clean facilities, friendly staff and a handy location near Hobart Airport.",
 	"/cabin-accommodation-hobart": {
 		title: "Cabin Accommodation in Hobart | Barilla Holiday Park",
 		description:
