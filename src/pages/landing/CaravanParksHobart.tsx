@@ -37,7 +37,7 @@ const CaravanParksHobart = () => {
               />
             </div>
             <div className="md:w-1/2 flex flex-col">
-              <h2 className="section-heading">Drive In to Find</h2>
+              <h2 className="section-heading">Your Hobart Caravan Park</h2>
               <div className="section-underline" />
               <p className="text-muted-foreground mb-6">
                 Quality caravan sites in a peaceful setting with everything you need
