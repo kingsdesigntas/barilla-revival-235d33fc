@@ -23,6 +23,7 @@ import FamilyFriendlyHolidayPark from "./pages/landing/FamilyFriendlyHolidayPark
 import { isSanityConfigured, isVisualEditingEnabled } from "@/lib/sanity";
 import SanityVisualEditing from "@/components/shared/SanityVisualEditing";
 import Seo from "@/components/shared/Seo";
+import ScrollToTop from "@/components/shared/ScrollToTop";
 
 const queryClient = new QueryClient();
 const visualEditingEnabled = isSanityConfigured() && isVisualEditingEnabled();
@@ -33,6 +34,7 @@ const App = () => (
 			<Toaster />
 			<Sonner />
 			<BrowserRouter>
+				<ScrollToTop />
 				<Seo />
 				<Routes>
 					<Route path="/" element={<Index />} />
