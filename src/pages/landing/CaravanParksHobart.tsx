@@ -19,7 +19,7 @@ const CaravanParksHobart = () => {
   return (
     <Layout>
       <PageHero
-        title="Local Caravan Park Hobart"
+        title="Caravan Parks Hobart"
         subtitle="Explore Hobart and the surrounding areas from a caravan park just 10 minutes from Hobart, Tasmania. You will find affordable, quality caravan sites close to Hobart, Richmond and the airport."
         backgroundImage={heroCaravan}
       />
