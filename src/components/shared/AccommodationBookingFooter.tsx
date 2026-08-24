@@ -7,7 +7,7 @@ const AccommodationBookingFooter = () => {
         contact us
       </Link>{" "}
       to find out more.{" "}
-      <Link to="/booking-policy" className="text-primary underline hover:text-primary/80">
+      <Link to="/accommodation/booking-policy" className="text-primary underline hover:text-primary/80">
         View our booking policy
       </Link>
       .
