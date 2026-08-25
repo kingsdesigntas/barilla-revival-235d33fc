@@ -32,7 +32,7 @@ const Contact = () => {
                   <div className="bg-barilla-cream rounded-full p-3 shrink-0"><Mail className="text-primary" size={24} /></div>
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Email</h3>
-                    <a href={`mailto:${content.email}`} className="text-accent hover:underline transition-colors">Email us</a>
+                    <a href={`mailto:${content.email}`} className="text-accent hover:underline transition-colors">{content.email}</a>
                   </div>
                 </div>
 
@@ -56,13 +56,7 @@ const Contact = () => {
                   <div className="bg-barilla-cream rounded-full p-3 shrink-0"><Clock className="text-primary" size={24} /></div>
                   <div>
                     <h3 className="font-semibold text-primary mb-1">Reception Hours</h3>
-                    <p className="text-muted-foreground whitespace-pre-line mb-2">{content.receptionHours}</p>
-                    <a
-                      href={`tel:${content.phone?.replace(/\s/g, "")}`}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
-                    >
-                      <Phone size={16} /> Freecall: {content.phone}
-                    </a>
+                    <p className="text-muted-foreground whitespace-pre-line">{content.receptionHours}</p>
                   </div>
                 </div>
               </div>

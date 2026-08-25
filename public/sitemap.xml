@@ -61,7 +61,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.barilla.com.au/accommodation/booking-policy</loc>
+    <loc>https://www.barilla.com.au/booking-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
@@ -71,12 +71,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.barilla.com.au/accommodation/caravan-parks-hobart</loc>
+    <loc>https://www.barilla.com.au/caravan-parks-hobart</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.barilla.com.au/accommodation/family-friendly-holiday-park-accommodation-in-hobart</loc>
+    <loc>https://www.barilla.com.au/family-friendly-holiday-park-accommodation-in-hobart</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
