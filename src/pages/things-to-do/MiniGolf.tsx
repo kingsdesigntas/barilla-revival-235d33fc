@@ -32,9 +32,9 @@ const MiniGolf = () => {
             <Phone size={18} />
             <span>0362 484 447</span>
           </a>
-          <a href="mailto:stay@barilla.com.au" className="btn-cta flex items-center gap-2">
+          <a href="mailto:stay@barilla.com.au" className="btn-cta-outline flex items-center gap-2">
             <Mail size={18} />
-            <span>stay@barilla.com.au</span>
+            <span>Email us</span>
           </a>
         </div>
       </PageHero>
