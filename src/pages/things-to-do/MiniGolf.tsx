@@ -66,16 +66,30 @@ const MiniGolf = () => {
             {/* Info Cards — horizontal row on tablet, stacked column on desktop */}
             {content.infoCards && (
               <div className="flex flex-col md:flex-row lg:flex-col gap-6 lg:col-span-1">
-                {content.infoCards.map((card) => {
-                  const Icon = iconMap[card.icon] || Clock;
-                  return (
-                    <div key={card.heading} className="bg-barilla-cream rounded-lg p-6 text-center flex flex-col items-center flex-1">
-                      <Icon className="text-primary mb-3" size={36} />
-                      <h3 className="font-semibold text-primary mb-2">{card.heading}</h3>
+              {content.infoCards.map((card) => {
+                const Icon = iconMap[card.icon] || Clock;
+                const CardWrapper = card.href ? "a" : "div";
+                return (
+                  <CardWrapper
+                    key={card.heading}
+                    href={card.href}
+                    className="bg-barilla-cream rounded-lg p-6 text-center flex flex-col items-center flex-1 no-underline hover:bg-barilla-cream/80 transition-colors"
+                  >
+                    <Icon className="text-primary mb-3" size={36} />
+                    <h3 className="font-semibold text-primary mb-2">{card.heading}</h3>
+                    {card.href ? (
+                      <a
+                        href={card.href}
+                        className="text-sm text-accent hover:underline whitespace-pre-line"
+                      >
+                        {card.content}
+                      </a>
+                    ) : (
                       <p className="text-sm text-muted-foreground whitespace-pre-line">{card.content}</p>
-                    </div>
-                  );
-                })}
+                    )}
+                  </CardWrapper>
+                );
+              })}
               </div>
             )}
           </div>
