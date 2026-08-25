@@ -37,6 +37,7 @@ const PhoneLinkText = ({ text, className }: { text: string; className?: string }
 };
 
 const topSliderImages = [
+  { src: gallery1, alt: "Aerial view of the Barilla Putt & Play mini golf course" },
   { src: sliderImg, alt: "Mini golf course hole 11 surrounded by trees and rocks" },
   { src: gallery2, alt: "Entrance to Barilla Holiday Park Putt & Play with shop and landscaped rocks" },
   { src: gallery3, alt: "Mini golf fairway lined with cypress trees and rocks" },
