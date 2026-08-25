@@ -12,7 +12,7 @@ import miniGolfPricesImg from "@/assets/Barillapark-77.jpg";
 import sliderImg from "@/assets/Barillapark-78.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-const iconMap: Record<string, any> = { Clock, DollarSign, Users };
+const iconMap: Record<string, any> = { Clock, DollarSign, Users, Phone };
 
 const topSliderImages = [
   { src: sliderImg, alt: "Mini golf course hole 11 surrounded by trees and rocks" },
