@@ -14,6 +14,28 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const iconMap: Record<string, any> = { Clock, DollarSign, Users, Phone };
 
+const PhoneLinkText = ({ text, className }: { text: string; className?: string }) => {
+  const phoneRegex = /(\d{4}\s\d{3}\s\d{3})/g;
+  const parts = text.split(phoneRegex);
+  return (
+    <>
+      {parts.map((part, i) =>
+        /^\d{4}\s\d{3}\s\d{3}$/.test(part) ? (
+          <a
+            key={i}
+            href={`tel:${part.replace(/\s/g, "")}`}
+            className={className || "text-primary underline hover:text-primary/80"}
+          >
+            {part}
+          </a>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
+};
+
 const topSliderImages = [
   { src: sliderImg, alt: "Mini golf course hole 11 surrounded by trees and rocks" },
   { src: gallery2, alt: "Entrance to Barilla Holiday Park Putt & Play with shop and landscaped rocks" },
