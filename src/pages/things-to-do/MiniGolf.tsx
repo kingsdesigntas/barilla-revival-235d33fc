@@ -100,7 +100,12 @@ const MiniGolf = () => {
                     <Icon className="text-primary mb-3" size={36} />
                     <h3 className="font-semibold text-primary mb-2">{card.heading}</h3>
                     <p className={card.href ? "text-sm text-accent whitespace-pre-line" : "text-sm text-muted-foreground whitespace-pre-line"}>
-                      {card.content}
+                      {card.content.split("\n").map((line, i) => (
+                        <span key={i}>
+                          {i > 0 ? <br /> : null}
+                          <PhoneLinkText text={line} />
+                        </span>
+                      ))}
                     </p>
                   </Wrapper>
                 );
