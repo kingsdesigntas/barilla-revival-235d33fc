@@ -433,9 +433,8 @@ export const defaultMiniGolfPage = {
     "Whether you're a serious golfer or just looking for some family fun, our mini golf course offers entertainment for everyone. It's the perfect activity for rainy days or sunny afternoons alike.",
   ],
   infoCards: [
-    { icon: "Clock", heading: "Opening Hours", content: "Daily: 9am - 5pm\n(Weather permitting)" },
+    { icon: "Clock", heading: "Opening Hours", content: "Daily: 9am - 5pm\n(Weather permitting)\n\nCall: 0362 484 447" },
     { icon: "DollarSign", heading: "Pricing", content: "Adults: $18 - Members $16\nChildren (up to 16yrs): $12 - Members $10\nConcession: $15 - Members $12\nFamily (2 Adults and 2 Children): $45 – Members $40\nExtra Child: $10 – Members $8" },
-    { icon: "Phone", heading: "Call", content: "0362 484 447", href: "tel:0362484447" },
   ],
   featureImage: miniGolfImage,
   ctaButton: { label: "Book Your Game", href: "/contact" },
