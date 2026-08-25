@@ -48,7 +48,7 @@ const MiniGolf = () => {
   const { content } = useSanityContent("mini-golf-page", ACTIVITY_PAGE_QUERY, defaultMiniGolfPage, { slug: "mini-golf" });
 
   return (
-    <Layout>
+    <Layout hideReviews>
       <PageHero title={content.title} subtitle={content.subtitle} backgroundImage={content.heroImage} backgroundPosition="bg-bottom">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
           <a href="tel:0362484447" className="btn-cta flex items-center gap-2">

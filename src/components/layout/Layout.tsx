@@ -5,14 +5,15 @@ import ReviewSlider from "@/components/shared/ReviewSlider";
 
 interface LayoutProps {
   children: ReactNode;
+  hideReviews?: boolean;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, hideReviews }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">{children}</main>
-      <ReviewSlider />
+      {!hideReviews && <ReviewSlider />}
       <Footer />
     </div>
   );
