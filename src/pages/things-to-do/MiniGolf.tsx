@@ -66,7 +66,7 @@ const MiniGolf = () => {
             {/* Info Cards — horizontal row on tablet, stacked column on desktop */}
             {content.infoCards && (
               <div className="flex flex-col md:flex-row lg:flex-col gap-6 lg:col-span-1">
-              {content.infoCards.map((card) => {
+              {content.infoCards.map((card: { icon: string; heading: string; content: string; href?: string }) => {
                 const Icon = iconMap[card.icon] || Clock;
                 const Wrapper = card.href ? "a" : "div";
                 return (
