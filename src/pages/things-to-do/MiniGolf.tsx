@@ -12,7 +12,7 @@ import miniGolfPricesImg from "@/assets/Barillapark-77.jpg";
 import sliderImg from "@/assets/Barillapark-78.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-const iconMap: Record<string, any> = { Clock, DollarSign, Users };
+const iconMap: Record<string, any> = { Clock, DollarSign, Users, Phone };
 
 const topSliderImages = [
   { src: sliderImg, alt: "Mini golf course hole 11 surrounded by trees and rocks" },
@@ -66,16 +66,23 @@ const MiniGolf = () => {
             {/* Info Cards — horizontal row on tablet, stacked column on desktop */}
             {content.infoCards && (
               <div className="flex flex-col md:flex-row lg:flex-col gap-6 lg:col-span-1">
-                {content.infoCards.map((card) => {
-                  const Icon = iconMap[card.icon] || Clock;
-                  return (
-                    <div key={card.heading} className="bg-barilla-cream rounded-lg p-6 text-center flex flex-col items-center flex-1">
-                      <Icon className="text-primary mb-3" size={36} />
-                      <h3 className="font-semibold text-primary mb-2">{card.heading}</h3>
-                      <p className="text-sm text-muted-foreground whitespace-pre-line">{card.content}</p>
-                    </div>
-                  );
-                })}
+              {content.infoCards.map((card) => {
+                const Icon = iconMap[card.icon] || Clock;
+                const Wrapper = card.href ? "a" : "div";
+                return (
+                  <Wrapper
+                    key={card.heading}
+                    href={card.href}
+                    className="bg-barilla-cream rounded-lg p-6 text-center flex flex-col items-center flex-1 no-underline hover:bg-barilla-cream/80 transition-colors"
+                  >
+                    <Icon className="text-primary mb-3" size={36} />
+                    <h3 className="font-semibold text-primary mb-2">{card.heading}</h3>
+                    <p className={card.href ? "text-sm text-accent whitespace-pre-line" : "text-sm text-muted-foreground whitespace-pre-line"}>
+                      {card.content}
+                    </p>
+                  </Wrapper>
+                );
+              })}
               </div>
             )}
           </div>
