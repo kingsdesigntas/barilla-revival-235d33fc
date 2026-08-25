@@ -14,6 +14,28 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const iconMap: Record<string, any> = { Clock, DollarSign, Users, Phone };
 
+const PhoneLinkText = ({ text, className }: { text: string; className?: string }) => {
+  const phoneRegex = /(\d{4}\s\d{3}\s\d{3})/g;
+  const parts = text.split(phoneRegex);
+  return (
+    <>
+      {parts.map((part, i) =>
+        /^\d{4}\s\d{3}\s\d{3}$/.test(part) ? (
+          <a
+            key={i}
+            href={`tel:${part.replace(/\s/g, "")}`}
+            className={className || "text-primary underline hover:text-primary/80"}
+          >
+            {part}
+          </a>
+        ) : (
+          <span key={i}>{part}</span>
+        )
+      )}
+    </>
+  );
+};
+
 const topSliderImages = [
   { src: sliderImg, alt: "Mini golf course hole 11 surrounded by trees and rocks" },
   { src: gallery2, alt: "Entrance to Barilla Holiday Park Putt & Play with shop and landscaped rocks" },
@@ -78,7 +100,12 @@ const MiniGolf = () => {
                     <Icon className="text-primary mb-3" size={36} />
                     <h3 className="font-semibold text-primary mb-2">{card.heading}</h3>
                     <p className={card.href ? "text-sm text-accent whitespace-pre-line" : "text-sm text-muted-foreground whitespace-pre-line"}>
-                      {card.content}
+                      {card.content.split("\n").map((line, i) => (
+                        <span key={i}>
+                          {i > 0 ? <br /> : null}
+                          <PhoneLinkText text={line} />
+                        </span>
+                      ))}
                     </p>
                   </Wrapper>
                 );
