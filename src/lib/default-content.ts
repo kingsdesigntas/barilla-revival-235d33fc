@@ -217,7 +217,7 @@ export const defaultCabinPage = {
     {
       name: "Two Bedroom Deluxe",
       sleeps: "Sleeps 4",
-      tagline: "Most popular",
+      tagline: "Deluxe Cabin",
       description: "Our most popular option, these Two Bedroom Deluxe cabins sleep four guests and offer practical, affordable accommodation with flexible bedding configurations, a shared kitchen, cosy living area, and a private ensuite. Perfect for families, workers, or small groups exploring Tasmania comfortably together.",
       features: [
         "Flexible configurations with private ensuite",
