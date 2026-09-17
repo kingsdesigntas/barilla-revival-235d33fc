@@ -184,7 +184,7 @@ export const defaultCabinPage = {
   items: [
     {
       name: "Two Bedroom Cabins",
-      sleeps: "Budget-friendly · ensuite",
+      sleeps: "offering a range of sleeping configurations",
       tagline: "Best value",
       description: "Our Two Bedroom Cabins are a budget-friendly accommodation option with an ensuite bathroom, providing practical comfort and essential amenities for road-trippers, workers, and value-conscious travellers. A simple, cosy place to rest, recharge, and enjoy an affordable Tasmania stay.",
       features: [
