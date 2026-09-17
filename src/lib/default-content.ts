@@ -202,7 +202,7 @@ export const defaultCabinPage = {
       name: "Ensuite Cabins",
       sleeps: "Sleeps 2–3 · 6 cabins available",
       tagline: "Newly refurbished",
-      description: "Our Ensuite Cabins provide comfortable, self-contained accommodation for couples, solo travellers, and small families. Newly refurbished studio-style cabins with a queen bed in the living area, private ensuite, and modern fit-out — an easy, relaxing base for short stays or longer Tasmania adventures.",
+      description: "Our Ensuite Cabins provide comfortable, self-contained accommodation for couples, solo travellers, and small families, featuring a studio-style layout with private ensuite, kitchen, and cosy living space. An easy, relaxing base for short stays or longer Tasmania adventures and holidays.",
       features: [
         "Studio-style layout (open bedroom + living)",
         "Private ensuite (shower + toilet)",
