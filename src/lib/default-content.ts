@@ -184,12 +184,12 @@ export const defaultCabinPage = {
   items: [
     {
       name: "Two Bedroom Cabins",
-      sleeps: "Budget-friendly · ensuite & non-ensuite",
+      sleeps: "Budget-friendly · ensuite",
       tagline: "Best value",
-      description: "Our Two Bedroom Cabins are a budget-friendly accommodation option with both ensuite and non-ensuite rooms available, providing practical comfort and essential amenities for road-trippers, workers, and value-conscious travellers. A simple, cosy place to rest, recharge, and enjoy an affordable Tasmania stay.",
+      description: "Our Two Bedroom Cabins are a budget-friendly accommodation option with an ensuite bathroom, providing practical comfort and essential amenities for road-trippers, workers, and value-conscious travellers. A simple, cosy place to rest, recharge, and enjoy an affordable Tasmania stay.",
       features: [
         "Budget-friendly nightly rates",
-        "Ensuite and non-ensuite options",
+        "Private ensuite bathroom",
         "Heating & electric blankets",
         "Crockery and cutlery included",
         "Additional linen supplied",
@@ -218,9 +218,9 @@ export const defaultCabinPage = {
       name: "Two Bedroom Deluxe",
       sleeps: "Sleeps 4",
       tagline: "Most popular",
-      description: "Our most popular option, these Two Bedroom Deluxe cabins sleep four guests and offer practical, affordable accommodation with flexible bedding, a shared kitchen, and cosy living area. Perfect for families, workers, or small groups exploring Tasmania comfortably together.",
+      description: "Our most popular option, these Two Bedroom Deluxe cabins sleep four guests and offer practical, affordable accommodation with flexible bedding configurations, a shared kitchen, cosy living area, and a private ensuite. Perfect for families, workers, or small groups exploring Tasmania comfortably together.",
       features: [
-        "Flexible configurations (queen + ensuite with bunks, or four singles)",
+        "Flexible configurations with private ensuite",
         "Open plan kitchen and dining",
         "Reverse cycle heating and air conditioning",
         "All linen and crockery provided",
