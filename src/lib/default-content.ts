@@ -216,9 +216,9 @@ export const defaultCabinPage = {
     },
     {
       name: "Two Bedroom Deluxe",
-      sleeps: "Sleeps 4",
+      sleeps: "Sleeps up to 4 guests",
       tagline: "Deluxe Cabin",
-      description: "Our most popular option, these Two Bedroom Deluxe cabins sleep four guests and offer practical, affordable accommodation with flexible bedding configurations, a shared kitchen, cosy living area, and a private ensuite. Perfect for families, workers, or small groups exploring Tasmania comfortably together.",
+      description: "Featuring one queen bed and two single beds, this self-contained cabin offers a comfortable and practical stay with open-plan living, a fully equipped kitchen, and reverse cycle heating and cooling. Ideal for couples, small families, or workers exploring Tasmania together.",
       features: [
         "Flexible configurations with private ensuite",
         "Open plan kitchen and dining",
